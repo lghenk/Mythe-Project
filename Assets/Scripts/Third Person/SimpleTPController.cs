@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,26 +21,21 @@ public class SimpleTPController : MonoBehaviour
         velocity.x = velocity.z = 0;
         velocity.y += Time.deltaTime * Physics.gravity.y;
         
-        bool grounded = _tpCollision.CheckGrounded(velocity.y);
-        
         if (_tpCollision.CheckGrounded(velocity.y * Time.deltaTime)) velocity.y = 0;
         if (velocity.y < -100) velocity.y = -100;
 
-        if (Input.GetKey(KeyCode.A)) velocity += Vector3.left * speed;
-        if(Input.GetKey(KeyCode.D)) velocity += Vector3.right * speed;
-        if(Input.GetKey(KeyCode.W)) velocity += Vector3.forward * speed;
-        if (Input.GetKey(KeyCode.S)) velocity += Vector3.back * speed;
+        Vector3 moveVector = Vector3.zero;
+        if (Input.GetKey(KeyCode.A)) moveVector += Vector3.left;
+        if(Input.GetKey(KeyCode.D)) moveVector += Vector3.right;
+        if(Input.GetKey(KeyCode.W)) moveVector += Vector3.forward;
+        if (Input.GetKey(KeyCode.S)) moveVector += Vector3.back;
 
-        Move(velocity * Time.deltaTime);
+        Vector3 vel = moveVector.normalized * speed + velocity;
+        Move(vel * Time.deltaTime);
     }
     
     private void Move(Vector3 velocity)
     {
-        Vector3 vel = velocity;
-        Vector3 moveVector = vel;
-        moveVector.y = 0;
-         _tpCollision.GetSlope(vel, moveVector.magnitude, ref vel);
-        velocity = vel;
-        transform.position += vel;
+        
     }
 }
