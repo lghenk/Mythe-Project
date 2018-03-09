@@ -17,6 +17,13 @@
           <e p="Events" t="Include">
             <e p="EventManager.cs" t="Include" />
           </e>
+          <e p="Health" t="Include">
+            <e p="Health.cs" t="Include" />
+            <e p="Modules" t="Include">
+              <e p="DBNOModule.cs" t="Include" />
+              <e p="HealthBaseModule.cs" t="Include" />
+            </e>
+          </e>
           <e p="Pause" t="Include">
             <e p="Pause.cs" t="Include" />
             <e p="PauseInput.cs" t="Include" />

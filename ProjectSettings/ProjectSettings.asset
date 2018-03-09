@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: DremTem
   productName: Mythe
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -634,7 +634,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: e1c1f540-17da-483a-8f14-55960473bf22
   projectName: Mythe
   organizationId: timo-heijne
