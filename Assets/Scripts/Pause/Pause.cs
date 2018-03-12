@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Made by Koen Sparreboom 8===============================D~~~~~~~~~~~~~
+/// Made by Koen Sparreboom
 /// </summary>
 public class Pause : MonoBehaviour {
     private static bool _paused;
