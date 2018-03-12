@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Made by Koen Sparreboom
+/// </summary>
 public class MeleeCombat : MonoBehaviour {
     [SerializeField]
     private MeleeType _meleeType;

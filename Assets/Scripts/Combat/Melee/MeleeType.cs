@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Made by Koen Sparreboom
+/// </summary>
 [CreateAssetMenu(fileName = "New Melee Weapon", menuName = "Weapons/Melee", order = 1)]
 public class MeleeType : ScriptableObject {
     [SerializeField]

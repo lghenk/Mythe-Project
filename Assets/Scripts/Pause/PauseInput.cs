@@ -8,7 +8,7 @@ public class PauseInput : MonoBehaviour {
         if (!Input.GetKeyDown(KeyCode.Escape))
             return;
 
-        if (!Pause.Paused) {
+        if (!Pause.IsPaused) {
             Pause.PauseGame();
         } else {
             Pause.UnpauseGame();
