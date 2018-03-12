@@ -1,8 +1,18 @@
-# upm-package-template-3DLegacy
-Project Template for 3D scenes not using a SRP and empty
+# 8===D\~\~: The Game
 
-This template uses Unity’s built in rendering pipeline and contain no content by default. This is a good starting point for developers looking to create 3D projects.
+8===D\~\~: The Game is a **working title**. It will definitely change at the end.
 
+**8===D\~\~: The Game** is a game based on the myth Sapling & Flint. It will release somewhere in 2018 with a more fitting title. Because it's about little kids, not ... this. 
 
-Package Name: com.unity.template.3dempty
-Package Version: 0.0.2
+The developers are:  
+Koen Boom  
+Timo Whiner  
+Antonio Bottle  
+
+The artists are:  
+Ryan Ryan  
+Núria een Leeuw  
+Sharona Achternaam  
+Desirée God
+
+Dankjewel
