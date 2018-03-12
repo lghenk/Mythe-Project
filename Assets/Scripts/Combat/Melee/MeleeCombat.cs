@@ -8,7 +8,7 @@ public class MeleeCombat : MonoBehaviour {
 	private Vector3 _attackOffset;
 
 	private void Update() {
-		if (Input.GetButtonDown("Fire 1")) {
+ 		if (Input.GetButtonDown("Fire1")) {
 			Attack();
 		}
 	}
@@ -17,7 +17,7 @@ public class MeleeCombat : MonoBehaviour {
 		RaycastHit[] hits = Physics.SphereCastAll(transform.position + _attackOffset, _meleeType.Radius, Vector3.forward, _meleeType.Radius);
 
 		for (int i = 0; i < hits.Length; i++) {
-			hits[i].collider?.GetComponent<Health>().TakeDamage(_meleeType.Damage);
+			hits[i].collider.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
 		}
 	}
 	

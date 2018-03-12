@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a731bd33-f393-48e6-86ff-bb2e83d33e5b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeCombat.cs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeCombat.cs.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Melee.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Melee/MeleeType.cs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Melee/MeleeType.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Melee Weapon.asset" afterPath="$PROJECT_DIR$/Assets/Melee Weapon.asset" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,15 +75,15 @@
       <file leaf-file-name="MeleeCombat.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="460">
+              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
-                <marker date="1520824842586" expanded="true" signature="61:684" ph="{...}" />
-                <marker date="1520824842586" expanded="true" signature="187:247" ph="{...}" />
-                <marker date="1520824842586" expanded="true" signature="226:244" ph="{...}" />
-                <marker date="1520824842586" expanded="true" signature="272:534" ph="{...}" />
-                <marker date="1520824842586" expanded="true" signature="451:531" ph="{...}" />
-                <marker date="1520824842586" expanded="true" signature="574:682" ph="{...}" />
+                <marker date="1520828070461" expanded="true" signature="61:684" ph="{...}" />
+                <marker date="1520828070461" expanded="true" signature="187:247" ph="{...}" />
+                <marker date="1520828070461" expanded="true" signature="226:244" ph="{...}" />
+                <marker date="1520828070461" expanded="true" signature="272:534" ph="{...}" />
+                <marker date="1520828070461" expanded="true" signature="451:531" ph="{...}" />
+                <marker date="1520828070461" expanded="true" signature="574:682" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -193,12 +191,12 @@
       <updated>1520245366603</updated>
       <workItem from="1520245375979" duration="8266000" />
       <workItem from="1520494929260" duration="6632000" />
-      <workItem from="1520612236921" duration="1986000" />
+      <workItem from="1520612236921" duration="2960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16884000" />
+    <option name="totallyTimeSpent" value="17858000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -215,7 +213,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -455,15 +453,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="460">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
-            <marker date="1520824842586" expanded="true" signature="61:684" ph="{...}" />
-            <marker date="1520824842586" expanded="true" signature="187:247" ph="{...}" />
-            <marker date="1520824842586" expanded="true" signature="226:244" ph="{...}" />
-            <marker date="1520824842586" expanded="true" signature="272:534" ph="{...}" />
-            <marker date="1520824842586" expanded="true" signature="451:531" ph="{...}" />
-            <marker date="1520824842586" expanded="true" signature="574:682" ph="{...}" />
+            <marker date="1520828070461" expanded="true" signature="61:684" ph="{...}" />
+            <marker date="1520828070461" expanded="true" signature="187:247" ph="{...}" />
+            <marker date="1520828070461" expanded="true" signature="226:244" ph="{...}" />
+            <marker date="1520828070461" expanded="true" signature="272:534" ph="{...}" />
+            <marker date="1520828070461" expanded="true" signature="451:531" ph="{...}" />
+            <marker date="1520828070461" expanded="true" signature="574:682" ph="{...}" />
           </folding>
         </state>
       </provider>

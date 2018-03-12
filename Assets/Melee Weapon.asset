@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Wooden sword
   _damage: 5
-  _radius: 2
+  _radius: 0.3
