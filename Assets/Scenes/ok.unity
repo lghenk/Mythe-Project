@@ -1324,12 +1324,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 846564530}
-  _offset: {x: 0, y: 0.5, z: 3.17}
+  _offset: {x: 0.34, y: 0.5, z: 3.17}
   _sens: 300
   _smoothRotation: 1
-  _smoothPosition: 0
+  _smoothPosition: 1
   _smoothRotAmount: 8
-  _smoothPosAmount: 8
+  _smoothPosAmount: 9.62
   _cameraLayerMask:
     serializedVersion: 2
     m_Bits: 4294966527
@@ -1409,7 +1409,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-511512
+  m_Name: pb_Mesh3704
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

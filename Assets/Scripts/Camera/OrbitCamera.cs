@@ -78,6 +78,6 @@ public class OrbitCamera : MonoBehaviour
         if (!Physics.SphereCast(targetpos, 0.2f, direction.normalized, out info, direction.magnitude,
             _cameraLayerMask)) return;
 
-        position = info.point + Vector3.up * 0.15f;
+        position = info.point + info.normal * 0.15f;
     }
 }
