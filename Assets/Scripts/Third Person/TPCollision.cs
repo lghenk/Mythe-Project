@@ -7,7 +7,7 @@ using UnityEngine;
 public class TPCollision : MonoBehaviour
 {
 	private const float STEP_HEIGHT = 0.2f;
-	private const float MAX_ANGLE = 89f;
+	private const float MAX_ANGLE = 50f;
 	private const float RAYCAST_HEIGHT = 0.05f;
 
 	[SerializeField] private LayerMask _collisionMask;
@@ -29,11 +29,12 @@ public class TPCollision : MonoBehaviour
 		float length = velocity.magnitude;
 		float moveDistance = moveVector.magnitude;
 
-		Vector3 origin = transform.position;
 		Vector3 direction = moveVector;
+		Vector3 origin = transform.position;
 		
 		RaycastHit info;
-		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, length, _collisionMask)) return false;
+		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, moveDistance + 
+		                                                                                _collider.radius / 2, _collisionMask)) return false;
 			
 		angle = Vector3.Angle(info.normal, Vector3.up);
 		if (angle > MAX_ANGLE || Mathf.Abs(angle) < float.Epsilon)
@@ -45,11 +46,11 @@ public class TPCollision : MonoBehaviour
 		float y = Mathf.Sin(angle * Mathf.Deg2Rad) * moveDistance;
 
 		if (!(velocity.y <= y)) return false;
-		
+
 		velocity.y = y;
 		velocity.x = Mathf.Cos(angle * Mathf.Deg2Rad) * velocity.x;
 		velocity.z = Mathf.Cos(angle * Mathf.Deg2Rad) * velocity.z;
-		velocity = velocity.normalized * moveDistance;
+		//velocity = velocity.normalized * moveDistance;
 
 		return true;
 	}
@@ -71,19 +72,29 @@ public class TPCollision : MonoBehaviour
 	/// <param name="velocity"></param>
 	private void TestCollision(ref Vector3 velocity)
 	{
-		
+		Vector3 p1, p2;
+		RaycastHit hit;
+		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
+		p2 = transform.position + Vector3.up * (_collider.radius);
+
+		if (!(Physics.CapsuleCast(p1, p2, _collider.radius - 0.05f, velocity.normalized, out hit, velocity.magnitude,
+			_collisionMask))) return;
+
+		print(hit.distance);
+		velocity = velocity.normalized * (hit.distance - 0.01f);
 	}
 
 	// Move the character with the velocity
 	public void Move(Vector3 velocity)
 	{
-		
 		Vector3 vel = velocity;
 		Vector3 moveVector = vel;
 		moveVector.y = 0;
 		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
+		
+		TestCollision(ref vel);
 		//velocity = vel;
-		transform.position += vel + Vector3.up * velocity.y;
+		transform.position += vel;
         
 		if (walkingOnSlope)
 		{
@@ -98,11 +109,19 @@ public class TPCollision : MonoBehaviour
 		transform.position = hit.point;
 	}
 	
-	public bool CheckGrounded(float gravity)
+	public bool CheckGrounded(float gravity, bool placeOnGround = false)
 	{
-		Vector3 p1 = transform.position + Vector3.up * (_collider.radius / 2);
-		return Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, -gravity + 0.5f, _collisionMask);
-		//return Physics.CapsuleCast(p1, p1 + Vector3.up * (_collider.height) - Vector3.up * (_collider.radius / 2), _collider.radius,
-		//	Vector3.up * gravity);
+		Vector3 p1 = transform.position + Vector3.up * (_collider.radius + _collider.height);
+		Vector3 p2 = transform.position + Vector3.up * _collider.radius;
+		RaycastHit hit;
+		bool grounded = Physics.Raycast(transform.position + Vector3.up * 0.25f, Vector3.down, out hit, -gravity + 0.25f,_collisionMask);
+		//bool grounded = Physics.CapsuleCast(p1, p2, _collider.radius, Vector3.down, out hit, -gravity + 0.5f, _collisionMask);
+
+		if (placeOnGround && grounded)
+		{
+			transform.position = hit.point;
+		}
+		
+		return grounded;
 	}
 }

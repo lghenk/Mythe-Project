@@ -15,6 +15,7 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField] private float _sens = 1.0f;
     [SerializeField] private bool _smoothRotation, _smoothPosition;
     [SerializeField] private float _smoothRotAmount = 1.0f, _smoothPosAmount = 1.0f;
+    [SerializeField] private LayerMask _cameraLayerMask;
 
     private Quaternion _rotation;
     
@@ -70,6 +71,13 @@ public class OrbitCamera : MonoBehaviour
 
     private void AvoidCollision(ref Vector3 position)
     {
-        
+        Vector3 targetpos = Target.position + Vector3.up * _offset.y;
+        Vector3 direction =  position - targetpos;
+
+        RaycastHit info;
+        if (!Physics.SphereCast(targetpos, 0.2f, direction.normalized, out info, direction.magnitude,
+            _cameraLayerMask)) return;
+
+        position = info.point + Vector3.up * 0.15f;
     }
 }
