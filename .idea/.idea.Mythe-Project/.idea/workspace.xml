@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a731bd33-f393-48e6-86ff-bb2e83d33e5b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pause/PauseInput.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Pause/PauseInput.cs" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" />
-      <change beforePath="$PROJECT_DIR$/UnityPackageManager/manifest.json" afterPath="" />
-    </list>
+    <list default="true" id="a731bd33-f393-48e6-86ff-bb2e83d33e5b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,15 +68,15 @@
       <file leaf-file-name="MeleeCombat.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MeleeCombat.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="483">
+              <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
               <folding>
-                <marker date="1520824229718" expanded="true" signature="61:639" ph="{...}" />
-                <marker date="1520824229718" expanded="true" signature="213:273" ph="{...}" />
-                <marker date="1520824229718" expanded="true" signature="252:270" ph="{...}" />
-                <marker date="1520824229718" expanded="true" signature="298:489" ph="{...}" />
-                <marker date="1520824229718" expanded="true" signature="477:486" ph="{...}" />
-                <marker date="1520824229718" expanded="true" signature="529:637" ph="{...}" />
+                <marker date="1520824594875" expanded="true" signature="61:639" ph="{...}" />
+                <marker date="1520824594875" expanded="true" signature="213:273" ph="{...}" />
+                <marker date="1520824594875" expanded="true" signature="252:270" ph="{...}" />
+                <marker date="1520824594875" expanded="true" signature="298:489" ph="{...}" />
+                <marker date="1520824594875" expanded="true" signature="477:486" ph="{...}" />
+                <marker date="1520824594875" expanded="true" signature="529:637" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -203,12 +196,12 @@
       <updated>1520245366603</updated>
       <workItem from="1520245375979" duration="8266000" />
       <workItem from="1520494929260" duration="6632000" />
-      <workItem from="1520612236921" duration="1371000" />
+      <workItem from="1520612236921" duration="1736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16269000" />
+    <option name="totallyTimeSpent" value="16634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,15 +448,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MeleeCombat.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="483">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
-            <marker date="1520824229718" expanded="true" signature="61:639" ph="{...}" />
-            <marker date="1520824229718" expanded="true" signature="213:273" ph="{...}" />
-            <marker date="1520824229718" expanded="true" signature="252:270" ph="{...}" />
-            <marker date="1520824229718" expanded="true" signature="298:489" ph="{...}" />
-            <marker date="1520824229718" expanded="true" signature="477:486" ph="{...}" />
-            <marker date="1520824229718" expanded="true" signature="529:637" ph="{...}" />
+            <marker date="1520824594875" expanded="true" signature="61:639" ph="{...}" />
+            <marker date="1520824594875" expanded="true" signature="213:273" ph="{...}" />
+            <marker date="1520824594875" expanded="true" signature="252:270" ph="{...}" />
+            <marker date="1520824594875" expanded="true" signature="298:489" ph="{...}" />
+            <marker date="1520824594875" expanded="true" signature="477:486" ph="{...}" />
+            <marker date="1520824594875" expanded="true" signature="529:637" ph="{...}" />
           </folding>
         </state>
       </provider>
