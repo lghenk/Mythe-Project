@@ -52,9 +52,11 @@ public class TPCollision : MonoBehaviour
 		normal.y = 0;
 		normal.Normalize();
 
+		float y = velocity.y;
 		Vector3 moveDir = Vector3.Cross(normal, Vector3.up);
 		Vector3 newVelocity = Vector3.Project(velocity, moveDir);
 		velocity = newVelocity;
+		velocity.y = y;
 	}
 	
 	/// <summary>

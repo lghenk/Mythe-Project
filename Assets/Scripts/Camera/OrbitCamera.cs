@@ -49,9 +49,7 @@ public class OrbitCamera : MonoBehaviour
 
         _rotation = WR;
 
-        var wantedPosition = Target.position + 
-                             (transform.forward * -_offset.z) + (transform.right * _offset.x) +
-                             (transform.up * _offset.y);
+        var wantedPosition = GetTargetPosition();
 
         AvoidCollision(ref wantedPosition);
 
@@ -63,6 +61,13 @@ public class OrbitCamera : MonoBehaviour
     {
         if (rotation.x > 180 && rotation.x < 330) rotation.x = 330;
         else if (rotation.x > 70 && rotation.x < 180) rotation.x = 70;
+    }
+
+    Vector3 GetTargetPosition()
+    {
+        return Target.position + 
+            (transform.forward * -_offset.z) + (transform.right * _offset.x) +
+            (transform.up * _offset.y);
     }
 
     public void RotateTowardsY(float yRotation, float rotationSpeed)
@@ -79,10 +84,11 @@ public class OrbitCamera : MonoBehaviour
     private void AvoidCollision(ref Vector3 position)
     {
         Vector3 targetpos = Target.position + Vector3.up * _offset.y;
-        Vector3 direction =  position - targetpos;
+        Vector3 direction = position - targetpos;
 
         RaycastHit info;
-        if (!Physics.SphereCast(targetpos, 0.2f, direction.normalized, out info, direction.magnitude,
+        Debug.DrawLine(targetpos, targetpos + direction);
+        if (!Physics.SphereCast(targetpos, 0.1f, direction, out info, direction.magnitude,
             _cameraLayerMask)) return;
 
         position = info.point + info.normal * 0.15f;
