@@ -45,7 +45,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (currentGravity < MAX_GRAVITY)
             currentGravity = MAX_GRAVITY;
 
-        if (_tpc.CheckGrounded(currentGravity * Time.deltaTime, true)) 
+        if (_tpc.CheckGrounded(currentGravity * Time.deltaTime, placeOnGround:true)) 
         {
             currentGravity = 0;
         }

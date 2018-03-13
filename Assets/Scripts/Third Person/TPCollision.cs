@@ -23,6 +23,9 @@ public class TPCollision : MonoBehaviour
 		Vector3 moveVector = vel;
 		moveVector.y = 0;
 		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
+		
+		if (walkingOnSlope) vel = vel.normalized * moveVector.magnitude;
+		
 		TestCollision(ref vel);
 		
 		transform.position += vel;
@@ -135,13 +138,15 @@ public class TPCollision : MonoBehaviour
 	{
 		Vector3 p1 = transform.position + Vector3.up * (_collider.radius + _collider.height);
 		Vector3 p2 = transform.position + Vector3.up * _collider.radius;
-		RaycastHit hit;
-		bool grounded = Physics.Raycast(transform.position + Vector3.up * 0.25f, Vector3.down, out hit, -gravity + 0.25f,_collisionMask);
-		//bool grounded = Physics.CapsuleCast(p1, p2, _collider.radius, Vector3.down, out hit, -gravity + 0.5f, _collisionMask);
+		
+		RaycastHit info;
+		const float castHeight = 0.25f;
+		
+		bool grounded = Physics.Raycast(transform.position + Vector3.up * castHeight, Vector3.down, out info, -gravity + castHeight,_collisionMask);
 
 		if (placeOnGround && grounded)
 		{
-			transform.position = hit.point;
+			transform.position = info.point;
 		}
 		
 		return grounded;

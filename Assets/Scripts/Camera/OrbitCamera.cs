@@ -38,9 +38,11 @@ public class OrbitCamera : MonoBehaviour
         wantedRotation.y += mouseDelta.x * Time.deltaTime;
         wantedRotation.x += mouseDelta.y * Time.deltaTime;
         wantedRotation.z = 0;
+
+        ClampX(ref wantedRotation);
         
         Quaternion WR = Quaternion.Euler(wantedRotation);
-        
+            
         transform.rotation = _smoothRotation
             ? Quaternion.Lerp(transform.rotation, WR, _smoothRotAmount * Time.deltaTime)
             : WR;
@@ -57,6 +59,12 @@ public class OrbitCamera : MonoBehaviour
             wantedPosition, Time.deltaTime * _smoothPosAmount) : wantedPosition;
     }
 
+    private void ClampX(ref Vector3 rotation)
+    {
+        if (rotation.x > 180 && rotation.x < 330) rotation.x = 330;
+        else if (rotation.x > 70 && rotation.x < 180) rotation.x = 70;
+    }
+
     public void RotateTowardsY(float yRotation, float rotationSpeed)
     {
         Vector3 tempEuler = transform.eulerAngles;
@@ -67,7 +75,6 @@ public class OrbitCamera : MonoBehaviour
 
         _rotation = Quaternion.Lerp(_rotation, wantedRotation, Time.deltaTime * 5);
     }
-
 
     private void AvoidCollision(ref Vector3 position)
     {
