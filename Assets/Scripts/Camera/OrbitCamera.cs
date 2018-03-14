@@ -33,10 +33,15 @@ public class OrbitCamera : MonoBehaviour
         if (Target == null || !Follow) return;
 
         var mouseDelta = MouseDelta;
-        
+
+        Move(mouseDelta);
+    }
+
+    public void Move(Vector3 delta)
+    {
         var wantedRotation = _rotation.eulerAngles;
-        wantedRotation.y += mouseDelta.x * Time.deltaTime;
-        wantedRotation.x += mouseDelta.y * Time.deltaTime;
+        wantedRotation.y += delta.x * Time.deltaTime;
+        wantedRotation.x += delta.y * Time.deltaTime;
         wantedRotation.z = 0;
 
         ClampX(ref wantedRotation);
