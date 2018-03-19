@@ -7,7 +7,7 @@ using UnityEngine;
 public class TPCollision : MonoBehaviour
 {
 	private const float STEP_HEIGHT = 0.2f;
-	private const float MAX_ANGLE = 50f;
+	private const float MAX_ANGLE = 40;
 	private const float RAYCAST_HEIGHT = 0.05f;
 
 	[SerializeField] private LayerMask _collisionMask;
@@ -56,7 +56,7 @@ public class TPCollision : MonoBehaviour
 		Vector3 moveDir = Vector3.Cross(normal, Vector3.up);
 		Vector3 newVelocity = Vector3.Project(velocity, moveDir);
 		velocity = newVelocity;
-		velocity.y = y;
+		//velocity.y = y;
 	}
 	
 	/// <summary>
