@@ -41,8 +41,12 @@ GameObject:
   - component: {fileID: 114329429740627518}
   - component: {fileID: 114457635425002318}
   - component: {fileID: 114882195468918130}
-  - component: {fileID: 95018833452407872}
   - component: {fileID: 114278250648484668}
+  - component: {fileID: 114151915450261436}
+  - component: {fileID: 114181758753203866}
+  - component: {fileID: 114579755044616954}
+  - component: {fileID: 114373302147078814}
+  - component: {fileID: 95018833452407872}
   - component: {fileID: 195080496330291742}
   - component: {fileID: 136663235717811196}
   m_Layer: 0
@@ -59,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1674769808220990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4683933282784796}
@@ -151,6 +155,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114151915450261436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674769808220990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af7be5b087178a478db18ee763bbbc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fovRadius: 25
+  _fovAngle: 90
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &114181758753203866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674769808220990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d171b461bf1d84db6c327df6ea00b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114278250648484668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,8 +208,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shouldWander: 1
-  _wanderState: {fileID: 114457635425002318}
   _reasonTimerLength: 5
+  _wanderState: {fileID: 114457635425002318}
+  _decideAttackState: {fileID: 0}
+--- !u!114 &114373302147078814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674769808220990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78054be9f79e9454ea5db5073198a15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chargeAttack: {fileID: 114579755044616954}
+  _staticAttack: {fileID: 114181758753203866}
+  _staticRadius: 5
 --- !u!114 &114457635425002318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +237,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wanderRadius: 25.75
+--- !u!114 &114579755044616954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674769808220990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638e2bf5ae3d89c49a361c526e5694f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114882195468918130
 MonoBehaviour:
   m_ObjectHideFlags: 1

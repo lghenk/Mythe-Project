@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Created By Timo Heijne
 [RequireComponent(typeof(Animator))]
 public class AnimationHandler : MonoBehaviour {
     private Animator _animator;
@@ -14,9 +15,6 @@ public class AnimationHandler : MonoBehaviour {
         if (!_animator)
             throw new Exception("No animator present on object with AnimationHandler Script...");
     }
-
-    // Update is called once per frame
-    void Update() { }
 
     public void SetAnimation(string anim, bool booleanValue) {
         _animator?.SetBool(anim, booleanValue);

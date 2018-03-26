@@ -392,7 +392,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3b93829fcbbb5234892c1ee4f9a31e46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -888,13 +888,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537576279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.2}
+  m_LocalPosition: {x: 0.38, y: 0.5, z: -6.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1924899261
+--- !u!1001 &1968345573
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -936,31 +936,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce491093a349bd3468f0b640b09b1982, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1924899262 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1674769808220990, guid: ce491093a349bd3468f0b640b09b1982,
-    type: 2}
-  m_PrefabInternal: {fileID: 1924899261}
---- !u!114 &1924899263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1924899262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af7be5b087178a478db18ee763bbbc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fovRadius: 50
-  _fovAngle: 90
-  _fovForceNoticeRadius: 10
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &1978168337
 Prefab:
   m_ObjectHideFlags: 0

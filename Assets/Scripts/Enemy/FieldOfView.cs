@@ -16,9 +16,6 @@ public class FieldOfView : MonoBehaviour {
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
-    // Use this for initialization
-    void Start() { }
-
     // Update is called once per frame
     void Update() {
         FindVisibleTargets();
@@ -38,12 +35,14 @@ public class FieldOfView : MonoBehaviour {
                 }
             }
         }   
-        
-        
     }
 
     public bool IsInView(Transform trans) {
         return (_itemsInView.IndexOf(trans) != -1);
+    }
+
+    public bool HasPlayerInRange() {
+        return (_itemsInView.Count > 0);
     }
 
     private void OnDrawGizmos() {

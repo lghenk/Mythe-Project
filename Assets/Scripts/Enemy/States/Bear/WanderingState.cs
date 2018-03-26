@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Created By Timo Heijne
 [RequireComponent(typeof(NavMeshAgent))]
 public class WanderingState : State {
 
@@ -11,13 +12,13 @@ public class WanderingState : State {
 	private NavMeshAgent _navAgent;
 	
 	private void Start() {
+		stateName = "WanderingState";
+
 		_navAgent = GetComponent<NavMeshAgent>();
 		if(!_navAgent) throw new System.Exception($"WanderingState :: No NavMeshAgent was found on the object {transform.name}. ");
 	}
 
 	public override void EnterState(StateMachine machine) {
-		base.EnterState(machine);
-		
 		// Set target position;
 		_navAgent.SetDestination(GetRandomPosition());
 		_navAgent.isStopped = false;
@@ -27,7 +28,7 @@ public class WanderingState : State {
 
 	public override void Reason(StateMachine machine) {
 		if (Vector3.Distance(_navAgent.destination, transform.position) < 1f) {
-			machine.CurrentState = GetComponent<IdleState>();
+			machine.CurrentState = machine.GetState("IdleState");
 		}
 	}
 

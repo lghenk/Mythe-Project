@@ -11,6 +11,8 @@ public class StateMachine : MonoBehaviour {
 	[SerializeField]
 	private State _defaultState;
 	private State _currentState;
+
+	protected StateHandler _stateHandler;
 	
 	public State CurrentState {
 		get { return _currentState;  }
@@ -23,8 +25,9 @@ public class StateMachine : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		_stateHandler = gameObject.AddComponent<StateHandler>();
 		State[] states = GetComponents<State>();
-		Debug.Log("Found " + states.Length + " State(s)");
+		Debug.Log($"Found {states.Length} State(s)");
 		CurrentState = _defaultState;
 	}
 	
@@ -32,5 +35,10 @@ public class StateMachine : MonoBehaviour {
 	void Update () {
 		_currentState?.Act(this);
 		_currentState?.Reason(this);
+	}
+
+	public State GetState(string state) {
+		Debug.Log($"Attempting to switch to state: {state}");
+		return _stateHandler.GetState(state);
 	}
 }

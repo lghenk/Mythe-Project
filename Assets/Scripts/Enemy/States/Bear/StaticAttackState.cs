@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class StaticAttackState : MonoBehaviour {
+// Created by Timo Heijne
+public class StaticAttackState : State {
+	[HideInInspector]
+	public Transform target;
 
-	// Use this for initialization
-	void Start () {
-		
+	private void Start() {
+		stateName = "StaticAttackState";
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public override void Act(StateMachine machine) {
+		throw new System.NotImplementedException();
+	}
+
+	public override void Reason(StateMachine machine) {
+		throw new System.NotImplementedException();
 	}
 }
