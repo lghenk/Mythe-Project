@@ -13,10 +13,12 @@ public class StaticAttackState : State {
 	}
 
 	public override void Act(StateMachine machine) {
-		throw new System.NotImplementedException();
+		//throw new System.NotImplementedException();
 	}
 
 	public override void Reason(StateMachine machine) {
-		throw new System.NotImplementedException();
+		if (Vector3.Distance(target.position, transform.position) > 5) { // TODO: Unhardcode this.
+			machine.CurrentState = machine.GetState("DecideAttackState");
+		}
 	}
 }

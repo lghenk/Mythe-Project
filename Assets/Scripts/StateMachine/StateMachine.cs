@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// Created by: Timo Heijne
-/// <summary>
+/// <summary author="Timo Heijne">
 /// Keeps track of the current active state, Also handles the Enter, Exit Act & Reason on the states.
 /// </summary>
 public class StateMachine : MonoBehaviour {
@@ -12,7 +11,7 @@ public class StateMachine : MonoBehaviour {
 	private State _defaultState;
 	private State _currentState;
 
-	protected StateHandler _stateHandler;
+	protected StateHandler stateHandler;
 	
 	public State CurrentState {
 		get { return _currentState;  }
@@ -25,20 +24,20 @@ public class StateMachine : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		_stateHandler = gameObject.AddComponent<StateHandler>();
+		stateHandler = gameObject.AddComponent<StateHandler>();
 		State[] states = GetComponents<State>();
 		Debug.Log($"Found {states.Length} State(s)");
 		CurrentState = _defaultState;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () { // TODO: Change to cooroutine to make ajustable tick rate
 		_currentState?.Act(this);
 		_currentState?.Reason(this);
 	}
 
 	public State GetState(string state) {
 		Debug.Log($"Attempting to switch to state: {state}");
-		return _stateHandler.GetState(state);
+		return stateHandler.GetState(state);
 	}
 }

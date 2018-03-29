@@ -30,7 +30,6 @@ public class IdleState : State {
         // Set idle animation state (if actor has idle anim state)
         _animationHandler?.SetAnimation("Idle", true);
         _reasonTimer = Time.timeSinceLevelLoad + _reasonTimerLength;
-        _navMeshAgent.speed = 3.5f;
     }
 
     public override void Act(StateMachine machine) { }
@@ -42,5 +41,9 @@ public class IdleState : State {
         } else if (_shouldWander && Time.timeSinceLevelLoad >= _reasonTimer) {
             machine.CurrentState = machine.GetState("WanderingState");            
         }
+    }
+
+    public override void ExitState(StateMachine machine) {
+        _animationHandler.SetAnimation("Idle", false);
     }
 }
