@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(TPCollision))]
@@ -50,7 +51,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         float speedModifier = Running ? _runSpeedModifier : 1.0f;
         Vector3 velocity = moveVector * currentVelocity 
-                           + Vector3.up * currentGravity;
+                           + Vector3.up * Gravity;
         
         #if UNITY_EDITOR
         Vector3 origin = transform.position + Vector3.up * 0.1f;
@@ -62,14 +63,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void ApplyGravity()
     {
+        if (_tpc.Grounded && !(Gravity > 0)) Gravity = 0;
+        
         currentGravity += Physics.gravity.y * Time.deltaTime;
         if (currentGravity < MAX_GRAVITY)
             currentGravity = MAX_GRAVITY;
-
-        if (_tpc.CheckGrounded(currentGravity * Time.deltaTime, placeOnGround:true)) 
-        {
-            currentGravity = 0;
-        }
     }
 
     public void SetMoveVector(Vector3 ControllerAxis)

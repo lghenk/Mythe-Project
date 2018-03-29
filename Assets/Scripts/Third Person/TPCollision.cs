@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class TPCollision : MonoBehaviour
 {
+	public bool Grounded => _grounded;
+	public float LastGroundTime => _lastGroundTime;
+	public RaycastHit GroundedInfo => _groundedInfo;
+	
+	private bool _grounded = false;
+	private float _lastGroundTime;
+	private RaycastHit _groundedInfo;
+	
 	private const float STEP_HEIGHT = 0.2f;
 	private const float MAX_ANGLE = 40;
 	private const float RAYCAST_HEIGHT = 0.05f;
@@ -22,6 +30,16 @@ public class TPCollision : MonoBehaviour
 		Vector3 vel = velocity;
 		Vector3 moveVector = vel;
 		moveVector.y = 0;
+		
+		UpdateGrounded(vel.y);
+		
+		if (Grounded)
+		{
+			vel.y = -0;
+			_lastGroundTime = Time.time;
+			transform.position = GroundedInfo.point;//  + Vector3.up * RAYCAST_HEIGHT; 
+		}
+		
 		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
 		
 		if (walkingOnSlope) vel = vel.normalized * moveVector.magnitude;
@@ -56,7 +74,7 @@ public class TPCollision : MonoBehaviour
 		Vector3 moveDir = Vector3.Cross(normal, Vector3.up);
 		Vector3 newVelocity = Vector3.Project(velocity, moveDir);
 		velocity = newVelocity;
-		//velocity.y = y;
+		velocity.y = y;
 	}
 	
 	/// <summary>
@@ -74,8 +92,8 @@ public class TPCollision : MonoBehaviour
 		Vector3 origin = transform.position;
 		
 		RaycastHit info;
-		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, moveDistance + 
-		                                                                                _collider.radius / 2, _collisionMask)) return false;
+		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, 
+			moveDistance + _collider.radius / 2, _collisionMask)) return false;
 			
 		angle = Vector3.Angle(info.normal, Vector3.up);
 		if (angle > MAX_ANGLE || Mathf.Abs(angle) < float.Epsilon)
@@ -102,7 +120,7 @@ public class TPCollision : MonoBehaviour
 	/// <returns>If the player is moving down.</returns>
 	private bool HandleDownSlope(Vector3 moveVector, float distance, ref Vector3 velocity)
 	{
-		throw new NotImplementedException("nigga");
+		throw new NotImplementedException("Not implemented yet. Sorry, man.");
 	}
 	
 	/// <summary>
@@ -125,32 +143,31 @@ public class TPCollision : MonoBehaviour
 		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
 		p2 = transform.position + Vector3.up * (_collider.radius);
 
-		return (Physics.CapsuleCast(p1, p2, _collider.radius - 0.05f, velocity.normalized, out info, velocity.magnitude,
+		return (Physics.CapsuleCast(p1, p2, _collider.radius - 0.001f, velocity.normalized, out info, velocity.magnitude,
 			_collisionMask));
 	}
 	
 	private void PushToGround()
 	{
 		RaycastHit hit;
-		if (!Physics.Raycast(transform.position + Vector3.up * 0.25f, Vector3.down, out hit)) return;
-		transform.position = hit.point;
+		if (!Physics.Raycast(transform.position + Vector3.up * RAYCAST_HEIGHT, Vector3.down, out hit)) return;
+		transform.position = hit.point;	
 	}
-	
-	public bool CheckGrounded(float gravity, bool placeOnGround = false)
-	{
-		Vector3 p1 = transform.position + Vector3.up * (_collider.radius + _collider.height);
-		Vector3 p2 = transform.position + Vector3.up * _collider.radius;
-		
-		RaycastHit info;
-		const float castHeight = 0.25f;
-		
-		bool grounded = Physics.Raycast(transform.position + Vector3.up * castHeight, Vector3.down, out info, -gravity + castHeight,_collisionMask);
 
-		if (placeOnGround && grounded)
-		{
-			transform.position = info.point;
-		}
+	private void UpdateGrounded(float velocity)
+	{
+		print(velocity);
 		
-		return grounded;
+		if (velocity > 0.1f)
+		{
+			_grounded = false;
+			return;
+		}
+
+		float length = Mathf.Abs(velocity) + RAYCAST_HEIGHT;
+		
+		const float castHeight = 0.25f;
+		_grounded = Physics.Raycast(transform.position + Vector3.up * RAYCAST_HEIGHT, Vector3.down, out _groundedInfo, 
+			length, _collisionMask);
 	}
 }

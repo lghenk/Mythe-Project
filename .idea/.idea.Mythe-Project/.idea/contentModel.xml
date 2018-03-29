@@ -24,11 +24,13 @@
             <e p="KeyboardInput.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
           </e>
+          <e p="MonoBehaviourExtension.cs" t="Include" />
           <e p="Pause" t="Include">
             <e p="Pause.cs" t="Include" />
             <e p="PauseInput.cs" t="Include" />
           </e>
           <e p="Third Person" t="Include">
+            <e p="PlayerJump.cs" t="Include" />
             <e p="SimpleTPController.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
             <e p="TPCollision.cs" t="Include" />

@@ -2,17 +2,19 @@
 using System.Security.AccessControl;
 using Boo.Lang.Environments;
 using UnityEngine;
+// ReSharper disable FieldCanBeMadeReadOnly.Global
+// ReSharper disable MemberCanBePrivate.Global
 
 namespace QTInput
 {
     public class KeyboardInput
     {
-        public Key kLeft = new Key("a"),
-            kForward = new Key("w"),
-            kRight = new Key("d"),
-            kBack = new Key("s"),
-            kRun = new Key(KeyCode.LeftShift),
-            kJump = new Key(KeyCode.Space);
+        public Key  kLeft = new Key("a"),
+                    kForward = new Key("w"),
+                    kRight = new Key("d"),
+                    kBack = new Key("s"),
+                    kRun = new Key(KeyCode.LeftShift),
+                    kJump = new Key(KeyCode.Space);
         
         public Vector3 MouseDelta => new Vector3(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         public Vector3 MoveInput {
