@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,17 +9,35 @@ public class StaticAttackState : State {
 	[HideInInspector]
 	public Transform target;
 
+	[SerializeField]
+	private float _staticRange = 5;
+	
+	private AnimationHandler _animationHandler;
+	private bool _goBackToIdle = false;
+
+
 	private void Start() {
 		stateName = "StaticAttackState";
+		
+		_animationHandler = GetComponent<AnimationHandler>();
 	}
 
-	public override void Act(StateMachine machine) {
-		//throw new System.NotImplementedException();
+	public override void EnterState(StateMachine machine) {
+		_animationHandler.SetAnimation("Attack");
+		_animationHandler.onAnimationFinish += OnAnimationFinish;
+		_goBackToIdle = false;
 	}
+
+	public override void Act(StateMachine machine) { }
 
 	public override void Reason(StateMachine machine) {
-		if (Vector3.Distance(target.position, transform.position) > 5) { // TODO: Unhardcode this.
+		if (Vector3.Distance(target.position, transform.position) > _staticRange || _goBackToIdle) {
 			machine.CurrentState = machine.GetState("DecideAttackState");
 		}
+	}
+	
+	private void OnAnimationFinish() {
+		_goBackToIdle = true;
+		_animationHandler.onAnimationFinish -= OnAnimationFinish;
 	}
 }
