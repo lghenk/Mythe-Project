@@ -5,10 +5,7 @@
 /// </summary>
 public class Pause : MonoBehaviour {
     private static bool _paused;
-
-    public static bool Paused {
-        get { return _paused; }
-    }
+    public static bool IsPaused => _paused;
 
     public static void PauseGame() {
         _paused = true;
