@@ -16,9 +16,10 @@ public class DamageTrigger : MonoBehaviour {
     private string[] _excludedTags;
 
     private void OnTriggerEnter(Collider other) {
-        if (_enabled && !_excludedTags.Contains(other.tag)) {
-            other.GetComponent<Health>()?.TakeDamage(_damage);
-            print(other.GetComponent<Health>()?.CurHealth);
-        }
+        if (!_enabled || _excludedTags.Contains(other.tag))
+            return;
+        
+        
+        other.GetComponent<Health>()?.TakeDamage(_damage);
     }
 }
