@@ -12,11 +12,13 @@ public class VideoControl : MonoBehaviour {
 
 	private MeshRenderer _meshRenderer;
 	private VideoPlayer _videoPlayer;
+	private AudioSource _audioSource;
 	
 	// Use this for initialization
 	void Start () {
 		_videoPlayer = GetComponent<VideoPlayer>();
-		
+		_meshRenderer = GetComponent<MeshRenderer>();
+		_audioSource = GetComponent<AudioSource>();
 		_videoPlayer.loopPointReached += VideoPlayerOnLoopPointReached;
 	}
 
@@ -26,8 +28,11 @@ public class VideoControl : MonoBehaviour {
 	}
 
 	public void PlayVideo(VideoClip video) {
+		print("Should Start Playin boi");
 		_meshRenderer.enabled = true;
 		_videoPlayer.clip = video;
+		_videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+		_videoPlayer.SetTargetAudioSource(0, _audioSource);
 		_videoPlayer.Play();
 	}
 

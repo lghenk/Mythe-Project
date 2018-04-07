@@ -31,7 +31,9 @@ public class DiaryBookkeeper : MonoBehaviour {
 		VideoClip item;
 		if (GetByName(name, out item)) {
 			// Can start video cuz we found sum clip BOI
+			print(item);
 			_videoControl?.PlayVideo(item);
+			return true;
 		}
 
 		return false; // Cannot start video
