@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary author="Timo Heijne">
+/// This scales a plane to the camera's size, depending on the distance (makes it available for all screens). Used for the videoplayer
+/// </summary>
 public class PlaneToCameraScale : MonoBehaviour {
 	void Start () {
 		float distance = Vector3.Distance(Camera.main.transform.position, gameObject.transform.position);

@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
+/// <summary author="Timo Heijne">
+/// This controls the video player
+/// </summary>
 [RequireComponent(typeof(VideoPlayer))]
 public class VideoControl : MonoBehaviour {
 
+	private MeshRenderer _meshRenderer;
 	private VideoPlayer _videoPlayer;
 	
 	// Use this for initialization
@@ -18,10 +22,17 @@ public class VideoControl : MonoBehaviour {
 
 	private void VideoPlayerOnLoopPointReached(VideoPlayer source) {
 		// Means the video has finished we can hide the plane now
+		StopPlaying();
 	}
 
-	// Update is called once per frame
-	void Update () {
-		
+	public void PlayVideo(VideoClip video) {
+		_meshRenderer.enabled = true;
+		_videoPlayer.clip = video;
+		_videoPlayer.Play();
+	}
+
+	public void StopPlaying() {
+		_meshRenderer.enabled = false;
+		_videoPlayer.Stop();
 	}
 }
