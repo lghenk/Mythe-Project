@@ -5,23 +5,26 @@ using UnityEngine;
 
 [CustomEditor(typeof(DiaryBookkeeper))]
 public class DiaryBookkeeperEditor : Editor {
-	private string nameOfClip;
-	
+	private int _selected;
+	private readonly List<string> _options = new List<string>();
+
 	public override void OnInspectorGUI() {
 		DrawDefaultInspector();
 		
 		DiaryBookkeeper myScript = (DiaryBookkeeper)target;
 
 		if (!Application.isPlaying) return;
+
+		foreach (var item in myScript.diaryItems) {
+			_options.Add(item.videoName);
+		}
 		
 		GUILayout.Space(20);
 		EditorGUILayout.LabelField("Debug Options", EditorStyles.boldLabel);
-		
-		nameOfClip = EditorGUILayout.TextField("Clip Name:", nameOfClip);
+		EditorGUILayout.Popup("Clip Name:", _selected, _options.ToArray());
 		
 		if(GUILayout.Button("Test Play")) {
-			Debug.Log(nameOfClip);
-			myScript.PlayByName(nameOfClip);
+			myScript.PlayByName(_options[_selected]);
 		}
 		
 		if(GUILayout.Button("Stop")) {

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -12,15 +13,22 @@ using UnityEngine.Video;
 [RequireComponent(typeof(VideoControl))]
 public class DiaryBookkeeper : MonoBehaviour {
 
-	public DiaryItems[] DiaryItems; // Would prefer this to be a dictionary but whatever...
 	public static DiaryBookkeeper instance;
-
+	[HideInInspector] public VideoObject[] diaryItems; // Would prefer this to be a dictionary but whatever...
 	private VideoControl _videoControl;
 
 	private void Start() {
 		if (instance == null) {
 			instance = this;
 			_videoControl = GetComponent<VideoControl>();
+
+			string[] guids = AssetDatabase.FindAssets("t:VideoObject");
+			diaryItems = new VideoObject[guids.Length];
+			for (int i = 0; i < guids.Length; i++) {
+				VideoObject obj = (VideoObject)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(guids[i]), typeof(VideoObject));
+				diaryItems[i] = obj;
+			}
+			
 		} else {
 			Debug.LogError("DiaryBookkeeper already exists. DELET");
 			Destroy(this);
@@ -44,7 +52,7 @@ public class DiaryBookkeeper : MonoBehaviour {
 	}
 
 	private bool GetByName(string name, out VideoClip returnItem) {
-		DiaryItems diaryItem = DiaryItems.First(item => item.name.Equals(name));
+		VideoObject diaryItem = diaryItems.First(item => item.videoName.Equals(name));
 		if (diaryItem != null) {
 			returnItem = diaryItem.clip;
 			return true;
@@ -53,10 +61,4 @@ public class DiaryBookkeeper : MonoBehaviour {
 		returnItem = null;
 		return false;
 	}
-}
-
-[Serializable]
-public class DiaryItems {
-	public string name;
-	public VideoClip clip;
 }
