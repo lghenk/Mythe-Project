@@ -30,6 +30,5 @@ public class DiaryBookkeeperEditor : Editor {
 		if(GUILayout.Button("Stop")) {
 			myScript.StopVideo();
 		}
-
 	}
 }
