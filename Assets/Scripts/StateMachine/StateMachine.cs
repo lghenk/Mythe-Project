@@ -26,7 +26,7 @@ public class StateMachine : MonoBehaviour {
 	void Start () {
 		stateHandler = gameObject.AddComponent<StateHandler>();
 		State[] states = GetComponents<State>();
-		Debug.Log($"Found {states.Length} State(s)");
+		Debug.Log($"{gameObject.name} :: Found {states.Length} State(s)");
 		CurrentState = _defaultState;
 	}
 	
@@ -37,7 +37,7 @@ public class StateMachine : MonoBehaviour {
 	}
 
 	public State GetState(string state) {
-		Debug.Log($"Attempting to switch to state: {state}");
+		Debug.Log($"{gameObject.name} :: Attempting to switch to state: {state}");
 		return stateHandler.GetState(state);
 	}
 }
