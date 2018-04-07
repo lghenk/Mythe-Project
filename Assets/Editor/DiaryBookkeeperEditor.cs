@@ -5,7 +5,7 @@ using UnityEngine;
 
 [CustomEditor(typeof(DiaryBookkeeper))]
 public class DiaryBookkeeperEditor : Editor {
-	private int _selected;
+	private int _selected = 0;
 	private readonly List<string> _options = new List<string>();
 
 	public override void OnInspectorGUI() {
