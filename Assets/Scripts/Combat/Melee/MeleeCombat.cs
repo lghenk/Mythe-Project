@@ -8,24 +8,28 @@ public class MeleeCombat : MonoBehaviour {
     private MeleeType _meleeType;
 
     [SerializeField]
-    private Vector3 _attackOffset;
+    private DamageTrigger _damageTrigger;
+
+    [SerializeField]
+    private Animator _animator;
+
+    [SerializeField]
+    private string _animatorAttackState = "Attack";
+
+    private void Start() {
+        _damageTrigger.Damage = _meleeType.Damage;
+    }
 
     private void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        /*if (Input.GetButtonDown("Fire1")) {
             Attack();
-        }
+        }*/
+
+        _damageTrigger.Enabled = _animator.GetCurrentAnimatorStateInfo(0).IsName(_animatorAttackState);
     }
 
-    private void Attack() {
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position + _attackOffset, _meleeType.Radius, Vector3.forward, _meleeType.Radius);
-
-        for (int i = 0; i < hits.Length; i++) {
-            hits[i].collider.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
-        }
-    }
-
-    private void OnDrawGizmosSelected() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position + _attackOffset, _meleeType.Radius);
+    public void ChangeWeapon(MeleeType meleeType) {
+        _meleeType = meleeType;
+        _damageTrigger.Damage = _meleeType.Damage;
     }
 }

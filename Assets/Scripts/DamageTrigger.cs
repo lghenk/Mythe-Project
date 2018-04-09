@@ -5,6 +5,11 @@ public class DamageTrigger : MonoBehaviour {
     [SerializeField]
     private float _damage = 5;
 
+    public float Damage {
+        get { return _damage; }
+        set { _damage = value; }
+    }
+
     private bool _enabled;
 
     public bool Enabled {
@@ -18,7 +23,6 @@ public class DamageTrigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (!_enabled || _excludedTags.Contains(other.tag))
             return;
-        
         
         other.GetComponent<Health>()?.TakeDamage(_damage);
     }

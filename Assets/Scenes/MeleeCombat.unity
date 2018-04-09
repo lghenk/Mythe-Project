@@ -212,7 +212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  _enabled: 1
   _excludedTags:
   - Player
 --- !u!54 &381665892
@@ -241,6 +240,7 @@ GameObject:
   - component: {fileID: 1311443244}
   - component: {fileID: 1311443243}
   - component: {fileID: 1311443242}
+  - component: {fileID: 1311443246}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -311,6 +311,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1311443246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311443241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ba8798e589d684ea8ad8977f3efc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meleeType: {fileID: 11400000, guid: d65e797ea45e0254eb9770bcf5d1ef39, type: 2}
+  _damageTrigger: {fileID: 381665891}
+  _animator: {fileID: 0}
+  _animatorAttackState: Attack
 --- !u!1 &1723833972
 GameObject:
   m_ObjectHideFlags: 0
