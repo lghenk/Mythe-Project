@@ -21,7 +21,7 @@ public class SimpleTPController : MonoBehaviour
         velocity.x = velocity.z = 0;
         velocity.y += Time.deltaTime * Physics.gravity.y;
         
-        if (_tpCollision.CheckGrounded(velocity.y * Time.deltaTime)) velocity.y = 0;
+        //if (_tpCollision.CheckGrounded(velocity.y * Time.deltaTime)) velocity.y = 0;
         if (velocity.y < -100) velocity.y = -100;
 
         Vector3 moveVector = Vector3.zero;
