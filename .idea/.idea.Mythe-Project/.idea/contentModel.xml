@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-<<<<<<< HEAD
     <e p="C:\Users\Koen\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Mythe-Project.1322098009.00" t="ExcludeRecursive" />
     <e p="C:\Users\Koen\Documents\Unity\Mythe-Project" t="IncludeRecursive">
-=======
-    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_Mythe-Project.-1791798409.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
->>>>>>> 0d9ad5bc0bc078fd243d253ac28b8b9a18a2d652
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="DiaryBookkeeperEditor.cs" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -22,7 +21,6 @@
           <e p="Camera" t="Include">
             <e p="OrbitCamera.cs" t="Include" />
           </e>
-<<<<<<< HEAD
           <e p="Combat" t="Include">
             <e p="Melee" t="Include">
               <e p="MeleeCombat.cs" t="Include" />
@@ -33,6 +31,11 @@
             </e>
           </e>
           <e p="DamageTrigger.cs" t="Include" />
+          <e p="Diary System" t="Include">
+            <e p="DiaryBookkeeper.cs" t="Include" />
+            <e p="VideoControl.cs" t="Include" />
+            <e p="VideoObject.cs" t="Include" />
+          </e>
           <e p="EnemyTracker.cs" t="Include" />
           <e p="Events" t="Include">
             <e p="EventManager.cs" t="Include" />
@@ -47,28 +50,25 @@
               <e p="HealthBaseModule.cs" t="Include" />
             </e>
           </e>
-=======
-          <e p="Events" t="Include">
-            <e p="EventManager.cs" t="Include" />
-          </e>
           <e p="Input" t="Include">
             <e p="KeyboardInput.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
           </e>
           <e p="MonoBehaviourExtension.cs" t="Include" />
->>>>>>> 0d9ad5bc0bc078fd243d253ac28b8b9a18a2d652
           <e p="Pause" t="Include">
             <e p="Pause.cs" t="Include" />
             <e p="PauseInput.cs" t="Include" />
           </e>
+          <e p="PlaneToCameraScale.cs" t="Include" />
           <e p="Third Person" t="Include">
-<<<<<<< HEAD
-=======
+            <e p="kjaf.shader" t="Include" />
             <e p="PlayerJump.cs" t="Include" />
->>>>>>> 0d9ad5bc0bc078fd243d253ac28b8b9a18a2d652
             <e p="SimpleTPController.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
             <e p="TPCollision.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="ButtonFunctions.cs" t="Include" />
           </e>
         </e>
       </e>

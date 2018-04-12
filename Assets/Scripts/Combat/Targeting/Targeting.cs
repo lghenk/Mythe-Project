@@ -15,7 +15,6 @@ public class Targeting : MonoBehaviour {
     [SerializeField]
     private float _maxTargetingDistance = 10;
 
-
     // Target variables
     private Transform _target;
 

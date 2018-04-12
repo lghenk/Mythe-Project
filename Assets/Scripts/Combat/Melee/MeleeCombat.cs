@@ -24,7 +24,7 @@ public class MeleeCombat : MonoBehaviour {
         /*if (Input.GetButtonDown("Fire1")) {
             Attack();
         }*/
-
+        
         _damageTrigger.Enabled = _animator.GetCurrentAnimatorStateInfo(0).IsName(_animatorAttackState);
     }
 
