@@ -7,14 +7,13 @@ public class Targeting : MonoBehaviour {
     // Camera variables
     [SerializeField]
     private bool _autoTargetCamera = true;
-    
+
     [SerializeField]
     private Camera _camera;
 
     // Settings variables
     [SerializeField]
     private float _maxTargetingDistance = 10;
-
 
     // Target variables
     private Transform _target;
@@ -29,10 +28,11 @@ public class Targeting : MonoBehaviour {
 
     private void Update() {
         // Stop targeting if the target is too far
-        if (_target && Vector3.Distance(_camera.transform.position, _target.transform.position) > _maxTargetingDistance) {
+        if (_target && Vector3.Distance(_camera.transform.position, _target.transform.position) >
+            _maxTargetingDistance) {
             _target = null;
         }
-        
+
         // Return if the target button hasn't been pressed
         if (!Input.GetButtonDown("Fire2")) {
             return;
@@ -45,14 +45,21 @@ public class Targeting : MonoBehaviour {
             for (int i = 0; i < EnemyTracker.activeEnemies.Count; i++) {
                 Debug.Log(_camera.ViewportToWorldPoint(EnemyTracker.activeEnemies[i].transform.position).magnitude);
 
+                
+                // Check if the enemy is in view & is close enough to be targeted
                 if (_camera.IsColliderInView(EnemyTracker.activeEnemies[i].GetComponent<Collider>())
                     && Vector3.Distance(_camera.transform.position, EnemyTracker.activeEnemies[i].transform.position) <
                     _maxTargetingDistance) {
-                    if (lowestIndex == -1
-                        || (_camera.WorldToViewportPoint(EnemyTracker.activeEnemies[i].transform.position) -
-                            new Vector3(.5f, .5f)).magnitude <
+                    
+                    // Magnitudes
+                    float curEnemyMagnitude =
+                        (_camera.WorldToViewportPoint(EnemyTracker.activeEnemies[i].transform.position) -
+                         new Vector3(.5f, .5f)).magnitude;
+                    float lowestMagnitude =
                         (_camera.WorldToViewportPoint(EnemyTracker.activeEnemies[lowestIndex].transform.position) -
-                         new Vector3(.5f, .5f)).magnitude) {
+                         new Vector3(.5f, .5f)).magnitude;
+                    
+                    if (lowestIndex == -1 || curEnemyMagnitude < lowestMagnitude) {
                         lowestIndex = i;
                     }
                 }
