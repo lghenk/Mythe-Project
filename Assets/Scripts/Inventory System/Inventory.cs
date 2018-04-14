@@ -49,7 +49,13 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void DropItem(ItemObject item) {
+		GameObject go = Instantiate(item.GameObject);
+		go.transform.position = transform.position;
+		Pickupable pickup = go.AddComponent<Pickupable>();
+		pickup.itemObject = item;
+		go.layer = 10;
 		
+		RemoveItem(item);
 		onItemDrop?.Invoke(item);
 	}
 
@@ -61,6 +67,28 @@ public class Inventory : MonoBehaviour {
 	public bool HasItem(ItemObject item, int amount = 1) {
 		if (CurrentInventory.ContainsKey(item) && CurrentInventory[item] >= amount) return true;
 		return false;
+	}
+
+	public void HandleCraftingRecipe(CraftableObject obj) {
+		if (obj.IsEnabled && obj.IsValidRecipe()) {
+			// First check if it is valid and enabled.. // shouldn't get here if its not but can't be too sure right?
+			bool canCraft = true;
+			
+			// Secondly check if we have all the nececairy items in our inventory
+			foreach (var requiredItem in obj.RequiredItems) {
+				if (!HasItem(requiredItem.obj, requiredItem.amount)) canCraft = false;
+			}
+
+			if (canCraft) {
+				// Remove the acual items
+				foreach (var requiredItem in obj.RequiredItems) {
+					RemoveItem(requiredItem.obj, requiredItem.amount);
+				}
+				
+				// Add the new item
+				AddItem(obj.ItemObject);
+			}
+		}
 	}
 	
 }
