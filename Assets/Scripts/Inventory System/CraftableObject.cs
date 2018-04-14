@@ -25,7 +25,7 @@ public class CraftableObject : ScriptableObject {
     public ReqItems[] RequiredItems => _requiredItems;
 
     public bool IsValidRecipe() {
-        return (_itemObject != null);
+        return (ItemObject != null && IsEnabled);
     }
 
     public void AddRequiredItem(ItemObject item, int amount = 1) {
