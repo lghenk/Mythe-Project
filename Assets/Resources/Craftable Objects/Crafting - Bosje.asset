@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e6807e4afea95344b4345352aea9817, type: 3}
-  m_Name: Kanker Bosje
+  m_Name: Crafting - Bosje
   m_EditorClassIdentifier: 
   _isEnabled: 1
   _itemObject: {fileID: 11400000, guid: 7e3544c8c79036043a90dba9452bdac9, type: 2}

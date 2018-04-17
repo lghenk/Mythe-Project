@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4896329254558396}
+  - component: {fileID: 65666770321041682}
   m_Layer: 0
   m_Name: struik 1
   m_TagString: Untagged
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039089349623112}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 374.53928, y: 0, z: 364.6384}
+  m_LocalPosition: {x: -7.275241, y: 4.6914726e-17, z: 3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4371170895700884}
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1170613054843108}
   m_Mesh: {fileID: 4300000, guid: 88fa1083d3f434635a6aced9a826e643, type: 3}
+--- !u!65 &65666770321041682
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039089349623112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.994873, y: 1.1701736, z: 2.9216328}
+  m_Center: {x: 8.191233, y: 0.6408911, z: -0.117554665}
