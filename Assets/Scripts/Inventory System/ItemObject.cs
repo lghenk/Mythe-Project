@@ -42,4 +42,8 @@ public class ItemObject : ScriptableObject {
     [SerializeField] 
     private MeleeType _meleeType;
     public MeleeType MeleeType => _meleeType;
+
+    [SerializeField]
+    private string _useBehaviour;
+    public string UseBehaviour => _useBehaviour;
 }

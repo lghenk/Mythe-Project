@@ -9,7 +9,7 @@ using UnityEngine;
 [CustomEditor(typeof(ItemObject))]
 public class ObjectEditor : Editor {
 
-    public SerializedProperty isEnabled, type, meleeType, itemName, itemDescription, itemIcon, gameObject;
+    public SerializedProperty isEnabled, type, meleeType, itemName, itemDescription, itemIcon, gameObject, useBehaviour;
     
     private void OnEnable() {
         isEnabled = serializedObject.FindProperty("_isEnabled");
@@ -19,6 +19,7 @@ public class ObjectEditor : Editor {
         itemDescription = serializedObject.FindProperty("_itemDescription");
         itemIcon = serializedObject.FindProperty("_itemIcon");
         gameObject = serializedObject.FindProperty("_gameObject");
+        useBehaviour = serializedObject.FindProperty("_useBehaviour");
     }
 
     public override void OnInspectorGUI() {
@@ -42,6 +43,9 @@ public class ObjectEditor : Editor {
             EditorGUILayout.LabelField("Weapon Item Specific Properties", EditorStyles.boldLabel);
 
             EditorGUILayout.PropertyField(meleeType, new GUIContent("Melee Type"));
+        } else if (myScript.Type == ItemObject.ItemType.Usable) {
+            EditorGUILayout.LabelField("Usable Item Specific Properties", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(useBehaviour, new GUIContent("Use Behaviour"));
         }
 
         serializedObject.ApplyModifiedProperties();

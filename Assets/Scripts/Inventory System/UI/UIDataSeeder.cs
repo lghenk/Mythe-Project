@@ -28,9 +28,12 @@ public class UIDataSeeder : MonoBehaviour {
         if (itemObject.Type == ItemObject.ItemType.CraftingComponent) {
             // Remove Equip Button
             Destroy(_equipButton.gameObject);
+        } else if (itemObject.Type == ItemObject.ItemType.Usable) {
+            _equipButton.transform.GetChild(0).GetComponent<Text>().text = "Use";
         }
         
         _dropButton?.onClick.AddListener(OnDropClick);
+        _equipButton?.onClick.AddListener(OnEquipClick);
     }
 
     public void SetCraftable(CraftableObject craftObject) {
@@ -47,6 +50,10 @@ public class UIDataSeeder : MonoBehaviour {
 
         _itemAmount.text = (canCraftAmount.Count > 0) ? canCraftAmount.Min(item => item).ToString() : "0";
         _craftButton?.onClick.AddListener(OnCraftClick);
+    }
+    
+    private void OnEquipClick() {
+        Inventory.Instance.EquipItem(_itemObject);
     }
 
     private void OnCraftClick() {
