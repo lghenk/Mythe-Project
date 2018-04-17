@@ -11,7 +11,6 @@ using UnityEngine;
 /// </summary>
 public class PlayerUseHandler : EquipListener {
     protected override void OnItemEquip(ItemObject itemObject) { 
-        print("Equip... 2");
         if (itemObject.Type == ItemObject.ItemType.Usable) {
             var assembly = Assembly.GetExecutingAssembly();
 

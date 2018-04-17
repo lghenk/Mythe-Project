@@ -60,7 +60,6 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void EquipItem(ItemObject item) {
-		print("Equip...");
 		onItemEquip?.Invoke(item);
 	}
 
