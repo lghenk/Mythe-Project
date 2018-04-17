@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class GenerateCraftingSlots : MonoBehaviour {
 
 	[SerializeField]
@@ -69,12 +71,8 @@ public class GenerateCraftingSlots : MonoBehaviour {
 	
 	private void LoadItems() {
 		_craftableObjects.Clear();
-		
-		string[] itemObjects = AssetDatabase.FindAssets("t:CraftableObject");
-		foreach (var obj in itemObjects) {
-			CraftableObject io = (CraftableObject)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(obj), typeof(CraftableObject));
-			_craftableObjects.Add(io);
-		}
+
+		_craftableObjects = Resources.FindObjectsOfTypeAll<CraftableObject>().ToList();
 	}
 
 }

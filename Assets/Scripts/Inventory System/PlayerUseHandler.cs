@@ -17,7 +17,7 @@ public class PlayerUseHandler : EquipListener {
             var assembly = Assembly.GetExecutingAssembly();
 
             var type = assembly.GetTypes()
-                .First(t => t.Name == itemObject.UseBehaviour);
+                .FirstOrDefault(t => t.Name == itemObject.UseBehaviour);
 
             if (type == null) {
                 throw new Exception($"Use Behaviour Class \"{itemObject.UseBehaviour}\" Not Found!");
