@@ -36,11 +36,13 @@ public class AnimationHandler : MonoBehaviour {
     public void SetAnimation(string anim) {
         _currentAnimParameter = anim;
         _animator?.SetTrigger(anim);
+        
         StartCoroutine(AwaitForParamClose());
+        _animator.GetBool(_currentAnimParameter);
     }
 
     IEnumerator AwaitForParamClose() { // Yeet
-        yield return new WaitUntil(() => _animator.GetBool(_currentAnimParameter) == false || _animator.GetInteger(_currentAnimParameter) == -1);
+        yield return new WaitUntil(() => _animator.GetBool(_currentAnimParameter) == false);
         onAnimationFinish?.Invoke();
     }
 }

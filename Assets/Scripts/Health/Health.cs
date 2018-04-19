@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// Created By Timo Heijne
 /// <summary>
@@ -11,17 +12,12 @@ public class Health : MonoBehaviour {
     /// <summary>
     /// An Event that invokes when the Object that has this health script supposedly dies
     /// </summary>
-    public delegate void OnDeath();
-    public OnDeath onDeath;
+    public Action<Health> onDeath;
 
     /// <summary>
     /// An Event that invokes when the object that has this health script gets sum damage
     /// </summary>
-    /// <param name="damageAmount">The amount of damage is has taken</param>
-    /// <param name="curHeath">The health is currently has (after the damage has substracted)</param>
-    /// <param name="startingHealth">The health this object has started with</param>
-    public delegate void OnDamage(float damageAmount, float curHeath, float startingHealth);
-    public OnDamage onDamage;
+    public Action<float, float, float, Health> onDamage;
 
     [SerializeField] [Tooltip("Define an overriding health module if the default handling is not wanted (for example Down But Not Out would need different handling)")]
     private HealthBaseModule _healthModule;
@@ -42,8 +38,13 @@ public class Health : MonoBehaviour {
         if (_healthModule) {
             _healthModule.OnDamage(amount, CurHealth, _startingHealth);
         } else {
-            onDamage?.Invoke(amount, CurHealth, _startingHealth);
+            onDamage?.Invoke(amount, CurHealth, _startingHealth, this);
         }
+    }
+
+    public void SetHealth(float h) {
+        CurHealth = h;
+        CheckDeath();
     }
 
     /// <summary>
@@ -51,6 +52,10 @@ public class Health : MonoBehaviour {
     /// </summary>
     /// <returns>A boolean if true object is dead</returns>
     public bool IsDead() {
+        if (_healthModule) {
+            return _healthModule.IsDead;
+        } 
+        
         return (CurHealth <= 0);
     }
 
@@ -60,7 +65,7 @@ public class Health : MonoBehaviour {
         if (_healthModule) {
             _healthModule.OnDeath();
         } else {
-            onDeath?.Invoke();
+            onDeath?.Invoke(this);
         }
     }
 }

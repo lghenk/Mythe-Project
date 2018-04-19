@@ -17,8 +17,6 @@ public class ChargeAttackState : State {
 	
 	private NavMeshAgent _navMeshAgent;
 	private AnimationHandler _animationHandler;
-
-	private bool _goBackToIdle = false;
  
 	private void Start() {
 		stateName = "ChargeAttackState";
@@ -30,7 +28,6 @@ public class ChargeAttackState : State {
 		_navMeshAgent.speed = 5;
 		_navMeshAgent.isStopped = false;
 		_animationHandler.SetAnimation("Charging", true);
-		_goBackToIdle = false;
 	}
 
 	public override void Act(StateMachine machine) {
@@ -38,17 +35,14 @@ public class ChargeAttackState : State {
 	}
 
 	public override void Reason(StateMachine machine) {		
-		if (Vector3.Distance(target.position, transform.position) > _chargeRange || _goBackToIdle) {
+		if (Vector3.Distance(target.position, transform.position) > _chargeRange) {
 			machine.CurrentState = machine.GetState("IdleState");
 		} else if (Vector3.Distance(target.position, transform.position) < _attackRange) {
+			_navMeshAgent.isStopped = true;
 			_animationHandler.SetAnimation("Attack");
-			_animationHandler.onAnimationFinish += OnAnimationFinish;
+			
+			machine.CurrentState = machine.GetState("IdleState");
 		}
-	}
-	
-	private void OnAnimationFinish() {
-		_goBackToIdle = true;
-		_animationHandler.onAnimationFinish -= OnAnimationFinish;
 	}
 
 	public override void ExitState(StateMachine machine) {
