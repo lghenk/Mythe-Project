@@ -7,9 +7,13 @@ public class GenerateInventorySlots : MonoBehaviour {
 
 	[SerializeField]
 	private GameObject _listItemPrefab;
-
-	// Use this for initialization
+	
 	void Start () {
+		StartCoroutine(WaitForInventory());
+	}
+
+	IEnumerator WaitForInventory() {
+		yield return new WaitUntil(() => Inventory.Instance != null);
 		if(Inventory.Instance == null) throw new Exception("Cannot initialize Generate Inventory Slots... No inventory exists");
 		Inventory.Instance.onItemAdd += OnItemAdd;
 		Inventory.Instance.onItemRemove += OnItemRemove;
