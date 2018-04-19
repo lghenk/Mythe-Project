@@ -36,6 +36,12 @@ public class ThirdPersonMovement : MonoBehaviour
         Movement(moveVector);
         
         Vector3 velocity = moveVector * currentVelocity * Time.deltaTime + Vector3.up * currentGravity;
+        
+        #if UNITY_EDITOR
+        Vector3 origin = transform.position + Vector3.up * 0.1f;
+        Debug.DrawLine(origin, origin + velocity, Color.red);
+        #endif
+        
         _tpc.Move(velocity * Time.deltaTime);
     }
 
@@ -45,7 +51,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (currentGravity < MAX_GRAVITY)
             currentGravity = MAX_GRAVITY;
 
-        if (_tpc.CheckGrounded(currentGravity * Time.deltaTime, true)) 
+        if (_tpc.CheckGrounded(currentGravity * Time.deltaTime, placeOnGround:true)) 
         {
             currentGravity = 0;
         }

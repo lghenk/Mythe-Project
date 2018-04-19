@@ -1281,7 +1281,7 @@ Camera:
     height: 1
   near clip plane: 0.11
   far clip plane: 1000
-  field of view: 75
+  field of view: 94
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1305,13 +1305,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993848909}
-  m_LocalRotation: {x: -0.23071101, y: -0.0037975917, z: 0.0009005149, w: -0.97301453}
+  m_LocalRotation: {x: 0.0011344665, y: 0.0039007594, z: -0.000004425317, w: 0.9999918}
   m_LocalPosition: {x: 3.3209817, y: 10.083595, z: -2.5355446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.13, y: 0.44700003, z: 0}
 --- !u!114 &993848914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,12 +1324,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 846564530}
-  _offset: {x: 0, y: 0.5, z: 3.17}
+  _offset: {x: 0.49, y: 0.13, z: 1.75}
   _sens: 300
   _smoothRotation: 1
-  _smoothPosition: 0
-  _smoothRotAmount: 8
-  _smoothPosAmount: 8
+  _smoothPosition: 1
+  _smoothRotAmount: 4.81
+  _smoothPosAmount: 5.95
   _cameraLayerMask:
     serializedVersion: 2
     m_Bits: 4294966527
@@ -1409,7 +1409,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-511512
+  m_Name: pb_Mesh3704
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

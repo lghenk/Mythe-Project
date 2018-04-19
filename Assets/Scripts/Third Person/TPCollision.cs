@@ -13,9 +13,50 @@ public class TPCollision : MonoBehaviour
 	[SerializeField] private LayerMask _collisionMask;
 	private CapsuleCollider _collider;
 
+	/// <summary>
+	/// Move the character with the velocity, without gravity
+	/// </summary>
+	/// <param name="velocity">velocity to go to</param>
+	public void Move(Vector3 velocity)
+	{
+		Vector3 vel = velocity;
+		Vector3 moveVector = vel;
+		moveVector.y = 0;
+		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
+		
+		if (walkingOnSlope) vel = vel.normalized * moveVector.magnitude;
+		
+		TestCollision(ref vel);
+		
+		transform.position += vel;
+        
+		if (walkingOnSlope)
+		{
+			PushToGround();
+		}
+	}
+	
 	private void Start()
 	{
 		_collider = GetComponent<CapsuleCollider>();
+	}
+
+	/// <summary>
+	/// Adjusts the velocity so that the player doesn't immediately stop against the wall, but slides along it.
+	/// </summary>
+	/// <param name="velocity">The current velocity to adjust</param>
+	/// <param name="info">The raycast info to use</param>
+	private void SlideAlongWall(ref Vector3 velocity, RaycastHit info)
+	{
+		Vector3 normal = info.normal;
+		normal.y = 0;
+		normal.Normalize();
+
+		float y = velocity.y;
+		Vector3 moveDir = Vector3.Cross(normal, Vector3.up);
+		Vector3 newVelocity = Vector3.Project(velocity, moveDir);
+		velocity = newVelocity;
+		velocity.y = y;
 	}
 	
 	/// <summary>
@@ -39,7 +80,6 @@ public class TPCollision : MonoBehaviour
 		angle = Vector3.Angle(info.normal, Vector3.up);
 		if (angle > MAX_ANGLE || Mathf.Abs(angle) < float.Epsilon)
 		{
-			//velocity = velocity.normalized * info.distance;
 			return false;
 		}
 
@@ -72,34 +112,21 @@ public class TPCollision : MonoBehaviour
 	/// <param name="velocity"></param>
 	private void TestCollision(ref Vector3 velocity)
 	{
-		Vector3 p1, p2;
 		RaycastHit hit;
+
+		if (!GetCapsuleCast(velocity, out hit)) return;
+
+		SlideAlongWall(ref velocity, hit);
+	}
+
+	private bool GetCapsuleCast(Vector3 velocity, out RaycastHit info )
+	{
+		Vector3 p1, p2;
 		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
 		p2 = transform.position + Vector3.up * (_collider.radius);
 
-		if (!(Physics.CapsuleCast(p1, p2, _collider.radius - 0.05f, velocity.normalized, out hit, velocity.magnitude,
-			_collisionMask))) return;
-
-		print(hit.distance);
-		velocity = velocity.normalized * (hit.distance - 0.01f);
-	}
-
-	// Move the character with the velocity
-	public void Move(Vector3 velocity)
-	{
-		Vector3 vel = velocity;
-		Vector3 moveVector = vel;
-		moveVector.y = 0;
-		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
-		
-		TestCollision(ref vel);
-		//velocity = vel;
-		transform.position += vel;
-        
-		if (walkingOnSlope)
-		{
-			PushToGround();
-		}
+		return (Physics.CapsuleCast(p1, p2, _collider.radius - 0.05f, velocity.normalized, out info, velocity.magnitude,
+			_collisionMask));
 	}
 	
 	private void PushToGround()
@@ -113,13 +140,15 @@ public class TPCollision : MonoBehaviour
 	{
 		Vector3 p1 = transform.position + Vector3.up * (_collider.radius + _collider.height);
 		Vector3 p2 = transform.position + Vector3.up * _collider.radius;
-		RaycastHit hit;
-		bool grounded = Physics.Raycast(transform.position + Vector3.up * 0.25f, Vector3.down, out hit, -gravity + 0.25f,_collisionMask);
-		//bool grounded = Physics.CapsuleCast(p1, p2, _collider.radius, Vector3.down, out hit, -gravity + 0.5f, _collisionMask);
+		
+		RaycastHit info;
+		const float castHeight = 0.25f;
+		
+		bool grounded = Physics.Raycast(transform.position + Vector3.up * castHeight, Vector3.down, out info, -gravity + castHeight,_collisionMask);
 
 		if (placeOnGround && grounded)
 		{
-			transform.position = hit.point;
+			transform.position = info.point;
 		}
 		
 		return grounded;
