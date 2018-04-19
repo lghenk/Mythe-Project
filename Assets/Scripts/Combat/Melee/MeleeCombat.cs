@@ -3,7 +3,7 @@
 /// <summary>
 /// Made by Koen Sparreboom
 /// </summary>
-public class MeleeCombat : MonoBehaviour {
+public class MeleeCombat : EquipListener {
     [SerializeField]
     private MeleeType _meleeType;
 
@@ -31,5 +31,11 @@ public class MeleeCombat : MonoBehaviour {
     public void ChangeWeapon(MeleeType meleeType) {
         _meleeType = meleeType;
         _damageTrigger.Damage = _meleeType.Damage;
+    }
+
+    protected override void OnItemEquip(ItemObject itemObject) {
+        if (itemObject.Type == ItemObject.ItemType.Weapon) {
+            ChangeWeapon(itemObject.MeleeType);
+        }
     }
 }

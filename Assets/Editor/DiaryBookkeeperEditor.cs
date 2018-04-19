@@ -21,7 +21,7 @@ public class DiaryBookkeeperEditor : Editor {
 		
 		GUILayout.Space(20);
 		EditorGUILayout.LabelField("Debug Options", EditorStyles.boldLabel);
-		EditorGUILayout.Popup("Clip Name:", _selected, _options.ToArray());
+		_selected = EditorGUILayout.Popup("Clip Name:", _selected, _options.ToArray());
 		
 		if(GUILayout.Button("Test Play")) {
 			myScript.PlayByName(_options[_selected]);

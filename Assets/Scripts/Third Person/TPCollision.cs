@@ -93,7 +93,7 @@ public class TPCollision : MonoBehaviour
 		
 		RaycastHit info;
 		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, 
-			moveDistance + _collider.radius / 2, _collisionMask)) return false;
+			moveDistance + _collider.radius / 2, _collisionMask, QueryTriggerInteraction.Ignore)) return false;
 			
 		angle = Vector3.Angle(info.normal, Vector3.up);
 		if (angle > MAX_ANGLE || Mathf.Abs(angle) < float.Epsilon)
@@ -144,7 +144,7 @@ public class TPCollision : MonoBehaviour
 		p2 = transform.position + Vector3.up * (_collider.radius);
 
 		return (Physics.CapsuleCast(p1, p2, _collider.radius - 0.001f, velocity.normalized, out info, velocity.magnitude,
-			_collisionMask));
+			_collisionMask, QueryTriggerInteraction.Ignore));
 	}
 	
 	private void PushToGround()
@@ -155,9 +155,7 @@ public class TPCollision : MonoBehaviour
 	}
 
 	private void UpdateGrounded(float velocity)
-	{
-		print(velocity);
-		
+	{	
 		if (velocity > 0.1f)
 		{
 			_grounded = false;
@@ -168,6 +166,6 @@ public class TPCollision : MonoBehaviour
 		
 		const float castHeight = 0.25f;
 		_grounded = Physics.Raycast(transform.position + Vector3.up * RAYCAST_HEIGHT, Vector3.down, out _groundedInfo, 
-			length, _collisionMask);
+			length, _collisionMask, QueryTriggerInteraction.Ignore);
 	}
 }
