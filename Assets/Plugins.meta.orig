@@ -1,8 +1,10 @@
 fileFormatVersion: 2
-guid: a5e9cc8210657487c85f33a62d93259a
+<<<<<<< HEAD
+guid: cfad14c70e590d34e9b0d38557aeca14
+=======
+guid: e14c4f859bcd34c1e9f1f05676433f8e
+>>>>>>> origin/tpCollisionj
 folderAsset: yes
-timeCreated: 1523516717
-licenseType: Free
 DefaultImporter:
   externalObjects: {}
   userData: 
