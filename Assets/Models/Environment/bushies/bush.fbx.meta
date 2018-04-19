@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: f3029dc71dca6461096ac3abc0c69e0a
-timeCreated: 1523295623
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -12,7 +10,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: bush
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert11
+    second: {fileID: 2100000, guid: 7aad2de38922444949e6a1363bf3ab8d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -31,6 +34,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

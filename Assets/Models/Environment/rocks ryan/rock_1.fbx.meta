@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 27006799f70304a03bad8a8a04a27990
-timeCreated: 1523523818
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -12,7 +10,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: rock_1
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8
+    second: {fileID: 2100000, guid: 934dffb1c2661481485551caa53a0b97, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -31,6 +34,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
