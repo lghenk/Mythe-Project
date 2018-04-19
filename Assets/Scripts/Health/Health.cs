@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using UnityEngine;
+
 
 /// Created By Timo Heijne
 /// <summary>
@@ -13,7 +14,6 @@ public class Health : MonoBehaviour {
     /// An Event that invokes when the Object that has this health script supposedly dies
     /// </summary>
     public Action<Health> onDeath;
-
     /// <summary>
     /// An Event that invokes when the object that has this health script gets sum damage
     /// </summary>
