@@ -19,6 +19,8 @@ public class Health : MonoBehaviour {
     /// </summary>
     public Action<float, float, float, Health> onDamage;
 
+    public Action<string> onMessage;
+
     [SerializeField] [Tooltip("Define an overriding health module if the default handling is not wanted (for example Down But Not Out would need different handling)")]
     private HealthBaseModule _healthModule;
 

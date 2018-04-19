@@ -13,6 +13,7 @@ public class DBNOModule : HealthBaseModule {
         if (curHeath <= 0 && isDBNO == false) {
             health.SetHealth(5);
             isDBNO = true;
+            health.onMessage?.Invoke("DBNO");
         }
         
         health.onDamage?.Invoke(damageAmount, health.CurHealth, startingHealth, health);
