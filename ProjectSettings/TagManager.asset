@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - PlayerLayer
-  - 
-  - 
+  - PostProcessing
+  - Player
+  - Pickup
   - 
   - 
   - 

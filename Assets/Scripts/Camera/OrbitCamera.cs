@@ -5,14 +5,10 @@ using UnityEngine;
 public class OrbitCamera : MonoBehaviour
 {
     public bool Follow { get; set; }
-    public float Sensitivity { get; set; }
     public Transform Target { get; set; }
-    public Vector2 MouseDelta => new Vector2(Input.GetAxis("Mouse X") * Sensitivity, 
-        Input.GetAxis("Mouse Y") * Sensitivity);
 
     [SerializeField] private Transform _target;
     [SerializeField] private Vector3 _offset;
-    [SerializeField] private float _sens = 1.0f;
     [SerializeField] private bool _smoothRotation, _smoothPosition;
     [SerializeField] private float _smoothRotAmount = 1.0f, _smoothPosAmount = 1.0f;
     [SerializeField] private LayerMask _cameraLayerMask;
@@ -22,7 +18,6 @@ public class OrbitCamera : MonoBehaviour
     private void Awake()
     {
         Follow = true;
-        Sensitivity = _sens;
         Target = _target;
 
         _rotation = transform.rotation;
@@ -30,15 +25,12 @@ public class OrbitCamera : MonoBehaviour
     
     private void LateUpdate()
     {
-        if (Target == null || !Follow) return;
-
-        var mouseDelta = MouseDelta;
-
-        Move(mouseDelta);
     }
 
-    public void Move(Vector3 delta)
+    public void Rotate(Vector3 delta)
     {
+        if (Target == null || !Follow) return;
+        
         var wantedRotation = _rotation.eulerAngles;
         wantedRotation.y += delta.x * Time.deltaTime;
         wantedRotation.x += delta.y * Time.deltaTime;
