@@ -172,6 +172,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2ad9094eeea9f0340813f1438d77cae2, type: 2}
+    - target: {fileID: 114882195468918130, guid: ce491093a349bd3468f0b640b09b1982,
+        type: 2}
+      propertyPath: _healthModule
+      value: 
+      objectReference: {fileID: 703446258}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce491093a349bd3468f0b640b09b1982, type: 2}
   m_IsPrefabParent: 0
@@ -296,6 +301,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goodState: {fileID: 0}
   _hostileState: {fileID: 0}
+--- !u!114 &703446258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703446256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215e0b337d2a4c04ab123685ac6b9fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &703446259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703446256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2732dbe77698d468af6a1c4af7f44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateName: 
+  _bleedOutTime: 60
 --- !u!1 &802346198
 GameObject:
   m_ObjectHideFlags: 0

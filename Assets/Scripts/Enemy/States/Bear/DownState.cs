@@ -9,6 +9,8 @@ public class DownState : State {
 	private float _downedTime;
 	private Health _health;
 	private StateMachine _machine;
+	private AnimationHandler _animationHandler;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +21,7 @@ public class DownState : State {
 		_health.onMessage += OnMessage;
 
 		_machine = GetComponent<StateMachine>();
+		_animationHandler = GetComponent<AnimationHandler>();
 	}
 
 	private void OnMessage(string s) {
@@ -28,19 +31,20 @@ public class DownState : State {
 	}
 
 	public override void EnterState(StateMachine machine) {
+		_animationHandler.SetAnimation("Dead", true);
 		_downedTime = Time.timeSinceLevelLoad;
 	}
 
 	public override void Act(StateMachine machine) {
-		throw new System.NotImplementedException();
+		//throw new System.NotImplementedException();
 	}
 
 	public override void Reason(StateMachine machine) {
-		throw new System.NotImplementedException();
+		//throw new System.NotImplementedException();
 	}
 
 	public override void ExitState(StateMachine machine) {
-		base.ExitState(machine);
+		_animationHandler.SetAnimation("Dead", false);
 	}
 	
 	private void OnDeath(Health health) {
