@@ -2082,6 +2082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goodState: {fileID: 2100000, guid: ea29a27fbfcc0ae4790a102e7ef662a4, type: 2}
   _hostileState: {fileID: 2100000, guid: 2ad9094eeea9f0340813f1438d77cae2, type: 2}
+  _renderer: {fileID: 137930498616652150}
 --- !u!114 &114457635425002318
 MonoBehaviour:
   m_ObjectHideFlags: 1

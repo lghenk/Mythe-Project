@@ -10,7 +10,7 @@ public class DownState : State {
 	private Health _health;
 	private StateMachine _machine;
 	private AnimationHandler _animationHandler;
-
+	private BehaviourState _behaviourState;
 
 	// Use this for initialization
 	void Start () {
@@ -22,17 +22,23 @@ public class DownState : State {
 
 		_machine = GetComponent<StateMachine>();
 		_animationHandler = GetComponent<AnimationHandler>();
+
+		_behaviourState = GetComponent<BehaviourState>();
 	}
 
 	private void OnMessage(string s) {
 		if (s == "DBNO") { // The health system just announced that its now DBNO
 			_machine.CurrentState = _machine.GetState(stateName); // Switch the state machine to this.
+		} else if (s == "Resurrect") {
+			_behaviourState.SetState(BehaviourState.BehaviourStates.Friendly);
+			_machine.CurrentState = _machine.GetState("IdleState");
 		}
 	}
 
 	public override void EnterState(StateMachine machine) {
 		_animationHandler.SetAnimation("Dead", true);
 		_downedTime = Time.timeSinceLevelLoad;
+		_behaviourState.SetState(BehaviourState.BehaviourStates.DBNO);
 	}
 
 	public override void Act(StateMachine machine) {

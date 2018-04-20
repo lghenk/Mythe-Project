@@ -25,10 +25,9 @@ public class MeleeCombat : EquipListener {
         if (_meleeType == null) return;
         
         Ray ray;
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 2, Vector3.forward, Mathf.Infinity,  _collisionLayers.value);
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 1, Vector3.forward, Mathf.Infinity,  _collisionLayers.value);
 
         foreach (var hit in hits) {
-            print(hit.transform.name);
             hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
         }
     }
