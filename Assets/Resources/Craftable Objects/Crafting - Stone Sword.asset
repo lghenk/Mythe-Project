@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e6807e4afea95344b4345352aea9817, type: 3}
-  m_Name: Crafting - Bosje
+  m_Name: Crafting - Stone Sword
   m_EditorClassIdentifier: 
   _isEnabled: 1
-  _itemObject: {fileID: 11400000, guid: 7e3544c8c79036043a90dba9452bdac9, type: 2}
+  _itemObject: {fileID: 11400000, guid: 3601d33ee7333324b91024a429af1568, type: 2}
   _requiredItems:
-  - obj: {fileID: 11400000, guid: 60558aee2d8ae4647acb9fdf19a039be, type: 2}
-    amount: 2
+  - obj: {fileID: 11400000, guid: 3b803db2edd90f04798ba6768de03378, type: 2}
+    amount: 1
