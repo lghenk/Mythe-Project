@@ -16,19 +16,22 @@ public class MeleeCombat : EquipListener {
     [SerializeField]
     private string _animatorAttackState = "Attack";
 
+    [SerializeField] 
+    private GameObject _weaponPoint;
+
+    private GameObject _currentWeapon;
+
     private void Start() {
         _damageTrigger.Damage = _meleeType.Damage;
     }
 
     private void Update() {
-        /*if (Input.GetButtonDown("Fire1")) {
-            Attack();
-        }*/
-
         _damageTrigger.Enabled = _animator.GetCurrentAnimatorStateInfo(0).IsName(_animatorAttackState);
     }
 
     public void ChangeWeapon(MeleeType meleeType) {
+        _damageTrigger = _currentWeapon.GetComponent<DamageTrigger>();
+        
         _meleeType = meleeType;
         _damageTrigger.Damage = _meleeType.Damage;
     }
@@ -36,6 +39,8 @@ public class MeleeCombat : EquipListener {
     protected override void OnItemEquip(ItemObject itemObject) {
         if (itemObject.Type == ItemObject.ItemType.Weapon) {
             ChangeWeapon(itemObject.MeleeType);
+
+            _currentWeapon = Instantiate(itemObject.GameObject, _weaponPoint.transform);
         }
     }
 }
