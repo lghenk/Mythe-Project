@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 4229717e21fca497f9fb40384cb778fd
-timeCreated: 1522306367
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -13,7 +11,12 @@ ModelImporter:
     2300000: pCube3
     3300000: pCube3
     4300000: pCube3
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube3Mat
+    second: {fileID: 2100000, guid: 934dffb1c2661481485551caa53a0b97, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -32,6 +35,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
