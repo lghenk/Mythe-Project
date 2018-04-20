@@ -1,13 +1,9 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-guid: e14c4f859bcd34c1e9f1f05676433f8e
-=======
-<<<<<<< HEAD
-guid: 268e8e2d8f694d9469c2f56116980ed6
-=======
 guid: cfad14c70e590d34e9b0d38557aeca14
->>>>>>> ae5cc4cd700143332f1420290eb6c97e5649b83e
->>>>>>> d3f557a6c643848c7bf5f28c574cee5788e6d22a
+=======
+guid: e14c4f859bcd34c1e9f1f05676433f8e
+>>>>>>> origin/tpCollisionj
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
