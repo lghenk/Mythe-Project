@@ -16,6 +16,7 @@ MonoBehaviour:
   _itemName: Wooden Sword
   _itemDescription: 
   _itemIcon: {fileID: 21300000, guid: 66c9a76b5b7982446bf48ec77a8103e8, type: 3}
-  _gameObject: {fileID: 0}
+  _gameObject: {fileID: 1993113231837932, guid: f2443746cff9f354bb33d374308dfb95,
+    type: 2}
   _meleeType: {fileID: 11400000, guid: ebc2df3331609cc47a07bc9aacf262af, type: 2}
   _useBehaviour: 

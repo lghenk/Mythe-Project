@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class PlayerAttackInput : MonoBehaviour {
 
-	private AnimationHandler _animHandler;
-
+	private MeleeCombat _meleeCombat;
+	private AnimationHandler _animationHandler;
+	
 	private void Start() {
-		_animHandler = GetComponent<AnimationHandler>();
+		_meleeCombat = GetComponent<MeleeCombat>();
+		_animationHandler = GetComponent<AnimationHandler>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
-			_animHandler.SetAnimation("Attack");
+			_meleeCombat.Attack();
+			_animationHandler.SetAnimation("Attack");
 		}
 	}
 }
