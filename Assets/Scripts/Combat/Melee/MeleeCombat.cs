@@ -13,8 +13,13 @@ public class MeleeCombat : EquipListener {
 
     [SerializeField] 
     private GameObject _weaponPoint;
+    
+    [SerializeField] 
+    private float _attackCooldown = 5;
 
     private GameObject _currentWeapon;
+
+    private float _lastAttack;
 
     protected void Start() {
         base.Start();
@@ -22,7 +27,7 @@ public class MeleeCombat : EquipListener {
     }
 
     public void Attack() {
-        if (_meleeType == null) return;
+        if (_meleeType == null || Time.timeSinceLevelLoad - _lastAttack < _attackCooldown) return;
         
         Ray ray;
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, 1, Vector3.forward, Mathf.Infinity,  _collisionLayers.value);
@@ -30,6 +35,8 @@ public class MeleeCombat : EquipListener {
         foreach (var hit in hits) {
             hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
         }
+
+        _lastAttack = Time.timeSinceLevelLoad;
     }
 
     public void ChangeWeapon(MeleeType meleeType) {
