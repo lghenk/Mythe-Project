@@ -36,7 +36,11 @@ public class DownState : State {
 	}
 
 	public override void Act(StateMachine machine) {
-		//throw new System.NotImplementedException();
+		if (Time.timeSinceLevelLoad - _downedTime >= _bleedOutTime) {
+			// Player let animal bleed out...
+			// Trigger kill stuff for now Destroy
+			Destroy(gameObject);
+		}
 	}
 
 	public override void Reason(StateMachine machine) {
@@ -48,6 +52,6 @@ public class DownState : State {
 	}
 	
 	private void OnDeath(Health health) {
-		throw new NotImplementedException();
+		Destroy(gameObject); // Player decided to kill this poor beast. Destroy it
 	}
 }
