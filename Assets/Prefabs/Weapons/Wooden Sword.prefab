@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 65259080568845924}
   - component: {fileID: 114533635532990848}
   - component: {fileID: 54591918267671996}
+  - component: {fileID: 114479608820631480}
   m_Layer: 12
   m_Name: Wooden Sword
   m_TagString: Untagged
@@ -233,7 +234,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 950759412a6318845a6a65b2a9ddeb74, type: 3}
+  - {fileID: 2100000, guid: 2079b022d1408d742beb74ea015d339f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,6 +288,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0811157, y: 0.0903604, z: 0.14446259}
   m_Center: {x: -0.38, y: 0.018110871, z: -0.013851166}
+--- !u!114 &114479608820631480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993113231837932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbbd6acdc3f89e4ba0b5a09885302f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemObject: {fileID: 11400000, guid: 3b803db2edd90f04798ba6768de03378, type: 2}
 --- !u!114 &114533635532990848
 MonoBehaviour:
   m_ObjectHideFlags: 1
