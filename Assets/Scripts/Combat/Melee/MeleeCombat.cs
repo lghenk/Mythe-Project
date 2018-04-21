@@ -45,8 +45,7 @@ public class MeleeCombat : EquipListener {
 
     protected override void OnItemEquip(ItemObject itemObject) {
         if (itemObject.Type == ItemObject.ItemType.Weapon) {
-            print("Testing Bibba");
-                
+             
             if(_currentWeapon)
                 Destroy(_currentWeapon);
             
