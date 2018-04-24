@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: db99967ea3fd60a418a0e1b3edffe647
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bear_moddle_basic:back_ankle_L
+    100002: Bear_moddle_basic:back_ankle_R
+    100004: Bear_moddle_basic:back_knee_L
+    100006: Bear_moddle_basic:back_knee_R
+    100008: Bear_moddle_basic:back_leg_L
+    100010: Bear_moddle_basic:back_leg_L_ctrl
+    100012: Bear_moddle_basic:back_leg_R
+    100014: Bear_moddle_basic:back_leg_R_ctrl
+    100016: Bear_moddle_basic:back_paw_L
+    100018: Bear_moddle_basic:back_paw_L_ctrl
+    100020: Bear_moddle_basic:back_paw_R
+    100022: Bear_moddle_basic:back_paw_R_ctrl
+    100024: Bear_moddle_basic:back_toes_L
+    100026: Bear_moddle_basic:back_toes_L_ctrl
+    100028: Bear_moddle_basic:back_toes_R
+    100030: Bear_moddle_basic:back_toes_R_ctrl
+    100032: Bear_moddle_basic:bear
+    100034: Bear_moddle_basic:begin_spine
+    100036: Bear_moddle_basic:begin_spine_ctrl
+    100038: Bear_moddle_basic:end_spine
+    100040: Bear_moddle_basic:end_spine_ctrl
+    100042: Bear_moddle_basic:face
+    100044: Bear_moddle_basic:front_ankle_L
+    100046: Bear_moddle_basic:front_ankle_R
+    100048: Bear_moddle_basic:front_knee_L
+    100050: Bear_moddle_basic:front_knee_R
+    100052: Bear_moddle_basic:front_leg_L
+    100054: Bear_moddle_basic:front_leg_L_ctrl
+    100056: Bear_moddle_basic:front_leg_R
+    100058: Bear_moddle_basic:front_leg_R_ctrl
+    100060: Bear_moddle_basic:front_paw_L
+    100062: Bear_moddle_basic:front_paw_L_ctrl
+    100064: Bear_moddle_basic:front_paw_R
+    100066: Bear_moddle_basic:front_paw_R_ctrl
+    100068: Bear_moddle_basic:front_shoulder_L
+    100070: Bear_moddle_basic:front_shoulder_R
+    100072: Bear_moddle_basic:front_toes_L
+    100074: Bear_moddle_basic:front_toes_L_ctrl
+    100076: Bear_moddle_basic:front_toes_R
+    100078: Bear_moddle_basic:front_toes_R_ctrl
+    100080: Bear_moddle_basic:head
+    100082: Bear_moddle_basic:head_ctrl
+    100084: Bear_moddle_basic:hip
+    100086: Bear_moddle_basic:ikHandle1
+    100088: Bear_moddle_basic:ikHandle10
+    100090: Bear_moddle_basic:ikHandle11
+    100092: Bear_moddle_basic:ikHandle12
+    100094: Bear_moddle_basic:ikHandle13
+    100096: Bear_moddle_basic:ikHandle14
+    100098: Bear_moddle_basic:ikHandle15
+    100100: Bear_moddle_basic:ikHandle17
+    100102: Bear_moddle_basic:ikHandle2
+    100104: Bear_moddle_basic:ikHandle3
+    100106: Bear_moddle_basic:ikHandle4
+    100108: Bear_moddle_basic:ikHandle5
+    100110: Bear_moddle_basic:ikHandle6
+    100112: Bear_moddle_basic:ikHandle7
+    100114: Bear_moddle_basic:ikHandle8
+    100116: Bear_moddle_basic:ikHandle9
+    100118: Bear_moddle_basic:neck
+    100120: Bear_moddle_basic:snout
+    100122: Bear_moddle_basic:spine
+    100124: Bear_moddle_basic:spine_ctrl
+    100126: Bear_moddle_basic:top_head
+    100128: //RootNode
+    400000: Bear_moddle_basic:back_ankle_L
+    400002: Bear_moddle_basic:back_ankle_R
+    400004: Bear_moddle_basic:back_knee_L
+    400006: Bear_moddle_basic:back_knee_R
+    400008: Bear_moddle_basic:back_leg_L
+    400010: Bear_moddle_basic:back_leg_L_ctrl
+    400012: Bear_moddle_basic:back_leg_R
+    400014: Bear_moddle_basic:back_leg_R_ctrl
+    400016: Bear_moddle_basic:back_paw_L
+    400018: Bear_moddle_basic:back_paw_L_ctrl
+    400020: Bear_moddle_basic:back_paw_R
+    400022: Bear_moddle_basic:back_paw_R_ctrl
+    400024: Bear_moddle_basic:back_toes_L
+    400026: Bear_moddle_basic:back_toes_L_ctrl
+    400028: Bear_moddle_basic:back_toes_R
+    400030: Bear_moddle_basic:back_toes_R_ctrl
+    400032: Bear_moddle_basic:bear
+    400034: Bear_moddle_basic:begin_spine
+    400036: Bear_moddle_basic:begin_spine_ctrl
+    400038: Bear_moddle_basic:end_spine
+    400040: Bear_moddle_basic:end_spine_ctrl
+    400042: Bear_moddle_basic:face
+    400044: Bear_moddle_basic:front_ankle_L
+    400046: Bear_moddle_basic:front_ankle_R
+    400048: Bear_moddle_basic:front_knee_L
+    400050: Bear_moddle_basic:front_knee_R
+    400052: Bear_moddle_basic:front_leg_L
+    400054: Bear_moddle_basic:front_leg_L_ctrl
+    400056: Bear_moddle_basic:front_leg_R
+    400058: Bear_moddle_basic:front_leg_R_ctrl
+    400060: Bear_moddle_basic:front_paw_L
+    400062: Bear_moddle_basic:front_paw_L_ctrl
+    400064: Bear_moddle_basic:front_paw_R
+    400066: Bear_moddle_basic:front_paw_R_ctrl
+    400068: Bear_moddle_basic:front_shoulder_L
+    400070: Bear_moddle_basic:front_shoulder_R
+    400072: Bear_moddle_basic:front_toes_L
+    400074: Bear_moddle_basic:front_toes_L_ctrl
+    400076: Bear_moddle_basic:front_toes_R
+    400078: Bear_moddle_basic:front_toes_R_ctrl
+    400080: Bear_moddle_basic:head
+    400082: Bear_moddle_basic:head_ctrl
+    400084: Bear_moddle_basic:hip
+    400086: Bear_moddle_basic:ikHandle1
+    400088: Bear_moddle_basic:ikHandle10
+    400090: Bear_moddle_basic:ikHandle11
+    400092: Bear_moddle_basic:ikHandle12
+    400094: Bear_moddle_basic:ikHandle13
+    400096: Bear_moddle_basic:ikHandle14
+    400098: Bear_moddle_basic:ikHandle15
+    400100: Bear_moddle_basic:ikHandle17
+    400102: Bear_moddle_basic:ikHandle2
+    400104: Bear_moddle_basic:ikHandle3
+    400106: Bear_moddle_basic:ikHandle4
+    400108: Bear_moddle_basic:ikHandle5
+    400110: Bear_moddle_basic:ikHandle6
+    400112: Bear_moddle_basic:ikHandle7
+    400114: Bear_moddle_basic:ikHandle8
+    400116: Bear_moddle_basic:ikHandle9
+    400118: Bear_moddle_basic:neck
+    400120: Bear_moddle_basic:snout
+    400122: Bear_moddle_basic:spine
+    400124: Bear_moddle_basic:spine_ctrl
+    400126: Bear_moddle_basic:top_head
+    400128: //RootNode
+    2100000: Bear_moddle_basic_lambert10
+    4300000: Bear_moddle_basic:bear
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Bear_moddle_basic:bear
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

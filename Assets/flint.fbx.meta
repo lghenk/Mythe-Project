@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 98d3e98f26c8ebf448c9ee49d5c60c0c
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: back
+    100002: chest
+    100004: Flint
+    100006: //RootNode
+    100008: Flint3
+    100010: heup
+    100012: hoofd
+    100014: ikhandle10
+    100016: ikHandle11
+    100018: ikHandle12
+    100020: ikhandle13
+    100022: ikHandle9
+    100024: Joint_1
+    100026: joint_1
+    100028: L_been
+    100030: L_elbow
+    100032: L_elleboog
+    100034: L_enkel
+    100036: L_hand
+    100038: L_hand 1
+    100040: L_heup
+    100042: L_knie
+    100044: L_knie 1
+    100046: L_middelvinger
+    100048: L_pols
+    100050: L_shoulder
+    100052: L_thumb
+    100054: L_thumb 1
+    100056: L_toe
+    100058: left
+    100060: mid
+    100062: nek
+    100064: nek 1
+    100066: pSphere1
+    100068: pSphere2
+    100070: R_been
+    100072: R_elbow
+    100074: R_elleboog
+    100076: R_enkel
+    100078: R_hand
+    100080: R_hand 1
+    100082: R_heup
+    100084: R_knie
+    100086: R_knie 1
+    100088: R_middelvinger
+    100090: R_middelvingerkootje
+    100092: R_pols
+    100094: R_shoulder
+    100096: R_thumb
+    100098: R_thumb 1
+    100100: R_thumb_verbinding
+    100102: R_toe
+    100104: root
+    100106: torso
+    100108: torso 1
+    100110: transform1
+    100112: transform2
+    400000: back
+    400002: chest
+    400004: Flint
+    400006: //RootNode
+    400008: Flint3
+    400010: heup
+    400012: hoofd
+    400014: ikhandle10
+    400016: ikHandle11
+    400018: ikHandle12
+    400020: ikhandle13
+    400022: ikHandle9
+    400024: Joint_1
+    400026: joint_1
+    400028: L_been
+    400030: L_elbow
+    400032: L_elleboog
+    400034: L_enkel
+    400036: L_hand
+    400038: L_hand 1
+    400040: L_heup
+    400042: L_knie
+    400044: L_knie 1
+    400046: L_middelvinger
+    400048: L_pols
+    400050: L_shoulder
+    400052: L_thumb
+    400054: L_thumb 1
+    400056: L_toe
+    400058: left
+    400060: mid
+    400062: nek
+    400064: nek 1
+    400066: pSphere1
+    400068: pSphere2
+    400070: R_been
+    400072: R_elbow
+    400074: R_elleboog
+    400076: R_enkel
+    400078: R_hand
+    400080: R_hand 1
+    400082: R_heup
+    400084: R_knie
+    400086: R_knie 1
+    400088: R_middelvinger
+    400090: R_middelvingerkootje
+    400092: R_pols
+    400094: R_shoulder
+    400096: R_thumb
+    400098: R_thumb 1
+    400100: R_thumb_verbinding
+    400102: R_toe
+    400104: root
+    400106: torso
+    400108: torso 1
+    400110: transform1
+    400112: transform2
+    2000000: back
+    2000002: left
+    2100000: Default_Material
+    2300000: transform2
+    3300000: transform2
+    4300000: transform2
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

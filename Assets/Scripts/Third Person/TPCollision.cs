@@ -15,18 +15,11 @@ public class TPCollision : MonoBehaviour
 	private RaycastHit _groundedInfo;
 	
 	private const float STEP_HEIGHT = 0.2f;
-	private const float MAX_ANGLE = 50;
+	private const float MAX_ANGLE = 40;
 	private const float RAYCAST_HEIGHT = 0.05f;
 
 	[SerializeField] private LayerMask _collisionMask;
 	private CapsuleCollider _collider;
-	
-	#if UNITY_EDITOR
-	private bool hitslope = false;
-	private Vector3 hitpoint;
-	private Vector3 normal;
-	
-	#endif
 
 	/// <summary>
 	/// Move the character with the velocity, without gravity
@@ -54,10 +47,10 @@ public class TPCollision : MonoBehaviour
 		TestCollision(ref vel);
 		
 		transform.position += vel;
-		
+        
 		if (walkingOnSlope)
 		{
-			//PushToGround();
+			PushToGround();
 		}
 	}
 	
@@ -73,18 +66,13 @@ public class TPCollision : MonoBehaviour
 	/// <param name="info">The raycast info to use</param>
 	private void SlideAlongWall(ref Vector3 velocity, RaycastHit info)
 	{
-		float angle = Vector3.Angle(info.normal, Vector3.up);
-		if (angle > 5 || angle < MAX_ANGLE) return;
-		
 		Vector3 normal = info.normal;
 		normal.y = 0;
 		normal.Normalize();
 
 		float y = velocity.y;
-		Vector3 vel = velocity;
-		vel.y = 0;
 		Vector3 moveDir = Vector3.Cross(normal, Vector3.up);
-		Vector3 newVelocity = Vector3.Project(vel, moveDir);
+		Vector3 newVelocity = Vector3.Project(velocity, moveDir);
 		velocity = newVelocity;
 		velocity.y = y;
 	}
@@ -100,12 +88,12 @@ public class TPCollision : MonoBehaviour
 		float length = velocity.magnitude;
 		float moveDistance = moveVector.magnitude;
 
-		Vector3 direction = Vector3.down;//moveVector;
+		Vector3 direction = moveVector;
 		Vector3 origin = transform.position;
 		
 		RaycastHit info;
-		if (!Physics.Raycast(origin + velocity + Vector3.up * 2, direction, out info, 
-			2 /*moveDistance + _collider.radius / 2*/, _collisionMask)) return false;
+		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, 
+			moveDistance + _collider.radius / 2, _collisionMask, QueryTriggerInteraction.Ignore)) return false;
 			
 		angle = Vector3.Angle(info.normal, Vector3.up);
 		if (angle > MAX_ANGLE || Mathf.Abs(angle) < float.Epsilon)
@@ -120,7 +108,7 @@ public class TPCollision : MonoBehaviour
 		velocity.y = y;
 		velocity.x = Mathf.Cos(angle * Mathf.Deg2Rad) * velocity.x;
 		velocity.z = Mathf.Cos(angle * Mathf.Deg2Rad) * velocity.z;
-		velocity = velocity.normalized * moveDistance;
+		//velocity = velocity.normalized * moveDistance;
 
 		return true;
 	}
@@ -156,7 +144,7 @@ public class TPCollision : MonoBehaviour
 		p2 = transform.position + Vector3.up * (_collider.radius);
 
 		return (Physics.CapsuleCast(p1, p2, _collider.radius - 0.001f, velocity.normalized, out info, velocity.magnitude,
-			_collisionMask));
+			_collisionMask, QueryTriggerInteraction.Ignore));
 	}
 	
 	private void PushToGround()
@@ -167,7 +155,7 @@ public class TPCollision : MonoBehaviour
 	}
 
 	private void UpdateGrounded(float velocity)
-	{		
+	{	
 		if (velocity > 0.1f)
 		{
 			_grounded = false;
@@ -178,13 +166,6 @@ public class TPCollision : MonoBehaviour
 		
 		const float castHeight = 0.25f;
 		_grounded = Physics.Raycast(transform.position + Vector3.up * RAYCAST_HEIGHT, Vector3.down, out _groundedInfo, 
-			length, _collisionMask);
+			length, _collisionMask, QueryTriggerInteraction.Ignore);
 	}
-	
-	#if UNITY_EDITOR
-	private void OnDrawGizmos()
-	{
-		
-	}
-	#endif
 }

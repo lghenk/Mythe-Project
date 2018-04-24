@@ -37,7 +37,7 @@ public class StateMachine : MonoBehaviour {
 	}
 
 	public State GetState(string state) {
-		Debug.Log($"{gameObject.name} :: Attempting to switch to state: {state}");
+		//Debug.Log($"{gameObject.name} :: Attempting to switch to state: {state}");
 		return stateHandler.GetState(state);
 	}
 }

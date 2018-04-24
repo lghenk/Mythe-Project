@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 114ec0b513176434c8445a4fd232cffb
-timeCreated: 1522306673
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -13,7 +11,12 @@ ModelImporter:
     2300000: struikie3
     3300000: struikie3
     4300000: struikie3
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: struikie3Mat
+    second: {fileID: 2100000, guid: d44417a53778643d1b0f42014c6d6682, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -32,6 +35,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -62,7 +66,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

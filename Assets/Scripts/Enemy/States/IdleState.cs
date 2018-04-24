@@ -11,6 +11,7 @@ public class IdleState : State {
     private bool _shouldWander = false;
     
     private AnimationHandler _animationHandler;
+    private BehaviourState _behaviourState;
 
     [SerializeField, Tooltip("How long it should take for this AI to move on to next state autonomously (e.g. wander state for example)"), Range(0, 100)]
     private float _reasonTimerLength = 5;
@@ -24,6 +25,7 @@ public class IdleState : State {
         _animationHandler = GetComponent<AnimationHandler>();
         _fieldOfView = GetComponent<FieldOfView>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _behaviourState = GetComponent<BehaviourState>();
     }
 
     public override void EnterState(StateMachine machine) {
@@ -36,7 +38,7 @@ public class IdleState : State {
 
     public override void Reason(StateMachine machine) {
         // TODO: Add more options for autonomous behaviour and randomize it then.
-        if (_fieldOfView.HasPlayerInRange()) {
+        if (_fieldOfView.HasPlayerInRange() && _behaviourState.State == BehaviourState.BehaviourStates.Hostile) {
             machine.CurrentState = machine.GetState("DecideAttackState");
         } else if (_shouldWander && Time.timeSinceLevelLoad >= _reasonTimer) {
             machine.CurrentState = machine.GetState("WanderingState");            

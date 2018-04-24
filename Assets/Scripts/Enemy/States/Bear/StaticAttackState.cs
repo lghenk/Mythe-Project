@@ -23,6 +23,7 @@ public class StaticAttackState : State {
 	}
 
 	public override void EnterState(StateMachine machine) {
+		_animationHandler.SetAnimation("Idle", true);
 		_animationHandler.SetAnimation("Attack");
 		_animationHandler.onAnimationFinish += OnAnimationFinish;
 		_goBackToIdle = false;
@@ -35,7 +36,11 @@ public class StaticAttackState : State {
 			machine.CurrentState = machine.GetState("DecideAttackState");
 		}
 	}
-	
+
+	public override void ExitState(StateMachine machine) {
+		_animationHandler.SetAnimation("Idle", false);
+	}
+
 	private void OnAnimationFinish() {
 		_goBackToIdle = true;
 		_animationHandler.onAnimationFinish -= OnAnimationFinish;

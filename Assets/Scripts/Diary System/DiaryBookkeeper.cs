@@ -10,7 +10,7 @@ using UnityEngine.Video;
 /// <summary author="Timo Heijne">
 /// Handles all the diary items, wil also send messages to the videocontrol to play certain videos...
 /// </summary>
-[RequireComponent(typeof(VideoControl))]
+[RequireComponent(typeof(VideoControl)), ExecuteInEditMode]
 public class DiaryBookkeeper : MonoBehaviour {
 
 	public static DiaryBookkeeper instance;
@@ -22,13 +22,7 @@ public class DiaryBookkeeper : MonoBehaviour {
 			instance = this;
 			_videoControl = GetComponent<VideoControl>();
 
-			string[] guids = AssetDatabase.FindAssets("t:VideoObject");
-			diaryItems = new VideoObject[guids.Length];
-			for (int i = 0; i < guids.Length; i++) {
-				VideoObject obj = (VideoObject)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(guids[i]), typeof(VideoObject));
-				diaryItems[i] = obj;
-			}
-			
+			diaryItems = Resources.FindObjectsOfTypeAll<VideoObject>();
 		} else {
 			Debug.LogError("DiaryBookkeeper already exists. DELET");
 			Destroy(this);
