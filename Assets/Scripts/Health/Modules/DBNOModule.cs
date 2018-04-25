@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class DBNOModule : HealthBaseModule {
     private bool isDBNO = false;
+    public bool IsDbno => isDBNO;
     
     public override void OnDamage(float damageAmount, float curHeath, float startingHealth) {
         if (curHeath <= 0 && isDBNO == false) {
@@ -24,5 +25,10 @@ public class DBNOModule : HealthBaseModule {
         if (isDBNO) {
             health.onDeath?.Invoke(health);
         }
+    }
+
+    public void Resurrect() {
+        health.SetHealth(100);
+        health.onMessage?.Invoke("Resurrect");
     }
 }

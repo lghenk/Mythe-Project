@@ -8,14 +8,18 @@ using UnityEngine;
 /// </summary>
 public abstract class EquipListener : MonoBehaviour {
 	protected GameObject player;
+
+	protected Inventory inventory;
 	
-	private void Start() {
+	protected virtual void Start() {
 		player = GameObject.FindGameObjectWithTag("Player");
 		if(player == null) 
 			Debug.LogError("No player was found in the scene");
-		
-		if(Inventory.Instance)
-			Inventory.Instance.onItemEquip += OnItemEquip;
+
+		print("TEst");
+
+		inventory = player.GetComponent<Inventory>(); 
+		inventory.onItemEquip += OnItemEquip;
 	}
 
 	protected virtual void OnItemEquip(ItemObject itemObject) {

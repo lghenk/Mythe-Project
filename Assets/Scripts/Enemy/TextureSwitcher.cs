@@ -8,12 +8,14 @@ public class TextureSwitcher : MonoBehaviour {
 	[SerializeField] private Material _goodState;
 	[SerializeField] private Material _hostileState;
 	private BehaviourState _behaviourState;
+	
+	[SerializeField]
 	private Renderer _renderer;
 	
 	// Use this for initialization
 	void Start () {
 		_behaviourState = GetComponent<BehaviourState>();
-		_renderer = GetComponent<Renderer>();
+		if(!_renderer) _renderer = GetComponent<Renderer>();
 		_behaviourState.onStateChange += OnStateChange;
 	}
 
