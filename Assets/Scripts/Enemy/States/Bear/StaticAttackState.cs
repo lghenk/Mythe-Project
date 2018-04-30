@@ -41,7 +41,7 @@ public class StaticAttackState : State {
 		_animationHandler.SetAnimation("Idle", false);
 	}
 
-	private void OnAnimationFinish() {
+	private void OnAnimationFinish(string s) {
 		_goBackToIdle = true;
 		_animationHandler.onAnimationFinish -= OnAnimationFinish;
 	}
