@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using System.Runtime.Remoting.Messaging;
+using UnityEditor;
 using UnityEngine;
 
 public class TPCollision : MonoBehaviour
@@ -35,23 +36,32 @@ public class TPCollision : MonoBehaviour
 		
 		if (Grounded)
 		{
-			vel.y = -0;
+			vel.y = 0;
 			_lastGroundTime = Time.time;
 			transform.position = GroundedInfo.point;//  + Vector3.up * RAYCAST_HEIGHT; 
 		}
 		
-		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
 		
-		if (walkingOnSlope) vel = vel.normalized * moveVector.magnitude;
+		
+		bool walkingOnSlope = HandleSlope(vel, moveVector.magnitude, ref vel);
+
+		if (walkingOnSlope) Debug.Log("tru af boy");
 		
 		TestCollision(ref vel);
 		
 		transform.position += vel;
         
-		if (walkingOnSlope)
+		if (vel.y >= 0)//walkingOnSlope)
 		{
 			PushToGround();
 		}
+
+		//PushToGround();
+	}
+
+	private void PartMove(Vector3 velocity)
+	{
+		
 	}
 	
 	private void Start()
@@ -86,15 +96,17 @@ public class TPCollision : MonoBehaviour
 	{
 		float angle = 0;
 		float length = velocity.magnitude;
-		float moveDistance = moveVector.magnitude;
+		float moveDistance = velocity.magnitude;
 
 		Vector3 direction = moveVector;
 		Vector3 origin = transform.position;
 		
 		RaycastHit info;
-		if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, 
-			moveDistance + _collider.radius / 2, _collisionMask, QueryTriggerInteraction.Ignore)) return false;
-			
+		//if (!Physics.Raycast(origin + Vector3.up * RAYCAST_HEIGHT, direction, out info, 
+		//	moveDistance + _collider.radius / 2, _collisionMask, QueryTriggerInteraction.Ignore)) return false;
+
+		if (!GetCapsuleCast(velocity, out info)) return false;		
+				
 		angle = Vector3.Angle(info.normal, Vector3.up);
 		if (angle > MAX_ANGLE || Mathf.Abs(angle) < float.Epsilon)
 		{
@@ -105,7 +117,7 @@ public class TPCollision : MonoBehaviour
 
 		if (!(velocity.y <= y)) return false;
 
-		velocity.y = y;
+		velocity.y = y + 0.001f;
 		velocity.x = Mathf.Cos(angle * Mathf.Deg2Rad) * velocity.x;
 		velocity.z = Mathf.Cos(angle * Mathf.Deg2Rad) * velocity.z;
 		//velocity = velocity.normalized * moveDistance;
@@ -135,6 +147,7 @@ public class TPCollision : MonoBehaviour
 		if (!GetCapsuleCast(velocity, out hit)) return;
 
 		SlideAlongWall(ref velocity, hit);
+		if (GetCapsuleCast(velocity, out hit)) velocity = Vector3.zero;
 	}
 
 	private bool GetCapsuleCast(Vector3 velocity, out RaycastHit info )
@@ -143,14 +156,30 @@ public class TPCollision : MonoBehaviour
 		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
 		p2 = transform.position + Vector3.up * (_collider.radius);
 
-		return (Physics.CapsuleCast(p1, p2, _collider.radius - 0.001f, velocity.normalized, out info, velocity.magnitude,
+		return (Physics.CapsuleCast(p1, p2, _collider.radius, velocity.normalized, out info, velocity.magnitude,
 			_collisionMask, QueryTriggerInteraction.Ignore));
 	}
+
+	#if UNITY_EDITOR
+	private void OnDrawGizmos()
+	{
+		if (!Application.isPlaying) return;
+		
+		Vector3 p1, p2;
+		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
+		p2 = transform.position + Vector3.up * (_collider.radius);
+
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(p1, _collider.radius+0.01f);
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireSphere(p2, _collider.radius);
+	}
+	#endif
 	
 	private void PushToGround()
 	{
 		RaycastHit hit;
-		if (!Physics.Raycast(transform.position + Vector3.up * RAYCAST_HEIGHT, Vector3.down, out hit)) return;
+		if (!Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 0.5f)) return;
 		transform.position = hit.point;	
 	}
 
