@@ -25,10 +25,18 @@ public class OrbitCamera : MonoBehaviour
         _rotation = transform.rotation;
     }
     
-    private void LateUpdate()
+    private void Update()
     {
-        transform.position = _position;
         transform.rotation = _wantedRotation;
+
+        var wantedPosition = GetTargetPosition();
+
+        AvoidCollision(ref wantedPosition);
+
+        _position = _smoothPosition ? Vector3.Lerp(transform.position, 
+            wantedPosition, Time.deltaTime * _smoothPosAmount) : wantedPosition;
+
+        transform.position = _position;
     }
 
     public void Rotate(Vector3 delta)
@@ -49,13 +57,6 @@ public class OrbitCamera : MonoBehaviour
             : WR;
 
         _rotation = WR;
-
-        var wantedPosition = GetTargetPosition();
-
-        AvoidCollision(ref wantedPosition);
-
-        _position = _smoothPosition ? Vector3.Lerp(transform.position, 
-            wantedPosition, Time.deltaTime * _smoothPosAmount) : wantedPosition;
     }
 
     private void ClampX(ref Vector3 rotation)
