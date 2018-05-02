@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 
 // Created By: Timo Heijne
@@ -16,13 +18,17 @@ public class FieldOfView : MonoBehaviour {
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
+    public Action<Transform> onDetectPlayer;
+
     // Update is called once per frame
     void Update() {
         FindVisibleTargets();
     }
 
     void FindVisibleTargets() {
+        List<Transform> oldList = ItemsInView;
         _itemsInView.Clear();
+        
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, _fovRadius, targetMask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++) {
@@ -34,7 +40,11 @@ public class FieldOfView : MonoBehaviour {
                     _itemsInView.Add(target);
                 }
             }
-        }   
+        }
+
+        foreach (var newItem in _itemsInView) {
+            onDetectPlayer?.Invoke(newItem);
+        }
     }
 
     public bool IsInView(Transform trans) {

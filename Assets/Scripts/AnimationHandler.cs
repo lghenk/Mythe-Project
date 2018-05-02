@@ -11,7 +11,7 @@ public class AnimationHandler : MonoBehaviour {
     [SerializeField, Tooltip("If you don't enter this it will simply use the one on the current object")]
     private Animator _animator;
 
-    public Action onAnimationFinish; 
+    public Action<string> onAnimationFinish;
 
     void Start() {
         if(!_animator) // If there isn't one set already. Try and get the one on this object
@@ -43,6 +43,6 @@ public class AnimationHandler : MonoBehaviour {
 
     IEnumerator AwaitForParamClose() { // Yeet
         yield return new WaitUntil(() => _animator.GetBool(_currentAnimParameter) == false);
-        onAnimationFinish?.Invoke();
+        onAnimationFinish?.Invoke(_currentAnimParameter);
     }
 }

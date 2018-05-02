@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,15 +10,29 @@ public class DecideAttackState : State {
 
 	[SerializeField] private float _staticRadius = 3;
 	private BehaviourState _behaviourState;
+	private StateMachine _stateMachine;
+	
 
 	private void Start() {
 		stateName = "DecideAttackState";
-	}
-
-	public override void EnterState(StateMachine machine) {
+		_stateMachine = GetComponent<StateMachine>();
 		_fieldOfView = GetComponent<FieldOfView>();
 		_behaviourState = GetComponent<BehaviourState>();
+
+		_fieldOfView.onDetectPlayer += OnDetectPlayer;
 	}
+
+	private void OnDetectPlayer(Transform transform) {
+		if (_behaviourState.State == BehaviourState.BehaviourStates.Hostile &&
+		    _stateMachine.CurrentState.stateName != "StaticAttackState" &&
+		    _stateMachine.CurrentState.stateName != "ChargeAttackState") 
+		{		
+			_stateMachine.CurrentState = _stateMachine.GetState(stateName);
+			Debug.Log("Switching To Decide Attack State... Cuz player in range boi");
+		}
+	}
+
+	public override void EnterState(StateMachine machine) { }
 
 	public override void Act(StateMachine machine) { }
 

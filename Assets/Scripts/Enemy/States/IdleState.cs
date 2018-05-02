@@ -38,9 +38,7 @@ public class IdleState : State {
 
     public override void Reason(StateMachine machine) {
         // TODO: Add more options for autonomous behaviour and randomize it then.
-        if (_fieldOfView.HasPlayerInRange() && _behaviourState.State == BehaviourState.BehaviourStates.Hostile) {
-            machine.CurrentState = machine.GetState("DecideAttackState");
-        } else if (_shouldWander && Time.timeSinceLevelLoad >= _reasonTimer) {
+        if (_shouldWander && Time.timeSinceLevelLoad >= _reasonTimer) {
             machine.CurrentState = machine.GetState("WanderingState");            
         }
     }

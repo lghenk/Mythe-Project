@@ -26,7 +26,7 @@ public class StateMachine : MonoBehaviour {
 	void Start () {
 		stateHandler = gameObject.AddComponent<StateHandler>();
 		State[] states = GetComponents<State>();
-		Debug.Log($"{gameObject.name} :: Found {states.Length} State(s)");
+		//Debug.Log($"{gameObject.name} :: Found {states.Length} State(s)");
 		CurrentState = _defaultState;
 	}
 	

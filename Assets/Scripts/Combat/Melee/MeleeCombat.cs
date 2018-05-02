@@ -1,35 +1,56 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Made by Koen Sparreboom
 /// </summary>
-public class MeleeCombat : MonoBehaviour {
+public class MeleeCombat : EquipListener {
     [SerializeField]
     private MeleeType _meleeType;
 
-    [SerializeField]
-    private DamageTrigger _damageTrigger;
+    [SerializeField] 
+    private LayerMask _collisionLayers;
 
-    [SerializeField]
-    private Animator _animator;
+    [SerializeField] 
+    private GameObject _weaponPoint;
+    
+    [SerializeField] 
+    private float _attackCooldown = 5;
 
-    [SerializeField]
-    private string _animatorAttackState = "Attack";
+    private GameObject _currentWeapon;
 
-    private void Start() {
-        _damageTrigger.Damage = _meleeType.Damage;
+    private float _lastAttack;
+
+    protected void Start() {
+        base.Start();
+        //_damageTrigger.Damage = _meleeType.Damage;
     }
 
-    private void Update() {
-        /*if (Input.GetButtonDown("Fire1")) {
-            Attack();
-        }*/
+    public void Attack() {
+        if (_meleeType == null || Time.timeSinceLevelLoad - _lastAttack < _attackCooldown) return;
+        
+        Ray ray;
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 1, Vector3.forward, Mathf.Infinity,  _collisionLayers.value);
 
-        _damageTrigger.Enabled = _animator.GetCurrentAnimatorStateInfo(0).IsName(_animatorAttackState);
+        foreach (var hit in hits) {
+            hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
+        }
+
+        _lastAttack = Time.timeSinceLevelLoad;
     }
 
     public void ChangeWeapon(MeleeType meleeType) {
         _meleeType = meleeType;
-        _damageTrigger.Damage = _meleeType.Damage;
+    }
+
+    protected override void OnItemEquip(ItemObject itemObject) {
+        if (itemObject.Type == ItemObject.ItemType.Weapon) {
+             
+            if(_currentWeapon)
+                Destroy(_currentWeapon);
+            
+            _currentWeapon = Instantiate(itemObject.GameObject, _weaponPoint.transform);
+            ChangeWeapon(itemObject.MeleeType);
+        }
     }
 }
