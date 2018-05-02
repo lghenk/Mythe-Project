@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using QTInput;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class PlayerInput : MonoBehaviour {
 
 	void UpdateControllerInput()
 	{
-		
+		//throw new NotImplementedException("Fuck jou floyd");
 	}
 	
 	void UpdateKeyboardInput()
@@ -45,12 +46,6 @@ public class PlayerInput : MonoBehaviour {
 			moving = true;
 		}
 
-		if (!looking)
-		{
-			_camera.Rotate(_keyboardInput.MouseDelta * Sensitivity);
-			looking = true;
-		}
-
 		if (!running)
 		{
 			_movement.Running = _keyboardInput.kRun;
@@ -59,6 +54,12 @@ public class PlayerInput : MonoBehaviour {
 		if (!jump)
 		{
 			if(_keyboardInput.kJump.WasPressed) _jump.Jump();
+		}
+		
+		if (!looking)
+		{
+			_camera.Rotate(_keyboardInput.MouseDelta * Sensitivity);
+			looking = true;
 		}
 	}
 

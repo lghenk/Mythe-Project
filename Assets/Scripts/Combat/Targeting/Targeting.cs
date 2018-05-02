@@ -6,10 +6,10 @@
 public class Targeting : MonoBehaviour {
     // Camera variables
     [SerializeField]
-    private Camera _camera;
-
-    [SerializeField]
     private bool _autoTargetCamera = true;
+    
+    [SerializeField]
+    private Camera _camera;
 
     // Settings variables
     [SerializeField]
@@ -19,9 +19,7 @@ public class Targeting : MonoBehaviour {
     // Target variables
     private Transform _target;
 
-    public Transform Target {
-        get { return _target; }
-    }
+    public Transform Target => _target;
 
     private void Start() {
         if (_autoTargetCamera) {
@@ -30,6 +28,11 @@ public class Targeting : MonoBehaviour {
     }
 
     private void Update() {
+        // Stop targeting if the target is too far
+        if (_target && Vector3.Distance(_camera.transform.position, _target.transform.position) > _maxTargetingDistance) {
+            _target = null;
+        }
+        
         // Return if the target button hasn't been pressed
         if (!Input.GetButtonDown("Fire2")) {
             return;
@@ -66,7 +69,5 @@ public class Targeting : MonoBehaviour {
             // Stop targeting
             _target = null;
         }
-
-        //Debug.Log(_target);
     }
 }

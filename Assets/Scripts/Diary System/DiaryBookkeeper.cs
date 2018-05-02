@@ -34,6 +34,7 @@ public class DiaryBookkeeper : MonoBehaviour {
 		if (GetByName(name, out item)) {
 			// Can start video cuz we found sum clip BOI
 			print(item);
+			print("Stepper loves weewee");
 			_videoControl?.PlayVideo(item);
 			return true;
 		}

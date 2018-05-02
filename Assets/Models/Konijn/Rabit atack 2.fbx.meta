@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 76049709e185a224a9edb08870f8e700
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: rabbit_basic:heup
+    100002: rabbit_basic:hoofd
+    100004: rabbit_basic:L_arm
+    100006: rabbit_basic:L_arm 1
+    100008: rabbit_basic:L_been
+    100010: rabbit_basic:L_elleboog
+    100012: rabbit_basic:L_enkel
+    100014: rabbit_basic:L_foot
+    100016: rabbit_basic:L_hand
+    100018: rabbit_basic:L_heup
+    100020: rabbit_basic:L_mid_oor
+    100022: rabbit_basic:L_oor
+    100024: rabbit_basic:L_oor 1
+    100026: rabbit_basic:L_shoulder
+    100028: rabbit_basic:L_tenen
+    100030: rabbit_basic:L_uiteinde
+    100032: rabbit_basic:linker_elleboog
+    100034: rabbit_basic:linkerarm
+    100036: rabbit_basic:linkerknie
+    100038: rabbit_basic:linkermiddenoor
+    100040: rabbit_basic:linkeroor
+    100042: rabbit_basic:linkerpols
+    100044: rabbit_basic:linkervoet
+    100046: rabbit_basic:mid
+    100048: rabbit_basic:nek
+    100050: rabbit_basic:nek 1
+    100052: rabbit_basic:nek1
+    100054: rabbit_basic:pCube1
+    100056: rabbit_basic:R_been
+    100058: rabbit_basic:R_elleboog
+    100060: rabbit_basic:R_enkel
+    100062: rabbit_basic:R_foot
+    100064: rabbit_basic:R_hand
+    100066: rabbit_basic:R_Heup
+    100068: rabbit_basic:R_mid_oor
+    100070: rabbit_basic:R_oor
+    100072: rabbit_basic:R_oor 1
+    100074: rabbit_basic:R_shoulder
+    100076: rabbit_basic:R_tenen
+    100078: rabbit_basic:R_uiteinde
+    100080: rabbit_basic:rechterarm
+    100082: rabbit_basic:rechterelleboog
+    100084: rabbit_basic:rechterknie
+    100086: rabbit_basic:rechtermiddenoor
+    100088: rabbit_basic:rechteroor
+    100090: rabbit_basic:rechterpols
+    100092: rabbit_basic:rechtervoet
+    100094: rabbit_basic:root
+    100096: rabbit_basic:torso
+    100098: rabbit_basic:torso 1
+    100100: rabbit_basic:torso1
+    100102: //RootNode
+    400000: rabbit_basic:heup
+    400002: rabbit_basic:hoofd
+    400004: rabbit_basic:L_arm
+    400006: rabbit_basic:L_arm 1
+    400008: rabbit_basic:L_been
+    400010: rabbit_basic:L_elleboog
+    400012: rabbit_basic:L_enkel
+    400014: rabbit_basic:L_foot
+    400016: rabbit_basic:L_hand
+    400018: rabbit_basic:L_heup
+    400020: rabbit_basic:L_mid_oor
+    400022: rabbit_basic:L_oor
+    400024: rabbit_basic:L_oor 1
+    400026: rabbit_basic:L_shoulder
+    400028: rabbit_basic:L_tenen
+    400030: rabbit_basic:L_uiteinde
+    400032: rabbit_basic:linker_elleboog
+    400034: rabbit_basic:linkerarm
+    400036: rabbit_basic:linkerknie
+    400038: rabbit_basic:linkermiddenoor
+    400040: rabbit_basic:linkeroor
+    400042: rabbit_basic:linkerpols
+    400044: rabbit_basic:linkervoet
+    400046: rabbit_basic:mid
+    400048: rabbit_basic:nek
+    400050: rabbit_basic:nek 1
+    400052: rabbit_basic:nek1
+    400054: rabbit_basic:pCube1
+    400056: rabbit_basic:R_been
+    400058: rabbit_basic:R_elleboog
+    400060: rabbit_basic:R_enkel
+    400062: rabbit_basic:R_foot
+    400064: rabbit_basic:R_hand
+    400066: rabbit_basic:R_Heup
+    400068: rabbit_basic:R_mid_oor
+    400070: rabbit_basic:R_oor
+    400072: rabbit_basic:R_oor 1
+    400074: rabbit_basic:R_shoulder
+    400076: rabbit_basic:R_tenen
+    400078: rabbit_basic:R_uiteinde
+    400080: rabbit_basic:rechterarm
+    400082: rabbit_basic:rechterelleboog
+    400084: rabbit_basic:rechterknie
+    400086: rabbit_basic:rechtermiddenoor
+    400088: rabbit_basic:rechteroor
+    400090: rabbit_basic:rechterpols
+    400092: rabbit_basic:rechtervoet
+    400094: rabbit_basic:root
+    400096: rabbit_basic:torso
+    400098: rabbit_basic:torso 1
+    400100: rabbit_basic:torso1
+    400102: //RootNode
+    2100000: rabbit_basic_lambert3
+    4300000: rabbit_basic:pCube1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: rabbit_basic:pCube1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

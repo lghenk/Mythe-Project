@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Made by Koen Sparreboom
@@ -7,35 +8,56 @@ public class MeleeCombat : EquipListener {
     [SerializeField]
     private MeleeType _meleeType;
 
-    [SerializeField]
-    private DamageTrigger _damageTrigger;
+    [SerializeField] 
+    private LayerMask _collisionLayers;
 
-    [SerializeField]
-    private Animator _animator;
+    [SerializeField] 
+    private GameObject _weaponPoint;
+    
+    [SerializeField] 
+    private float _attackCooldown = 5;
 
-    [SerializeField]
-    private string _animatorAttackState = "Attack";
+    private GameObject _currentWeapon;
 
-    private void Start() {
-        _damageTrigger.Damage = _meleeType.Damage;
+    private float _lastAttack;
+
+    protected void Start() {
+        base.Start();
     }
 
-    private void Update() {
-        /*if (Input.GetButtonDown("Fire1")) {
-            Attack();
-        }*/
+    public void Attack() {
+        if (_meleeType == null || Time.timeSinceLevelLoad - _lastAttack < _attackCooldown) return;
+        
+        Vector3 center = transform.position + new Vector3(0, 1.25f, 0);
+     
+        Ray ray;
+        RaycastHit[] hits = Physics.SphereCastAll(center + (transform.forward * 1.25f), 1.2f, transform.forward, Mathf.Infinity,  _collisionLayers.value);
 
-        _damageTrigger.Enabled = _animator.GetCurrentAnimatorStateInfo(0).IsName(_animatorAttackState);
+        foreach (var hit in hits) {
+            hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
+        }
+
+        _lastAttack = Time.timeSinceLevelLoad;
     }
 
     public void ChangeWeapon(MeleeType meleeType) {
         _meleeType = meleeType;
-        _damageTrigger.Damage = _meleeType.Damage;
     }
 
     protected override void OnItemEquip(ItemObject itemObject) {
         if (itemObject.Type == ItemObject.ItemType.Weapon) {
+             
+            if(_currentWeapon)
+                Destroy(_currentWeapon);
+            
+            _currentWeapon = Instantiate(itemObject.GameObject, _weaponPoint.transform);
             ChangeWeapon(itemObject.MeleeType);
         }
+    }
+
+    private void OnDrawGizmos() {
+        Vector3 center = transform.position + new Vector3(0, 1.25f, 0);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(center + (transform.forward * 1.25f), 1.2f);
     }
 }

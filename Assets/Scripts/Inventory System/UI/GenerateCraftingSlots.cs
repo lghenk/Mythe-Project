@@ -15,7 +15,17 @@ public class GenerateCraftingSlots : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(WaitForInventory());
+		//StartCoroutine(WaitForInventory());
+		
+		if(Inventory.Instance == null) throw new Exception("Cannot initialize Generate Crafting Slots... No inventory exists");
+		Inventory.Instance.onItemAdd += OnItemAdd;
+		Inventory.Instance.onItemRemove += OnItemRemove;
+		
+		// Load all craftable objects at the beginning of the game
+		LoadItems();
+		
+		// Then draw the initial crafting list. // Likely no items at the begin but can't hurt right?
+		DrawItems();
 	}
 
 	IEnumerator WaitForInventory() {
@@ -76,8 +86,7 @@ public class GenerateCraftingSlots : MonoBehaviour {
 	
 	private void LoadItems() {
 		_craftableObjects.Clear();
-
-		_craftableObjects = Resources.FindObjectsOfTypeAll<CraftableObject>().ToList();
+		_craftableObjects = Resources.LoadAll<CraftableObject>("").ToList();
 	}
 
 }

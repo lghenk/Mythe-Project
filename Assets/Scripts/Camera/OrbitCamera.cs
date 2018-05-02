@@ -13,7 +13,9 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField] private float _smoothRotAmount = 1.0f, _smoothPosAmount = 1.0f;
     [SerializeField] private LayerMask _cameraLayerMask;
 
-    private Quaternion _rotation;
+    private Quaternion _rotation, _wantedRotation;
+    private Vector3 _position;
+    
     
     private void Awake()
     {
@@ -23,15 +25,25 @@ public class OrbitCamera : MonoBehaviour
         _rotation = transform.rotation;
     }
     
-    private void LateUpdate()
+    private void Update()
     {
+        transform.rotation = _wantedRotation;
+
+        var wantedPosition = GetTargetPosition();
+
+        AvoidCollision(ref wantedPosition);
+
+        _position = _smoothPosition ? Vector3.Lerp(transform.position, 
+            wantedPosition, Time.deltaTime * _smoothPosAmount) : wantedPosition;
+
+        transform.position = _position;
     }
 
     public void Rotate(Vector3 delta)
     {
         if (Target == null || !Follow) return;
         
-        var wantedRotation = _rotation.eulerAngles;
+        var wantedRotation = _wantedRotation.eulerAngles;
         wantedRotation.y += delta.x * Time.deltaTime;
         wantedRotation.x += delta.y * Time.deltaTime;
         wantedRotation.z = 0;
@@ -40,18 +52,11 @@ public class OrbitCamera : MonoBehaviour
         
         Quaternion WR = Quaternion.Euler(wantedRotation);
             
-        transform.rotation = _smoothRotation
+        _wantedRotation = _smoothRotation
             ? Quaternion.Lerp(transform.rotation, WR, _smoothRotAmount * Time.deltaTime)
             : WR;
 
         _rotation = WR;
-
-        var wantedPosition = GetTargetPosition();
-
-        AvoidCollision(ref wantedPosition);
-
-        transform.position = _smoothPosition ? Vector3.Lerp(transform.position, 
-            wantedPosition, Time.deltaTime * _smoothPosAmount) : wantedPosition;
     }
 
     private void ClampX(ref Vector3 rotation)
