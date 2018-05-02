@@ -23,14 +23,15 @@ public class MeleeCombat : EquipListener {
 
     protected void Start() {
         base.Start();
-        //_damageTrigger.Damage = _meleeType.Damage;
     }
 
     public void Attack() {
         if (_meleeType == null || Time.timeSinceLevelLoad - _lastAttack < _attackCooldown) return;
         
+        Vector3 center = transform.position + new Vector3(0, 1.25f, 0);
+     
         Ray ray;
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 1, Vector3.forward, Mathf.Infinity,  _collisionLayers.value);
+        RaycastHit[] hits = Physics.SphereCastAll(center + (transform.forward * 1.25f), 1.2f, transform.forward, Mathf.Infinity,  _collisionLayers.value);
 
         foreach (var hit in hits) {
             hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
@@ -52,5 +53,11 @@ public class MeleeCombat : EquipListener {
             _currentWeapon = Instantiate(itemObject.GameObject, _weaponPoint.transform);
             ChangeWeapon(itemObject.MeleeType);
         }
+    }
+
+    private void OnDrawGizmos() {
+        Vector3 center = transform.position + new Vector3(0, 1.25f, 0);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(center + (transform.forward * 1.25f), 1.2f);
     }
 }
