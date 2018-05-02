@@ -16,8 +16,6 @@ public abstract class EquipListener : MonoBehaviour {
 		if(player == null) 
 			Debug.LogError("No player was found in the scene");
 
-		print("TEst");
-
 		inventory = player.GetComponent<Inventory>(); 
 		inventory.onItemEquip += OnItemEquip;
 	}
