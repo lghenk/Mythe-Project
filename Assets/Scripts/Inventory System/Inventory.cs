@@ -19,6 +19,8 @@ public class Inventory : MonoBehaviour {
 	public Action<ItemObject> onItemDrop;
 	public Action<ItemObject> onItemEquip;
 
+	[SerializeField] private GameObject _dropParticle;
+
 	// Use this for initialization
 	void Start() {
 		if (Inventory.Instance == null) {
@@ -49,13 +51,20 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void DropItem(ItemObject item) {
+		RemoveItem(item);
+
 		GameObject go = Instantiate(item.GameObject);
-		go.transform.position = transform.position;
+		//go.transform.position = transform.position + (-transform.forward * 2);
+		go.transform.position = transform.position + new Vector3(0, .75f, -2);
+		
 		Pickupable pickup = go.AddComponent<Pickupable>();
 		pickup.itemObject = item;
 		go.layer = 10;
-		
-		RemoveItem(item);
+
+		GameObject part = Instantiate(_dropParticle);
+		part.transform.parent = go.transform;	
+		part.transform.position = new Vector3(go.transform.position.x, .15f, go.transform.position.z);
+				
 		onItemDrop?.Invoke(item);
 	}
 

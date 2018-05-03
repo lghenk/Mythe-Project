@@ -9,6 +9,7 @@ using UnityEngine;
 public class Pickupable : MonoBehaviour {
 
     public ItemObject itemObject;
+    public float rotationSpeed = 2.5f;
 
     private void Start() {
         Collider col = GetComponent<Collider>();
@@ -19,5 +20,10 @@ public class Pickupable : MonoBehaviour {
         }
 
         col.isTrigger = true;
+        transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(-20, 30, -120));
+    }
+
+    private void Update() {
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, rotationSpeed, 0));
     }
 }
