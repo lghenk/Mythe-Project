@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 9bb481e36bac97d41b6ac23d5bde5e8a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pasted__group
+    100004: refrence_file:sapling_0036:back
+    100006: refrence_file:sapling_0036:head1
+    100008: refrence_file:sapling_0036:Heup
+    100010: refrence_file:sapling_0036:hoofd
+    100012: refrence_file:sapling_0036:ikHandle10
+    100014: refrence_file:sapling_0036:ikHandle11
+    100016: refrence_file:sapling_0036:ikHandle12
+    100018: refrence_file:sapling_0036:ikHandle9
+    100020: refrence_file:sapling_0036:joint1
+    100022: refrence_file:sapling_0036:joint2
+    100024: refrence_file:sapling_0036:L_arm
+    100026: refrence_file:sapling_0036:L_been2
+    100028: refrence_file:sapling_0036:L_elbow
+    100030: refrence_file:sapling_0036:L_elleboog
+    100032: refrence_file:sapling_0036:L_elleboog1
+    100034: refrence_file:sapling_0036:L_enkel
+    100036: refrence_file:sapling_0036:L_hand
+    100038: refrence_file:sapling_0036:L_heup
+    100040: refrence_file:sapling_0036:L_knie
+    100042: refrence_file:sapling_0036:L_knie 1
+    100044: refrence_file:sapling_0036:L_middelvinger
+    100046: refrence_file:sapling_0036:L_shoulder
+    100048: refrence_file:sapling_0036:L_thumb
+    100050: refrence_file:sapling_0036:L_toe
+    100052: refrence_file:sapling_0036:left
+    100054: refrence_file:sapling_0036:mid
+    100056: refrence_file:sapling_0036:mid 1
+    100058: refrence_file:sapling_0036:nek
+    100060: refrence_file:sapling_0036:nurbsCircle10
+    100062: refrence_file:sapling_0036:nurbsCircle11
+    100064: refrence_file:sapling_0036:nurbsCircle12
+    100066: refrence_file:sapling_0036:nurbsCircle13
+    100068: refrence_file:sapling_0036:R_arm
+    100070: refrence_file:sapling_0036:R_been2
+    100072: refrence_file:sapling_0036:R_elbow
+    100074: refrence_file:sapling_0036:R_enkel
+    100076: refrence_file:sapling_0036:R_hand
+    100078: refrence_file:sapling_0036:R_heup
+    100080: refrence_file:sapling_0036:R_knie
+    100082: refrence_file:sapling_0036:R_knie 1
+    100084: refrence_file:sapling_0036:R_middelvinger
+    100086: refrence_file:sapling_0036:R_middelvinger_kootje_1
+    100088: refrence_file:sapling_0036:R_shoulder
+    100090: refrence_file:sapling_0036:R_thumb
+    100092: refrence_file:sapling_0036:R_thumb_verbinding
+    100094: refrence_file:sapling_0036:R_toe
+    100096: refrence_file:sapling_0036:root
+    100098: refrence_file:sapling_0036:Sapling
+    100100: refrence_file:sapling_0036:shoulders
+    100102: refrence_file:sapling_0036:torso
+    100104: refrence_file:sapling_0036:voor
+    100106: refrence_file:sapling_0036:zij
+    400000: //RootNode
+    400002: pasted__group
+    400004: refrence_file:sapling_0036:back
+    400006: refrence_file:sapling_0036:head1
+    400008: refrence_file:sapling_0036:Heup
+    400010: refrence_file:sapling_0036:hoofd
+    400012: refrence_file:sapling_0036:ikHandle10
+    400014: refrence_file:sapling_0036:ikHandle11
+    400016: refrence_file:sapling_0036:ikHandle12
+    400018: refrence_file:sapling_0036:ikHandle9
+    400020: refrence_file:sapling_0036:joint1
+    400022: refrence_file:sapling_0036:joint2
+    400024: refrence_file:sapling_0036:L_arm
+    400026: refrence_file:sapling_0036:L_been2
+    400028: refrence_file:sapling_0036:L_elbow
+    400030: refrence_file:sapling_0036:L_elleboog
+    400032: refrence_file:sapling_0036:L_elleboog1
+    400034: refrence_file:sapling_0036:L_enkel
+    400036: refrence_file:sapling_0036:L_hand
+    400038: refrence_file:sapling_0036:L_heup
+    400040: refrence_file:sapling_0036:L_knie
+    400042: refrence_file:sapling_0036:L_knie 1
+    400044: refrence_file:sapling_0036:L_middelvinger
+    400046: refrence_file:sapling_0036:L_shoulder
+    400048: refrence_file:sapling_0036:L_thumb
+    400050: refrence_file:sapling_0036:L_toe
+    400052: refrence_file:sapling_0036:left
+    400054: refrence_file:sapling_0036:mid
+    400056: refrence_file:sapling_0036:mid 1
+    400058: refrence_file:sapling_0036:nek
+    400060: refrence_file:sapling_0036:nurbsCircle10
+    400062: refrence_file:sapling_0036:nurbsCircle11
+    400064: refrence_file:sapling_0036:nurbsCircle12
+    400066: refrence_file:sapling_0036:nurbsCircle13
+    400068: refrence_file:sapling_0036:R_arm
+    400070: refrence_file:sapling_0036:R_been2
+    400072: refrence_file:sapling_0036:R_elbow
+    400074: refrence_file:sapling_0036:R_enkel
+    400076: refrence_file:sapling_0036:R_hand
+    400078: refrence_file:sapling_0036:R_heup
+    400080: refrence_file:sapling_0036:R_knie
+    400082: refrence_file:sapling_0036:R_knie 1
+    400084: refrence_file:sapling_0036:R_middelvinger
+    400086: refrence_file:sapling_0036:R_middelvinger_kootje_1
+    400088: refrence_file:sapling_0036:R_shoulder
+    400090: refrence_file:sapling_0036:R_thumb
+    400092: refrence_file:sapling_0036:R_thumb_verbinding
+    400094: refrence_file:sapling_0036:R_toe
+    400096: refrence_file:sapling_0036:root
+    400098: refrence_file:sapling_0036:Sapling
+    400100: refrence_file:sapling_0036:shoulders
+    400102: refrence_file:sapling_0036:torso
+    400104: refrence_file:sapling_0036:voor
+    400106: refrence_file:sapling_0036:zij
+    2000000: refrence_file:sapling_0036:back
+    2000002: refrence_file:sapling_0036:left
+    2100000: refrence_file_sapling_0036_lambert5
+    2100002: refrence_file_sapling_0036_lambert6
+    2100004: refrence_file_sapling_0036_lambert11
+    2300000: refrence_file:sapling_0036:voor
+    2300002: refrence_file:sapling_0036:zij
+    3300000: refrence_file:sapling_0036:voor
+    3300002: refrence_file:sapling_0036:zij
+    4300000: refrence_file:sapling_0036:voor
+    4300002: refrence_file:sapling_0036:zij
+    4300004: refrence_file:sapling_0036:Sapling
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: refrence_file:sapling_0036:Sapling
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
