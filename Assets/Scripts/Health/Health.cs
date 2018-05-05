@@ -14,8 +14,12 @@ public class Health : MonoBehaviour {
     /// An Event that invokes when the Object that has this health script supposedly dies
     /// </summary>
     public Action<Health> onDeath;
+    
     /// <summary>
     /// An Event that invokes when the object that has this health script gets sum damage
+    /// <param name="damageAmount"></param>
+    /// <param name="curHealth"></param>
+    /// <param name="startingHealth"></param>
     /// </summary>
     public Action<float, float, float, Health> onDamage;
 
