@@ -14,8 +14,9 @@ MonoBehaviour:
   _type: 1
   _isEnabled: 1
   _itemName: Stick
-  _itemDescription: 
+  _itemDescription: Sticks and stone may break your bones. But its only a stick
   _itemIcon: {fileID: 21300000, guid: 60707418f157ae349887e375a9c61a83, type: 3}
-  _gameObject: {fileID: 0}
+  _gameObject: {fileID: 1878742905396562, guid: d49131eabe71f4044befe3a9eef29a0e,
+    type: 2}
   _meleeType: {fileID: 11400000, guid: e580ac7583d917941974bcc5b3851127, type: 2}
   _useBehaviour: 

@@ -14,9 +14,11 @@ MonoBehaviour:
   _type: 0
   _isEnabled: 1
   _itemName: Health Potion
-  _itemDescription: 
-  _itemIcon: {fileID: 21300000, guid: b7872a3f01b6645b4b1c437757e658f9, type: 3}
-  _gameObject: {fileID: 1428572079237288, guid: 42778bc7439596641a2aab18343556c6,
+  _itemDescription: 'It gives you health and stuff
+
+'
+  _itemIcon: {fileID: 21300000, guid: 863d3f4e02de2374bbcb50011a2c60c7, type: 3}
+  _gameObject: {fileID: 1435476468384914, guid: d0da15262ddfb374da9618db06e2ae3e,
     type: 2}
   _meleeType: {fileID: 0}
   _useBehaviour: TestUseBehaviour
