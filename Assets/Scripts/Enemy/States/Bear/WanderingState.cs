@@ -15,7 +15,10 @@ public class WanderingState : State {
 
 	private AnimationHandler _animationHandler;
 	
-	private void Start() {
+	private void Start()
+	{
+		if (_animationHandler) return;
+		
 		stateName = "WanderingState";
 		
 		_animationHandler = GetComponent<AnimationHandler>();
@@ -23,7 +26,10 @@ public class WanderingState : State {
 		if(!_navAgent) throw new System.Exception($"WanderingState :: No NavMeshAgent was found on the object {transform.name}. ");
 	}
 
-	public override void EnterState(StateMachine machine) {
+	public override void EnterState(StateMachine machine)
+	{
+		if (!_animationHandler) Start();
+		
 		// Set target position;
 		_navAgent.SetDestination(GetRandomPosition());
 		_navAgent.isStopped = false;
