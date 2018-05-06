@@ -11,8 +11,10 @@ public class StateMachine : MonoBehaviour {
 	private State _defaultState;
 	private State _currentState;
 
-	protected StateHandler stateHandler;
-	
+	protected StateHandler _stateHandler;
+
+	protected StateHandler stateHandler => _stateHandler ?? (_stateHandler = gameObject.AddComponent<StateHandler>());
+
 	public State CurrentState {
 		get { return _currentState;  }
 		set { 
@@ -23,10 +25,8 @@ public class StateMachine : MonoBehaviour {
 	}
 	
 	// Use this for initialization
-	void Start () {
-		stateHandler = gameObject.AddComponent<StateHandler>();
-		State[] states = GetComponents<State>();
-		//Debug.Log($"{gameObject.name} :: Found {states.Length} State(s)");
+	public void Start () 
+	{
 		CurrentState = _defaultState;
 	}
 	
@@ -39,5 +39,20 @@ public class StateMachine : MonoBehaviour {
 	public State GetState(string state) {
 		//Debug.Log($"{gameObject.name} :: Attempting to switch to state: {state}");
 		return stateHandler.GetState(state);
+	}
+
+	/// <summary author="Antonio Bottelier">
+	/// Easy method for switching states
+	/// </summary>
+	public void SwitchState(string state)
+	{
+		CurrentState = GetState(state);
+		
+		Debug.Log($"Switched to {CurrentState.stateName}");
+	}
+
+	public State[] GetAllStates()
+	{
+		return stateHandler.GetAllStates();
 	}
 }

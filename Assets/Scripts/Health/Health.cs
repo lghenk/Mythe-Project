@@ -33,7 +33,8 @@ public class Health : MonoBehaviour {
     /// A function that substracts health from the current health
     /// </summary>
     /// <param name="amount">The amount of damage it should take</param>
-    public void TakeDamage(float amount = 1) {
+    public void TakeDamage(float amount = 1)
+    {
         CurHealth -= amount;
         CheckDeath();
 
