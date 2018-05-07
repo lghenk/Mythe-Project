@@ -14,6 +14,18 @@ public class FieldOfView : MonoBehaviour {
     [SerializeField, Tooltip("The angle that the object can see at (no one can see 360 degrees)"), Range(0, 360)]
     private float _fovAngle = 90;
 
+    public float FOVAngle
+    {
+        set { _fovAngle = value; }
+        get { return _fovAngle; }
+    }
+
+    public float FOVRadius
+    {
+        get { return _fovRadius; }
+        set { _fovRadius = value; }
+    }
+
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 

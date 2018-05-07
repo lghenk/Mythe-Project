@@ -1,18 +1,18 @@
-# 8===D\~\~: The Game
+# Saving Private Flint
 
-8===D\~\~: The Game is a **working title**. It will definitely change at the end.
+Saving Private Flint is a better **working title** than the previous one. It will definitely probably change at the end.
 
-**8===D\~\~: The Game** is a game based on the myth Sapling & Flint. It will release somewhere in 2018 with a more fitting title. Because it's about little kids, not ... this. 
+Saving Private Flint is a game based on the myth Sapling & Flint. Flint suddenly diseappears, and it's up to Sapling to find him. But as he steps in the forest, Sapling finds out that it has changed, and everything is hostile. Now it's up to him to... save the world...
 
 The developers are:  
-Koen Boom  
-Timo Whiner  
-Antonio Bottle  
+Koen Sparreboom  
+Timo Heijne (volgens mij)  
+Antonio Bottelier  
 
 The artists are:  
-Ryan Ryan  
-Núria een Leeuw  
-Sharona Achternaam  
-Desirée God
+Ryan Cannon
+Núria de Leeuw  
+Sharona Vorswijk   
+Desirée Scheper
 
 Dankjewel

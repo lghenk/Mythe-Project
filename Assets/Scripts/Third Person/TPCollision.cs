@@ -134,6 +134,9 @@ public class TPCollision : MonoBehaviour
 	{
 		throw new NotImplementedException("Not implemented yet. Sorry, man.");
 	}
+
+	private Vector3 lastPoint;
+	private Vector3 lastNormal;
 	
 	/// <summary>
 	/// Checks with a capsule sweep if the player can move to the next position,
@@ -146,8 +149,12 @@ public class TPCollision : MonoBehaviour
 
 		if (!GetCapsuleCast(velocity, out hit)) return;
 
+		lastPoint = hit.point;
+		lastNormal = hit.normal;
+		
 		SlideAlongWall(ref velocity, hit);
 		if (GetCapsuleCast(velocity, out hit)) velocity = Vector3.zero;
+		else return;
 	}
 
 	private bool GetCapsuleCast(Vector3 velocity, out RaycastHit info )
@@ -156,14 +163,14 @@ public class TPCollision : MonoBehaviour
 		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
 		p2 = transform.position + Vector3.up * (_collider.radius);
 
-		return (Physics.CapsuleCast(p1, p2, _collider.radius, velocity.normalized, out info, velocity.magnitude,
+		return (Physics.CapsuleCast(p1, p2, _collider.radius+0.01f, velocity, out info, velocity.magnitude,
 			_collisionMask, QueryTriggerInteraction.Ignore));
 	}
 
 	#if UNITY_EDITOR
 	private void OnDrawGizmos()
 	{
-		if (!Application.isPlaying) return;
+		if (!Application.isPlaying || !_collider) return;
 		
 		Vector3 p1, p2;
 		p1 = transform.position + Vector3.up * (_collider.height - _collider.radius);
@@ -171,8 +178,10 @@ public class TPCollision : MonoBehaviour
 
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(p1, _collider.radius+0.01f);
+		Gizmos.DrawLine(lastPoint, lastPoint + lastNormal);
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireSphere(p2, _collider.radius);
+		
 	}
 	#endif
 	

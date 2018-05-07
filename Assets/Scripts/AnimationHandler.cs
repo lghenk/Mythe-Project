@@ -42,7 +42,10 @@ public class AnimationHandler : MonoBehaviour {
     }
 
     IEnumerator AwaitForParamClose() { // Yeet
-        yield return new WaitUntil(() => _animator.GetBool(_currentAnimParameter) == false);
+        do
+        {
+            yield return new WaitForEndOfFrame();
+        } while (_animator.GetBool(_currentAnimParameter) == false);
         onAnimationFinish?.Invoke(_currentAnimParameter);
     }
 }
