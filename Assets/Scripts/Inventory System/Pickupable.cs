@@ -21,7 +21,7 @@ public class Pickupable : MonoBehaviour {
 
         col.isTrigger = true;
         
-        if(transform.GetChild(0))
+        if(transform.childCount > 0)
             transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(-20, 30, -120));
     }
 

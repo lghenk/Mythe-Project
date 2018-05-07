@@ -16,8 +16,8 @@ public class PlayerDispenserHandler : MonoBehaviour {
 		_meleeCombat.onHit += OnHit;
 	}
 
-	private void OnHit(Transform transform) {
-		ItemDispenser id = transform.GetComponent<ItemDispenser>();
+	private void OnHit(Transform hitTransform) {
+		ItemDispenser id = hitTransform.GetComponent<ItemDispenser>();
 		if (id != null) {
 			ItemObject io = id.TakeItem();			
 			Inventory.Instance.AddItem(io);

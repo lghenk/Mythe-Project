@@ -5,7 +5,6 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class GodRays : MonoBehaviour
 {
-
 	public float speed = 0.2f;
 	private Material mat;
 	

@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958d8b1a308569142856c47f355458b4, type: 3}
   m_Name: Item - Stick
   m_EditorClassIdentifier: 
-  _type: 1
+  _type: 2
   _isEnabled: 1
   _itemName: Stick
-  _itemDescription: Sticks and stone may break your bones. But its only a stick
+  _itemDescription: Sticks and stone may break your bones. But its only a stick so
+    you are lucky today
   _itemIcon: {fileID: 21300000, guid: 60707418f157ae349887e375a9c61a83, type: 3}
   _gameObject: {fileID: 1878742905396562, guid: d49131eabe71f4044befe3a9eef29a0e,
     type: 2}
