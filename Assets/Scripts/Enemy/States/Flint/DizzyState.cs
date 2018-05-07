@@ -5,7 +5,7 @@ using UnityEngine;
 public class DizzyState : State
 {
     public float dizzyTime;
-    public float startingHP = 200;
+    public float startingHP = 5000;
     
     private void Awake() => stateName = GetType().Name;
 
@@ -13,16 +13,24 @@ public class DizzyState : State
     private AnimationHandler _animationHandler;
     private BlendshapeHandler _blendshapeHandler;
 
+    private bool healthSet = false;
+    
     private void Start()
     {
         _animationHandler = GetComponent<AnimationHandler>();
         _blendshapeHandler = GetComponent<BlendshapeHandler>();
         _health = gameObject.AddComponent<Health>();
-        _health.SetHealth(startingHP);
     }
     
     public override void EnterState(StateMachine machine)
     {
+        if (!healthSet)
+        {
+            _health.SetHealth(startingHP);
+            _health.onDamage += (f, f1, arg3, arg4) => _animationHandler.SetAnimation("t_Hit");
+            healthSet = true;
+        }
+        
         var c = StartCoroutine(DizzyWait(machine));
         StartCoroutine(CheckDeath(machine, c));
         

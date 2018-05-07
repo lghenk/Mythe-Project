@@ -30,7 +30,7 @@ public class BlendshapeHandler : MonoBehaviour
 
         if (indexn == null) throw new Exception($"Blendshape {name} not found.");
         int index = (int) indexn;
-
+        
         _mesh?.SetBlendShapeWeight(index, value);
     }
 

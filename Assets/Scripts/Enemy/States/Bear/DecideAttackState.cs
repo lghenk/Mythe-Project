@@ -28,7 +28,6 @@ public class DecideAttackState : State {
 		    _stateMachine.CurrentState.stateName != "ChargeAttackState") 
 		{		
 			_stateMachine.CurrentState = _stateMachine.GetState(stateName);
-			Debug.Log("Switching To Decide Attack State... Cuz player in range boi");
 		}
 	}
 

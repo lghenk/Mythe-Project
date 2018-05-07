@@ -152,13 +152,9 @@ public class TPCollision : MonoBehaviour
 		lastPoint = hit.point;
 		lastNormal = hit.normal;
 		
-		print("Touched something");
-		
 		SlideAlongWall(ref velocity, hit);
 		if (GetCapsuleCast(velocity, out hit)) velocity = Vector3.zero;
 		else return;
-
-		print("still touched something...");
 	}
 
 	private bool GetCapsuleCast(Vector3 velocity, out RaycastHit info )

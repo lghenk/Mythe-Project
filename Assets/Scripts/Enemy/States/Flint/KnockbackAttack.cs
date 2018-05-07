@@ -28,13 +28,13 @@ public class KnockbackAttack : State
     {
         if (!player) player = GameObject.FindGameObjectWithTag("Player").transform;
         if (!playerCollision) playerCollision = player?.GetComponent<TPCollision>();
-        if (!_animationHandler) _animationHandler = transform.parent.GetComponent<AnimationHandler>();
-        if (!_blendshapeHandler) _blendshapeHandler = transform.parent.GetComponent<BlendshapeHandler>();
+        if (!_animationHandler) _animationHandler = GetComponent<AnimationHandler>();
+        if (!_blendshapeHandler) _blendshapeHandler = GetComponent<BlendshapeHandler>();
     }
     
     public override void EnterState(StateMachine machine)
     {
-        knockbackVelocity = (player.position - transform.position) * velocityMultiplier;
+        knockbackVelocity = (player.position - transform.position).normalized * velocityMultiplier;
         _animationHandler.SetAnimation("t_Stomp");
         _blendshapeHandler.SetBlendshape("Flint_face.eyes_angry", 90f);
         _blendshapeHandler.SetBlendshape("Flint_face.angry", 90f);

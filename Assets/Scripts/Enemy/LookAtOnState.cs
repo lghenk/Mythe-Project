@@ -36,7 +36,6 @@ public class LookAtOnState : MonoBehaviour
             if (!_statesToRotate.Any(x =>
                 string.Equals(x, _stateMachine.CurrentState.stateName, StringComparison.CurrentCultureIgnoreCase)))
             {
-                Debug.Log($"Current state is {_stateMachine.CurrentState.stateName}, returning.");
                 return;
             }
         }

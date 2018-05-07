@@ -45,6 +45,7 @@
           </e>
           <e p="Enemy" t="Include">
             <e p="BehaviourState.cs" t="Include" />
+            <e p="BossfightStarter.cs" t="Include" />
             <e p="FieldOfView.cs" t="Include" />
             <e p="LookAtOnState.cs" t="Include" />
             <e p="States" t="Include">

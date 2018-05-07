@@ -62,7 +62,7 @@ public class HideAfterSpawnState : State
 			if (s != null) Destroy(s);
 		}
 		
-		machine.SwitchState("");
+		machine.SwitchState("SubDizzyState");
 	}
 
 	public void SetSpawnedEnemies(BehaviourState[] e)

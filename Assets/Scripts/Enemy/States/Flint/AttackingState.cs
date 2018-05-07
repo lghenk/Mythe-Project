@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /// <summary author="Antonio Bottelier">
 /// 
@@ -22,7 +24,7 @@ public class AttackingState : State
 	private StateMachine @this;
 	private StateMachine subStateMachine;
 	private State[] subStateMachineStates;
-	private State lastSubState;
+	private string lastSubState;
 
 	private Transform player;
 
@@ -33,6 +35,9 @@ public class AttackingState : State
 	
 	public override void EnterState(StateMachine machine)
 	{
+		// if the player is too close, do a knockback attack instead.
+		CheckAndDoKnockback(machine);
+		
 		if (!@this) @this = machine;
 		
 		if (subStateMachine) subStateMachine.enabled = true;
@@ -45,6 +50,8 @@ public class AttackingState : State
 				subStateMachine?.Start(); // make an early call to start, because otherwise the random state does not work.
 			}
 		}
+
+		Debug.Log("yo");
 		
 		SetRandomState();
 	}
@@ -63,16 +70,23 @@ public class AttackingState : State
 		{
 			randomState =
 				subStateMachineStates[Random.Range(0, subStateMachineStates.Length)];
-		} while (impossibleRandomStates.Any(x => x == randomState.stateName));
+		} while (impossibleRandomStates.Any(x => x == randomState.stateName) || randomState.stateName == lastSubState);
 
+		Debug.Log($"FUUUUUUUUUUCK {randomState.stateName == lastSubState}");
 
 		subStateMachine.CurrentState = randomState;
+		lastSubState = randomState.stateName;
 		Debug.Log($"State switched to {subStateMachine.CurrentState.stateName}");
 	}
 
 	public override void Act(StateMachine machine) {} // look, this one isn't going to be used!
 
 	public override void Reason(StateMachine machine)
+	{
+		CheckAndDoKnockback(machine);
+	}
+
+	private void CheckAndDoKnockback(StateMachine machine)
 	{
 		float distance = (player.position - transform.position).sqrMagnitude;
 

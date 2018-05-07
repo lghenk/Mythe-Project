@@ -38,7 +38,7 @@ public class ThrowAttack : State
 		if (!_player) _player = GameObject.FindGameObjectWithTag("Player");
 		if (!_animationHandler) _animationHandler = transform.parent.GetComponent<AnimationHandler>();
 		if (!_blendshapeHandler) _blendshapeHandler = transform.parent.GetComponent<BlendshapeHandler>();
-
+		
 		_blendshapeHandler.SetBlendshape("Flint_face.eyes_angry", 90f);
 		_blendshapeHandler.SetBlendshape("Flint_face.angry", 90f);
 		_blendshapeHandler.SetBlendshape("Flint_face.closed_mouth", 70f);
@@ -46,6 +46,7 @@ public class ThrowAttack : State
 		rocksLeft = rocksToThrow;
 		lastRockThrown = Time.time - timeBetweenRocks + 0.1f;
 		_lastPlayerPosition = _player.transform.position;
+	
 	}
 
 	public override void ExitState(StateMachine machine)
@@ -69,7 +70,7 @@ public class ThrowAttack : State
 		
 		Vector3 nextPoint = _player.transform.position + playerVelocity * seconds;
 		Debug.DrawLine(nextPoint, nextPoint + Vector3.up, Color.blue);
-		Vector3 trajectory = (nextPoint - transform.position) * projectileSpeed;
+		Vector3 trajectory = (nextPoint - transform.position).normalized * projectileSpeed;
 
 		return trajectory;
 	}
@@ -96,7 +97,7 @@ public class ThrowAttack : State
 		if (Time.time > lastRockThrown + timeBetweenRocks)
 		{
 			Vector3 trajectory = CalculateTrajectory();
-			trajectory.y = transform.position.y;
+			trajectory.y = 0;
 			ThrowRock(trajectory);
 
 			lastRockThrown = Time.time;
