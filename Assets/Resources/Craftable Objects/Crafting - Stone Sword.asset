@@ -16,3 +16,5 @@ MonoBehaviour:
   _requiredItems:
   - obj: {fileID: 11400000, guid: 3b803db2edd90f04798ba6768de03378, type: 2}
     amount: 1
+  - obj: {fileID: 11400000, guid: ada3c2a3d935dbb43aeeae3fd13ce500, type: 2}
+    amount: 2

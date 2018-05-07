@@ -21,4 +21,4 @@ MonoBehaviour:
   _gameObject: {fileID: 1435476468384914, guid: d0da15262ddfb374da9618db06e2ae3e,
     type: 2}
   _meleeType: {fileID: 0}
-  _useBehaviour: TestUseBehaviour
+  _useBehaviour: HealthPotionBehaviour
