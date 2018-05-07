@@ -47,8 +47,6 @@ public class StateMachine : MonoBehaviour {
 	public void SwitchState(string state)
 	{
 		CurrentState = GetState(state);
-		
-		Debug.Log($"Switched to {CurrentState.stateName}");
 	}
 
 	public State[] GetAllStates()

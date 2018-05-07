@@ -13,7 +13,14 @@ public class BossfightStarter : MonoBehaviour
 
     private void Start()
     {
+        if (!Application.isPlaying) return;
+        
         Player = GameObject.FindGameObjectWithTag("Player");
+        
+        // TODO : ANTONIO, WAAROM START DE NORMALE MUZIEK VIA DIT SCRIPT? 
+        //                                               Met vriendelijke groeten,
+        //                                                      Antonio Bottelier.
+        MusicManager.PlayOverworldSong();
     }
     
     private void FixedUpdate()
@@ -37,6 +44,9 @@ public class BossfightStarter : MonoBehaviour
         // enable Flint.
         _flint.enabled = true;
         _flint2.enabled = true;
+        
+        // Start the music
+        MusicManager.PlayBossBattleSong();
         
         // Destroy this!
         Destroy(gameObject);

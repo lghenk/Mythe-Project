@@ -39,9 +39,7 @@ public class SpawnAttack : State {
 	public override void EnterState(StateMachine machine)
 	{
 		Init();
-		
-		Debug.Log($"Entered state ${stateName}");
-		
+				
 		// decide the 3 spawn positions
 		// the positions are kind of static, but still need to be calculated.
 		// one is always in between flint and the player.

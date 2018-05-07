@@ -72,11 +72,8 @@ public class AttackingState : State
 				subStateMachineStates[Random.Range(0, subStateMachineStates.Length)];
 		} while (impossibleRandomStates.Any(x => x == randomState.stateName) || randomState.stateName == lastSubState);
 
-		Debug.Log($"FUUUUUUUUUUCK {randomState.stateName == lastSubState}");
-
 		subStateMachine.CurrentState = randomState;
 		lastSubState = randomState.stateName;
-		Debug.Log($"State switched to {subStateMachine.CurrentState.stateName}");
 	}
 
 	public override void Act(StateMachine machine) {} // look, this one isn't going to be used!
