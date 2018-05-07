@@ -21,6 +21,8 @@ public class MeleeCombat : EquipListener {
 
     private float _lastAttack;
 
+    public Action<Transform> onHit;
+
     protected void Start() {
         base.Start();
     }
@@ -35,6 +37,7 @@ public class MeleeCombat : EquipListener {
 
         foreach (var hit in hits) {
             hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
+            onHit?.Invoke(hit.transform);
         }
 
         _lastAttack = Time.timeSinceLevelLoad;

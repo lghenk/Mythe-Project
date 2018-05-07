@@ -94,10 +94,13 @@
           </e>
           <e p="Inventory System" t="Include">
             <e p="CraftableObject.cs" t="Include" />
+            <e p="DispenserItem.cs" t="Include" />
             <e p="EquipListener.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
+            <e p="ItemDispenser.cs" t="Include" />
             <e p="ItemObject.cs" t="Include" />
             <e p="Pickupable.cs" t="Include" />
+            <e p="PlayerDispenserHandler.cs" t="Include" />
             <e p="PlayerPickupDetection.cs" t="Include" />
             <e p="PlayerUseHandler.cs" t="Include" />
             <e p="UI" t="Include">
@@ -158,6 +161,37 @@
           <e p="Editor" t="Include">
             <e p="CrossPlatformInput" t="Include">
               <e p="CrossPlatformInputInitialize.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Effects" t="Include">
+            <e p="GlassRefraction" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="GlassStainedBumpDistort.shader" t="Include" />
+              </e>
+            </e>
+            <e p="ImageEffects" t="Include">
+              <e p="Readme.txt" t="Include" />
+            </e>
+            <e p="Projectors" t="Include">
+              <e p="Guidelines.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="ProjectorLight.shader" t="Include" />
+                <e p="ProjectorMultiply.shader" t="Include" />
+              </e>
+            </e>
+            <e p="TessellationShaders" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="BumpedSpecularDisplacement.shader" t="Include" />
+                <e p="BumpedSpecularSmooth.shader" t="Include" />
+              </e>
+            </e>
+            <e p="ToonShading" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="ToonBasic.shader" t="Include" />
+                <e p="ToonBasicOutline.shader" t="Include" />
+                <e p="ToonLit.shader" t="Include" />
+                <e p="ToonLitOutline.shader" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Environment" t="Include">

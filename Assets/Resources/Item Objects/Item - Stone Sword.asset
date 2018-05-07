@@ -14,10 +14,9 @@ MonoBehaviour:
   _type: 1
   _isEnabled: 1
   _itemName: Stone Sword
-  _itemDescription: A sword made out of stone... Atleast its not wood... AHAHAHAHAHAH
-    AMIRITE?!?!?!?? i made funny. k thanks bye
+  _itemDescription: A wooden sword with a plot twist; Its Stone
   _itemIcon: {fileID: 21300000, guid: 04c33ce246ed4d54f8bd7b6a5acf4d1c, type: 3}
-  _gameObject: {fileID: 1993113231837932, guid: 323be307b1fcb1d4181d415a8dbf6d3c,
+  _gameObject: {fileID: 1070164859469158, guid: 171c8749a962ebf4ba9a0e229c7901ad,
     type: 2}
   _meleeType: {fileID: 11400000, guid: 374347822dcb6e4488c4b6ae83c3f5a9, type: 2}
   _useBehaviour: 

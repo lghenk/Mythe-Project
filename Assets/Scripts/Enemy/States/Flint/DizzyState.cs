@@ -40,11 +40,13 @@ public class DizzyState : State
         _blendshapeHandler.SetBlendshape("Flint_face.super_sad", 75);
         _blendshapeHandler.SetBlendshape("Flint_face.open_mouth", 100);
         _blendshapeHandler.SetBlendshape("Flint_face.eyes_wide_open", 100);
+        _health.enabled = true;
     }
 
     public override void ExitState(StateMachine machine)
     {
-        _animationHandler.SetAnimation("b_Paralised", false);
+        _animationHandler.SetAnimation("b_Paralised", false);        
+        _health.enabled = false;
     }
 
     /// <summary>

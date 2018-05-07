@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 8c871bd35f646ac4281239e728355843
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pasted__group
+    100004: pasted__pasted__group
+    100006: refrence_file:sapling_0036:Heup
+    100008: refrence_file:sapling_0036:hoofd
+    100010: refrence_file:sapling_0036:joint1
+    100012: refrence_file:sapling_0036:joint2
+    100014: refrence_file:sapling_0036:L_elbow
+    100016: refrence_file:sapling_0036:L_enkel
+    100018: refrence_file:sapling_0036:L_hand
+    100020: refrence_file:sapling_0036:L_heup
+    100022: refrence_file:sapling_0036:L_knie
+    100024: refrence_file:sapling_0036:L_middelvinger
+    100026: refrence_file:sapling_0036:L_shoulder
+    100028: refrence_file:sapling_0036:L_thumb
+    100030: refrence_file:sapling_0036:L_toe
+    100032: refrence_file:sapling_0036:mid
+    100034: refrence_file:sapling_0036:nek
+    100036: refrence_file:sapling_0036:R_elbow
+    100038: refrence_file:sapling_0036:R_enkel
+    100040: refrence_file:sapling_0036:R_hand
+    100042: refrence_file:sapling_0036:R_heup
+    100044: refrence_file:sapling_0036:R_knie
+    100046: refrence_file:sapling_0036:R_middelvinger
+    100048: refrence_file:sapling_0036:R_middelvinger_kootje_1
+    100050: refrence_file:sapling_0036:R_shoulder
+    100052: refrence_file:sapling_0036:R_thumb
+    100054: refrence_file:sapling_0036:R_thumb_verbinding
+    100056: refrence_file:sapling_0036:R_toe
+    100058: refrence_file:sapling_0036:root
+    100060: refrence_file:sapling_0036:torso
+    400000: //RootNode
+    400002: pasted__group
+    400004: pasted__pasted__group
+    400006: refrence_file:sapling_0036:Heup
+    400008: refrence_file:sapling_0036:hoofd
+    400010: refrence_file:sapling_0036:joint1
+    400012: refrence_file:sapling_0036:joint2
+    400014: refrence_file:sapling_0036:L_elbow
+    400016: refrence_file:sapling_0036:L_enkel
+    400018: refrence_file:sapling_0036:L_hand
+    400020: refrence_file:sapling_0036:L_heup
+    400022: refrence_file:sapling_0036:L_knie
+    400024: refrence_file:sapling_0036:L_middelvinger
+    400026: refrence_file:sapling_0036:L_shoulder
+    400028: refrence_file:sapling_0036:L_thumb
+    400030: refrence_file:sapling_0036:L_toe
+    400032: refrence_file:sapling_0036:mid
+    400034: refrence_file:sapling_0036:nek
+    400036: refrence_file:sapling_0036:R_elbow
+    400038: refrence_file:sapling_0036:R_enkel
+    400040: refrence_file:sapling_0036:R_hand
+    400042: refrence_file:sapling_0036:R_heup
+    400044: refrence_file:sapling_0036:R_knie
+    400046: refrence_file:sapling_0036:R_middelvinger
+    400048: refrence_file:sapling_0036:R_middelvinger_kootje_1
+    400050: refrence_file:sapling_0036:R_shoulder
+    400052: refrence_file:sapling_0036:R_thumb
+    400054: refrence_file:sapling_0036:R_thumb_verbinding
+    400056: refrence_file:sapling_0036:R_toe
+    400058: refrence_file:sapling_0036:root
+    400060: refrence_file:sapling_0036:torso
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

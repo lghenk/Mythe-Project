@@ -14,8 +14,12 @@ public class Health : MonoBehaviour {
     /// An Event that invokes when the Object that has this health script supposedly dies
     /// </summary>
     public Action<Health> onDeath;
+    
     /// <summary>
     /// An Event that invokes when the object that has this health script gets sum damage
+    /// <param name="damageAmount"></param>
+    /// <param name="curHealth"></param>
+    /// <param name="startingHealth"></param>
     /// </summary>
     public Action<float, float, float, Health> onDamage;
 
@@ -23,6 +27,8 @@ public class Health : MonoBehaviour {
 
     [SerializeField] [Tooltip("Define an overriding health module if the default handling is not wanted (for example Down But Not Out would need different handling)")]
     private HealthBaseModule _healthModule;
+
+    public bool godMode = false;
 
     void Start() {
         _healthModule?.SetHealthReference(this); // Passalong health script to the module (if exists)
@@ -33,8 +39,9 @@ public class Health : MonoBehaviour {
     /// A function that substracts health from the current health
     /// </summary>
     /// <param name="amount">The amount of damage it should take</param>
-    public void TakeDamage(float amount = 1)
-    {
+    public void TakeDamage(float amount = 1) {
+        if (godMode) return; 
+        
         CurHealth -= amount;
         CheckDeath();
 
@@ -43,6 +50,14 @@ public class Health : MonoBehaviour {
         } else {
             onDamage?.Invoke(amount, CurHealth, _startingHealth, this);
         }
+    }
+
+    /// <summary>
+    /// A function that adds health to the current health
+    /// </summary>
+    /// <param name="amount">The amount of health it should add</param>
+    public void AddHealth(float amount = 1) {
+        CurHealth += amount;
     }
 
     public void SetHealth(float h) {

@@ -85,6 +85,7 @@ public class MusicManager : MonoBehaviour
 		if (!_source.isPlaying && lastPlaying)
 		{
 			SongFinished?.Invoke();
+			Debug.Log("Song Finished");
 			lastPlaying = _source.isPlaying;
 		}
 	}

@@ -669,6 +669,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4614707500650636}
+  - component: {fileID: 195080496330291742}
   - component: {fileID: 114999879784085816}
   - component: {fileID: 114329429740627518}
   - component: {fileID: 114457635425002318}
@@ -682,7 +683,6 @@ GameObject:
   - component: {fileID: 114421141725461984}
   - component: {fileID: 114779199742364560}
   - component: {fileID: 114442856249399188}
-  - component: {fileID: 195080496330291742}
   - component: {fileID: 136663235717811196}
   m_Layer: 0
   m_Name: Bear Enemennemyies
@@ -2179,7 +2179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9785c6c6f83357643bc4790a262008c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultState: {fileID: 114457635425002318}
+  _defaultState: {fileID: 114329429740627518}
 --- !u!136 &136663235717811196
 CapsuleCollider:
   m_ObjectHideFlags: 1

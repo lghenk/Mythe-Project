@@ -30,6 +30,8 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void AddItem(ItemObject item, int amount = 1) {
+		if (item == null) return;
+		
 		if (CurrentInventory.ContainsKey(item)) {
 			// Item already exists. So we can simply add
 			CurrentInventory[item] += amount;
@@ -42,6 +44,8 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void RemoveItem(ItemObject item, int amount = 1) {
+		if (item == null) return;
+
 		if (!CurrentInventory.ContainsKey(item)) return; // Item does not exist. So we cannot remove
 
 		CurrentInventory[item] -= amount;
@@ -51,6 +55,8 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void DropItem(ItemObject item) {
+		if (item == null) return;
+		
 		RemoveItem(item);
 
 		GameObject go = Instantiate(item.GameObject);
@@ -60,6 +66,9 @@ public class Inventory : MonoBehaviour {
 		Pickupable pickup = go.AddComponent<Pickupable>();
 		pickup.itemObject = item;
 		go.layer = 10;
+
+		Rigidbody rb = go.AddComponent<Rigidbody>();
+		rb.isKinematic = true;
 
 		GameObject part = Instantiate(_dropParticle);
 		part.transform.parent = go.transform;	
@@ -78,6 +87,7 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void HandleCraftingRecipe(CraftableObject obj) {
+		if (obj == null) return;
 		if (obj.IsEnabled && obj.IsValidRecipe()) {
 			// First check if it is valid and enabled.. // shouldn't get here if its not but can't be too sure right?
 			bool canCraft = true;

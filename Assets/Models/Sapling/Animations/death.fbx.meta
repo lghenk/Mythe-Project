@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: d50dcb62b2aeb6b43a1870864da66f9a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pasted__group
+    100004: pasted__pasted__group
+    100006: pasted__pasted__pasted__group
+    100008: refrence_file:sapling_0036:Heup
+    100010: refrence_file:sapling_0036:hoofd
+    100012: refrence_file:sapling_0036:joint1
+    100014: refrence_file:sapling_0036:joint2
+    100016: refrence_file:sapling_0036:L_elbow
+    100018: refrence_file:sapling_0036:L_enkel
+    100020: refrence_file:sapling_0036:L_hand
+    100022: refrence_file:sapling_0036:L_heup
+    100024: refrence_file:sapling_0036:L_knie
+    100026: refrence_file:sapling_0036:L_middelvinger
+    100028: refrence_file:sapling_0036:L_shoulder
+    100030: refrence_file:sapling_0036:L_thumb
+    100032: refrence_file:sapling_0036:L_toe
+    100034: refrence_file:sapling_0036:mid
+    100036: refrence_file:sapling_0036:nek
+    100038: refrence_file:sapling_0036:R_elbow
+    100040: refrence_file:sapling_0036:R_enkel
+    100042: refrence_file:sapling_0036:R_hand
+    100044: refrence_file:sapling_0036:R_heup
+    100046: refrence_file:sapling_0036:R_knie
+    100048: refrence_file:sapling_0036:R_middelvinger
+    100050: refrence_file:sapling_0036:R_middelvinger_kootje_1
+    100052: refrence_file:sapling_0036:R_shoulder
+    100054: refrence_file:sapling_0036:R_thumb
+    100056: refrence_file:sapling_0036:R_thumb_verbinding
+    100058: refrence_file:sapling_0036:R_toe
+    100060: refrence_file:sapling_0036:root
+    100062: refrence_file:sapling_0036:torso
+    400000: //RootNode
+    400002: pasted__group
+    400004: pasted__pasted__group
+    400006: pasted__pasted__pasted__group
+    400008: refrence_file:sapling_0036:Heup
+    400010: refrence_file:sapling_0036:hoofd
+    400012: refrence_file:sapling_0036:joint1
+    400014: refrence_file:sapling_0036:joint2
+    400016: refrence_file:sapling_0036:L_elbow
+    400018: refrence_file:sapling_0036:L_enkel
+    400020: refrence_file:sapling_0036:L_hand
+    400022: refrence_file:sapling_0036:L_heup
+    400024: refrence_file:sapling_0036:L_knie
+    400026: refrence_file:sapling_0036:L_middelvinger
+    400028: refrence_file:sapling_0036:L_shoulder
+    400030: refrence_file:sapling_0036:L_thumb
+    400032: refrence_file:sapling_0036:L_toe
+    400034: refrence_file:sapling_0036:mid
+    400036: refrence_file:sapling_0036:nek
+    400038: refrence_file:sapling_0036:R_elbow
+    400040: refrence_file:sapling_0036:R_enkel
+    400042: refrence_file:sapling_0036:R_hand
+    400044: refrence_file:sapling_0036:R_heup
+    400046: refrence_file:sapling_0036:R_knie
+    400048: refrence_file:sapling_0036:R_middelvinger
+    400050: refrence_file:sapling_0036:R_middelvinger_kootje_1
+    400052: refrence_file:sapling_0036:R_shoulder
+    400054: refrence_file:sapling_0036:R_thumb
+    400056: refrence_file:sapling_0036:R_thumb_verbinding
+    400058: refrence_file:sapling_0036:R_toe
+    400060: refrence_file:sapling_0036:root
+    400062: refrence_file:sapling_0036:torso
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
+      does not match:\n\tTransform 'refrence_file:sapling_0036:L_knie 1' for human
+      bone 'LeftLowerLeg' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: pasted__pasted__pasted__group
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_heup
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_heup
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_knie
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_knie
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_enkel
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_enkel
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:mid
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:nek
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:hoofd
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_toe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_toe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_thumb
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:joint2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:L_middelvinger
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:joint1
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_thumb_verbinding
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_middelvinger
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: refrence_file:sapling_0036:R_middelvinger_kootje_1
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: death(Clone)
+      parentName: 
+      position: {x: -0.037361044, y: 3.102254, z: 0.14611702}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__group
+      parentName: death(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__group
+      parentName: pasted__group
+      position: {x: 0.015059014, y: 0.023257319, z: -0.2063955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pasted__group
+      parentName: pasted__pasted__group
+      position: {x: -9.313226e-10, y: 0.075899065, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:Heup
+      parentName: pasted__pasted__pasted__group
+      position: {x: 0.022302032, y: -0.7571658, z: 0.060278498}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:root
+      parentName: pasted__pasted__pasted__group
+      position: {x: 0.08425327, y: -1.0263314, z: -0.0021131001}
+      rotation: {x: 0, y: -0, z: -0.6928319, w: 0.7210992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_heup
+      parentName: refrence_file:sapling_0036:root
+      position: {x: -0.042691834, y: -0.48538443, z: -2.220446e-16}
+      rotation: {x: -0.020349788, y: 0.0039495495, z: 0.01643831, w: 0.99965}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_knie
+      parentName: refrence_file:sapling_0036:L_heup
+      position: {x: 1.0433239, y: 1.1310202e-15, z: 0.09029202}
+      rotation: {x: 0.0006002057, y: 0.16894422, z: -0.06035164, w: 0.98377603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_enkel
+      parentName: refrence_file:sapling_0036:L_knie
+      position: {x: 1.0398526, y: 0.025702868, z: -0.1377779}
+      rotation: {x: -0.02883944, y: 0.06663192, z: 0.048295375, w: 0.9961908}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_toe
+      parentName: refrence_file:sapling_0036:L_enkel
+      position: {x: -0.053493705, y: -0.0864262, z: 0.405106}
+      rotation: {x: 0.7024162, y: 0.6789041, z: 0.19612154, w: 0.08507067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_heup
+      parentName: refrence_file:sapling_0036:root
+      position: {x: -0.008065844, y: 0.3802653, z: -2.220446e-16}
+      rotation: {x: 0.026223123, y: 0.9960072, z: -0.00450268, w: 0.085216746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_knie
+      parentName: refrence_file:sapling_0036:R_heup
+      position: {x: -1.0433239, y: -5.588675e-16, z: -0.056517676}
+      rotation: {x: 0.0026580559, y: 0.19302589, z: -0.056324113, w: 0.9795721}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_enkel
+      parentName: refrence_file:sapling_0036:R_knie
+      position: {x: -1.0971632, y: -0.034572367, z: 0.09733655}
+      rotation: {x: -0.0904486, y: -0.1645873, z: 0.091088414, w: 0.97797394}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_toe
+      parentName: refrence_file:sapling_0036:R_enkel
+      position: {x: -0.12100198, y: 0.08180755, z: -0.37704447}
+      rotation: {x: 0.7283696, y: 0.6797869, z: 0.014075092, w: -0.084672965}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:torso
+      parentName: refrence_file:sapling_0036:root
+      position: {x: -0.71122664, y: 5.551115e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0.019988013, w: 0.9998002}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:mid
+      parentName: refrence_file:sapling_0036:torso
+      position: {x: -0.6588896, y: 1.0685897e-15, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_shoulder
+      parentName: refrence_file:sapling_0036:mid
+      position: {x: -0.71823, y: 0.19390044, z: 0}
+      rotation: {x: -0.009203015, y: 0.80679435, z: -0.59064686, w: 0.011596707}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_elbow
+      parentName: refrence_file:sapling_0036:L_shoulder
+      position: {x: 0.68356323, y: 0, z: 0}
+      rotation: {x: -0.00008397719, y: 0.02527279, z: 0.06891685, w: 0.99730223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_hand
+      parentName: refrence_file:sapling_0036:L_elbow
+      position: {x: 0.46473196, y: -0.08928357, z: 0.013962994}
+      rotation: {x: 0.49914834, y: 0.7119652, z: -0.49375898, w: -0.0125920605}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_middelvinger
+      parentName: refrence_file:sapling_0036:L_hand
+      position: {x: -0.20627649, y: 0.21734297, z: -0.27288452}
+      rotation: {x: 0.04711102, y: -0.40570512, z: -0.1913408, w: 0.89250916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:joint1
+      parentName: refrence_file:sapling_0036:L_middelvinger
+      position: {x: -0.21950825, y: 0.036263984, z: -0.027625548}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:L_thumb
+      parentName: refrence_file:sapling_0036:L_hand
+      position: {x: -0.33216867, y: 0.16206965, z: 0.0008251452}
+      rotation: {x: 0.25759944, y: 0.66120344, z: -0.22967175, w: 0.6661107}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:joint2
+      parentName: refrence_file:sapling_0036:L_thumb
+      position: {x: 0.015102378, y: -0.030020569, z: -0.17924915}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:nek
+      parentName: refrence_file:sapling_0036:mid
+      position: {x: -0.013401337, y: 0.37404397, z: 0}
+      rotation: {x: -0.7028855, y: 0.711303, z: 1.5845947e-16, w: -2.4266292e-16}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:hoofd
+      parentName: refrence_file:sapling_0036:nek
+      position: {x: -0.62762743, y: -0.0028086505, z: -1.3877788e-17}
+      rotation: {x: -0.7028855, y: 0.711303, z: -8.659407e-17, w: -5.1542255e-19}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_shoulder
+      parentName: refrence_file:sapling_0036:mid
+      position: {x: 0.6680189, y: 0.19390044, z: 0}
+      rotation: {x: 0.0090235155, y: 0.54486763, z: 0.83844894, w: 0.006432979}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_elbow
+      parentName: refrence_file:sapling_0036:R_shoulder
+      position: {x: -0.68356323, y: -1.3877788e-16, z: -1.407142e-32}
+      rotation: {x: -0.0003962046, y: 0.004290948, z: 0.04104011, w: 0.99914825}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_hand
+      parentName: refrence_file:sapling_0036:R_elbow
+      position: {x: -0.50850445, y: 0.041896224, z: -0.004376222}
+      rotation: {x: 0.5443501, y: -0.43035293, z: -0.40626603, w: 0.5944975}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_middelvinger
+      parentName: refrence_file:sapling_0036:R_hand
+      position: {x: -0.27201608, y: 0.017448116, z: 0.25171292}
+      rotation: {x: 0.040219884, y: 0.33180487, z: 0.035631906, w: 0.94181645}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_middelvinger_kootje_1
+      parentName: refrence_file:sapling_0036:R_middelvinger
+      position: {x: -0.18185467, y: -0.0035366248, z: 0.013162277}
+      rotation: {x: 0, y: -0.02422191, z: -0, w: 0.9997066}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_thumb
+      parentName: refrence_file:sapling_0036:R_hand
+      position: {x: -0.26985466, y: 0.00690904, z: -0.060295496}
+      rotation: {x: 0.040950887, y: 0.16144384, z: 0.14864162, w: 0.9747639}
+      scale: {x: 1, y: 1, z: 1}
+    - name: refrence_file:sapling_0036:R_thumb_verbinding
+      parentName: refrence_file:sapling_0036:R_thumb
+      position: {x: -0.15277998, y: 0.01132702, z: 0.0066175205}
+      rotation: {x: 0, y: -0.00001226889, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 35b1ceefbf84154499330976e9731f56,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
