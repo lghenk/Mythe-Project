@@ -51,12 +51,7 @@ public class TPCollision : MonoBehaviour
 		
 		transform.position += vel;
         
-		if (vel.y >= 0)//walkingOnSlope)
-		{
-			PushToGround();
-		}
-
-		//PushToGround();
+		PushToGround();
 	}
 
 	private void PartMove(Vector3 velocity)

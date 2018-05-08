@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1093980231144392}
+  m_IsPrefabParent: 1
+--- !u!1 &1093980231144392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4563376209747248}
+  - component: {fileID: 114566756244562382}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4563376209747248
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093980231144392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.99237, y: 2.8173003, z: 46.56722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114566756244562382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093980231144392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d70c206b753934d9ed5e2234267276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _songs:
+  - songName: Childrens Corner
+    volume: 1
+    type: 0
+    clip: {fileID: 8300000, guid: 1a1a302a204a92d4495eff010c9db2e5, type: 3}
+  - songName: Comedy Trailer
+    volume: 1
+    type: 0
+    clip: {fileID: 8300000, guid: d4dbd72ec9ff6ba4aa53f1693db2f6bb, type: 3}
+  - songName: Struggle in the Jungle
+    volume: 0.3
+    type: 3
+    clip: {fileID: 8300000, guid: ff6e6b7fcdc6d10428102dec4b73a6da, type: 3}
+  - songName: Even Fight
+    volume: 0.3
+    type: 3
+    clip: {fileID: 8300000, guid: a4908ad311beae94fb44e5670a9fb5ec, type: 3}
+  - songName: Funny Views
+    volume: 1
+    type: 0
+    clip: {fileID: 8300000, guid: ea6bac7da5e78cd42bf5a9c0cc84fcd7, type: 3}
+  - songName: Hiding in the Dark
+    volume: 0.3
+    type: 2
+    clip: {fileID: 8300000, guid: 55019c8d0c1821b4088261b035a7c71c, type: 3}
+  - songName: Light And Darkness
+    volume: 0.3
+    type: 2
+    clip: {fileID: 8300000, guid: 615788de4dbaca8499aaab364ade9ce6, type: 3}
+  - songName: The Castle Gardens
+    volume: 1
+    type: 0
+    clip: {fileID: 8300000, guid: cb0e93a70a3eaf84385c6faffef13d31, type: 3}

@@ -63,15 +63,19 @@ public class ThrowAttack : State
 	{
 		Vector3 playerVelocity = _player.transform.position - _lastPlayerPosition;
 		
+		
 		float distance = (_player.transform.position - transform.position).magnitude;
 		float seconds = distance / projectileSpeed; // how many seconds it will take before the projectile reaches the player
 
+		Debug.Log((playerVelocity * seconds).ToString("f4"));
 		Debug.Log(seconds);
+
 		
-		Vector3 nextPoint = _player.transform.position + playerVelocity * seconds;
+		Vector3 nextPoint = _player.transform.position + playerVelocity * seconds / Time.deltaTime;
+		nextpos = nextPoint;
 		Debug.DrawLine(nextPoint, nextPoint + Vector3.up, Color.blue);
 		Vector3 trajectory = (nextPoint - transform.position).normalized * projectileSpeed;
-
+		
 		return trajectory;
 	}
 	
@@ -110,6 +114,13 @@ public class ThrowAttack : State
 		
 		Debug.Log("oof.. I am very dizzy... by god I am dizzy...");
 		machine.SwitchState("SubDizzyState");
+	}
+
+	private Vector3 nextpos; 
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(1,0,0,0.2f);
+		Gizmos.DrawSphere(nextpos, 0.5f);
 	}
 
 	public override void Reason(StateMachine machine)

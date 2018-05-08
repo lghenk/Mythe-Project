@@ -36,7 +36,7 @@ public class AttackingState : State
 	public override void EnterState(StateMachine machine)
 	{
 		// if the player is too close, do a knockback attack instead.
-		CheckAndDoKnockback(machine);
+		if (CheckAndDoKnockback(machine)) return;
 		
 		if (!@this) @this = machine;
 		
@@ -72,11 +72,8 @@ public class AttackingState : State
 				subStateMachineStates[Random.Range(0, subStateMachineStates.Length)];
 		} while (impossibleRandomStates.Any(x => x == randomState.stateName) || randomState.stateName == lastSubState);
 
-		Debug.Log($"FUUUUUUUUUUCK {randomState.stateName == lastSubState}");
-
 		subStateMachine.CurrentState = randomState;
 		lastSubState = randomState.stateName;
-		Debug.Log($"State switched to {subStateMachine.CurrentState.stateName}");
 	}
 
 	public override void Act(StateMachine machine) {} // look, this one isn't going to be used!
@@ -86,15 +83,18 @@ public class AttackingState : State
 		CheckAndDoKnockback(machine);
 	}
 
-	private void CheckAndDoKnockback(StateMachine machine)
+	private bool CheckAndDoKnockback(StateMachine machine)
 	{
 		float distance = (player.position - transform.position).sqrMagnitude;
 
 		if (distance < minPlayerSqrPlayerDistance)
 		{
-			if(uninterruptableStates.Any(x => x == subStateMachine.CurrentState.stateName)) return;
+			if(uninterruptableStates.Any(x => x == subStateMachine.CurrentState.stateName)) return false;
 			machine.SwitchState("KnockbackAttack");
+			return true;
 		}
+
+		return false;
 	}
 
 	public override void ExitState(StateMachine machine)
