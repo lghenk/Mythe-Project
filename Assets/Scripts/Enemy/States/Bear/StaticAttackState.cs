@@ -16,7 +16,7 @@ public class StaticAttackState : State {
 	private bool _goBackToIdle = false;
 
 	public Action OnAttack;
-
+	
 	private void Start() {
 		stateName = "StaticAttackState";
 		
@@ -26,7 +26,6 @@ public class StaticAttackState : State {
 	public override void EnterState(StateMachine machine) {
 		_animationHandler.SetAnimation("Idle", true);
 		_animationHandler.SetAnimation("Attack");
-		_animationHandler.onAnimationFinish += OnAnimationFinish;
 		OnAttack?.Invoke();
 		_goBackToIdle = false;
 	}
@@ -43,8 +42,8 @@ public class StaticAttackState : State {
 		_animationHandler.SetAnimation("Idle", false);
 	}
 
-	private void OnAnimationFinish(string s) {
+	IEnumerable ReturnToIdle() {
+		yield return new WaitForSeconds(1f);
 		_goBackToIdle = true;
-		_animationHandler.onAnimationFinish -= OnAnimationFinish;
 	}
 }

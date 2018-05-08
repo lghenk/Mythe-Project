@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class Health : MonoBehaviour {
     [SerializeField] private float _startingHealth = 100;
+    public float StartingHealth => _startingHealth;
     public float CurHealth { get; private set; }
 
     /// <summary>
@@ -58,6 +59,9 @@ public class Health : MonoBehaviour {
     /// <param name="amount">The amount of health it should add</param>
     public void AddHealth(float amount = 1) {
         CurHealth += amount;
+
+        if (CurHealth > _startingHealth)
+            CurHealth = _startingHealth;
     }
 
     public void SetHealth(float h) {
@@ -75,6 +79,10 @@ public class Health : MonoBehaviour {
         } 
         
         return (CurHealth <= 0);
+    }
+
+    public void ResetHealth() {
+        CurHealth = _startingHealth;
     }
 
     private void CheckDeath() {

@@ -24,6 +24,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AnimationHandler.cs" t="Include" />
+          <e p="BlendshapeHandler.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="OrbitCamera.cs" t="Include" />
           </e>
@@ -44,7 +45,9 @@
           </e>
           <e p="Enemy" t="Include">
             <e p="BehaviourState.cs" t="Include" />
+            <e p="BossfightStarter.cs" t="Include" />
             <e p="FieldOfView.cs" t="Include" />
+            <e p="LookAtOnState.cs" t="Include" />
             <e p="States" t="Include">
               <e p="Bear" t="Include">
                 <e p="ChargeAttackState.cs" t="Include" />
@@ -52,6 +55,18 @@
                 <e p="DownState.cs" t="Include" />
                 <e p="StaticAttackState.cs" t="Include" />
                 <e p="WanderingState.cs" t="Include" />
+              </e>
+              <e p="Flint" t="Include">
+                <e p="AttackingState.cs" t="Include" />
+                <e p="DizzyState.cs" t="Include" />
+                <e p="KnockbackAttack.cs" t="Include" />
+                <e p="Substates" t="Include">
+                  <e p="HideAfterSpawnState.cs" t="Include" />
+                  <e p="SpawnAttack.cs" t="Include" />
+                  <e p="SubDizzyState.cs" t="Include" />
+                  <e p="ThrowAttack.cs" t="Include" />
+                  <e p="WaitingState.cs" t="Include" />
+                </e>
               </e>
               <e p="IdleState.cs" t="Include" />
             </e>
@@ -79,10 +94,13 @@
           </e>
           <e p="Inventory System" t="Include">
             <e p="CraftableObject.cs" t="Include" />
+            <e p="DispenserItem.cs" t="Include" />
             <e p="EquipListener.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
+            <e p="ItemDispenser.cs" t="Include" />
             <e p="ItemObject.cs" t="Include" />
             <e p="Pickupable.cs" t="Include" />
+            <e p="PlayerDispenserHandler.cs" t="Include" />
             <e p="PlayerPickupDetection.cs" t="Include" />
             <e p="PlayerUseHandler.cs" t="Include" />
             <e p="UI" t="Include">
@@ -100,6 +118,7 @@
           </e>
           <e p="PlaneToCameraScale.cs" t="Include" />
           <e p="PlayerAttackInput.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
           <e p="ResurrectEnemy.cs" t="Include" />
           <e p="StateMachine" t="Include">
             <e p="State.cs" t="Include" />
@@ -139,6 +158,37 @@
           <e p="Editor" t="Include">
             <e p="CrossPlatformInput" t="Include">
               <e p="CrossPlatformInputInitialize.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Effects" t="Include">
+            <e p="GlassRefraction" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="GlassStainedBumpDistort.shader" t="Include" />
+              </e>
+            </e>
+            <e p="ImageEffects" t="Include">
+              <e p="Readme.txt" t="Include" />
+            </e>
+            <e p="Projectors" t="Include">
+              <e p="Guidelines.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="ProjectorLight.shader" t="Include" />
+                <e p="ProjectorMultiply.shader" t="Include" />
+              </e>
+            </e>
+            <e p="TessellationShaders" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="BumpedSpecularDisplacement.shader" t="Include" />
+                <e p="BumpedSpecularSmooth.shader" t="Include" />
+              </e>
+            </e>
+            <e p="ToonShading" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="ToonBasic.shader" t="Include" />
+                <e p="ToonBasicOutline.shader" t="Include" />
+                <e p="ToonLit.shader" t="Include" />
+                <e p="ToonLitOutline.shader" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Environment" t="Include">

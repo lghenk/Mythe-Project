@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="DeathScreen.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="CraftableEditor.cs" t="Include" />
           <e p="DiaryBookkeeperEditor.cs" t="Include" />
@@ -46,6 +47,7 @@
           <e p="Enemy" t="Include">
             <e p="BehaviourState.cs" t="Include" />
             <e p="BossfightStarter.cs" t="Include" />
+            <e p="EnemyAttackHandler.cs" t="Include" />
             <e p="FieldOfView.cs" t="Include" />
             <e p="LookAtOnState.cs" t="Include" />
             <e p="States" t="Include">
@@ -78,11 +80,14 @@
           </e>
           <e p="Extensions" t="Include">
             <e p="CameraExtension.cs" t="Include" />
+            <e p="ColorExtension.cs" t="Include" />
           </e>
           <e p="GodRays.cs" t="Include" />
           <e p="GodRays.shader" t="Include" />
           <e p="Health" t="Include">
             <e p="Health.cs" t="Include" />
+            <e p="HealthObject.cs" t="Include" />
+            <e p="HealthObjectHandler.cs" t="Include" />
             <e p="Modules" t="Include">
               <e p="DBNOModule.cs" t="Include" />
               <e p="HealthBaseModule.cs" t="Include" />
@@ -118,6 +123,7 @@
           </e>
           <e p="PlaneToCameraScale.cs" t="Include" />
           <e p="PlayerAttackInput.cs" t="Include" />
+          <e p="PlayerMovementAnims.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
           <e p="ResurrectEnemy.cs" t="Include" />
           <e p="Sound&amp;Music" t="Include">
@@ -137,7 +143,12 @@
             <e p="ThirdPersonMovement.cs" t="Include" />
             <e p="TPCollision.cs" t="Include" />
           </e>
+          <e p="UI" t="Include">
+            <e p="BasicButton.cs" t="Include" />
+            <e p="PanelUI.cs" t="Include" />
+          </e>
           <e p="Use Behaviours" t="Include">
+            <e p="HealthPotionBehaviour.cs" t="Include" />
             <e p="TestUseBehaviour.cs" t="Include" />
           </e>
         </e>

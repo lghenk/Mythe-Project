@@ -6,6 +6,7 @@ using UnityEngine;
 public class BossfightStarter : MonoBehaviour
 {
     [SerializeField] private float _startOnDistance;
+    [SerializeField] private GameObject _collisionDome;
     [SerializeField] private StateMachine _flint;
     [SerializeField] private LookAtOnState _flint2;
     
@@ -38,7 +39,10 @@ public class BossfightStarter : MonoBehaviour
             Destroy(enemy);
         }
         
-        // todo : enable a invisible wall
+        // enable a invisible wall (dome)
+
+        _collisionDome.SetActive(true);
+        
         // todo : place the player a bit more forward (so that he can't get stuck in the invisible wall?)
         
         // enable Flint.
