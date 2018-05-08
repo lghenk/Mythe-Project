@@ -26,6 +26,8 @@ public class IdleState : State {
         _fieldOfView = GetComponent<FieldOfView>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _behaviourState = GetComponent<BehaviourState>();
+
+        PlayerKillCounter.instance.totalEnemies += 1;
     }
 
     public override void EnterState(StateMachine machine) {

@@ -33,15 +33,16 @@ public class MeleeCombat : EquipListener {
         Vector3 center = transform.position + new Vector3(0, 1.25f, 0);
      
         Ray ray;
-        RaycastHit[] hits = Physics.SphereCastAll(center + (transform.forward * 1.25f), 1.2f, transform.forward, Mathf.Infinity,  _collisionLayers.value);
+        RaycastHit[] hits = Physics.SphereCastAll(center + (transform.forward * 1.25f), 1.2f, transform.forward, 1.2f,  _collisionLayers.value);
 
         foreach (var hit in hits)
         {
+            onHit?.Invoke(hit.transform);
+            
             var health = hit.transform.GetComponent<Health>();
             if(health == null) continue;
             
             health.TakeDamage(_meleeType.Damage);
-            onHit?.Invoke(hit.transform);
         }
 
         _lastAttack = Time.timeSinceLevelLoad;

@@ -17,6 +17,7 @@ public class PlayerDispenserHandler : MonoBehaviour {
 	}
 
 	private void OnHit(Transform hitTransform) {
+		Debug.Log("Item ....");
 		ItemDispenser id = hitTransform.GetComponent<ItemDispenser>();
 		if (id != null) {
 			ItemObject io = id.TakeItem();			

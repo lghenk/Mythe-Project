@@ -15,8 +15,8 @@ public class ResurrectEnemy : MonoBehaviour {
 					print("DBNO found");
 					dbno.Resurrect();
 					
-					GameObject go = (GameObject)Instantiate(Resources.Load("Particles/Enemy Heal"), transform.position, Quaternion.Euler(new Vector3(-90,0,0)));
-					Destroy(go, 5);
+					GameObject go = (GameObject)Instantiate(Resources.Load("Particles/Enemy Heal"), transform.position, Quaternion.identity);
+					Destroy(go, 2);
 				}
 			}
 		}

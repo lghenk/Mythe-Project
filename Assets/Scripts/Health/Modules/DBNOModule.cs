@@ -23,6 +23,7 @@ public class DBNOModule : HealthBaseModule {
  
     public override void OnDeath() {
         if (isDBNO) {
+            PlayerKillCounter.instance.AddKill();
             health.onDeath?.Invoke(health);
         }
     }

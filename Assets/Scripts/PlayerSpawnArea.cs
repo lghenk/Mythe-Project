@@ -23,6 +23,8 @@ public class PlayerSpawnArea : MonoBehaviour {
             foreach (var enemy in _enemies) {
                 enemy.SetActive(true);
             }
+
+            PlayerKillCounter.instance.totalEnemies = _enemies.Length;
         }
     }
 }

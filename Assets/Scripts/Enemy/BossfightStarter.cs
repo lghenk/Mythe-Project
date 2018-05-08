@@ -51,6 +51,8 @@ public class BossfightStarter : MonoBehaviour
         
         // Start the music
         MusicManager.PlayBossBattleSong();
+
+        DiaryBookkeeper.instance.PlayByName("Cutscene Preboss");
         
         // Destroy this!
         Destroy(gameObject);
