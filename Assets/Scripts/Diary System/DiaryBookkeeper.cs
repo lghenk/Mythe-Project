@@ -21,7 +21,7 @@ public class DiaryBookkeeper : MonoBehaviour {
 		if (instance == null) {
 			instance = this;
 			_videoControl = GetComponent<VideoControl>();
-
+			
 			diaryItems = Resources.FindObjectsOfTypeAll<VideoObject>();
 		} else {
 			Debug.LogError("DiaryBookkeeper already exists. DELET");

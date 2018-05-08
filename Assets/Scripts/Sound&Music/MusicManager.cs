@@ -114,4 +114,23 @@ public class MusicManager : MonoBehaviour
 		_source.Play();
 		lastSong = song;
 	}
+
+	public void Pause() {
+		_source.volume = 0;
+	}
+
+	public void Resume() {
+		if (_currentPlayingType != null) {
+			StartCoroutine(GraduallyTurnUpVolume());
+		}
+	}
+
+	IEnumerator GraduallyTurnUpVolume() {
+		while (true) {
+			_source.volume = Mathf.Lerp(_source.volume, lastSong.volume, Time.deltaTime * 3);
+			yield return new WaitForEndOfFrame();
+
+			if (Math.Abs(_source.volume - lastSong.volume) < 0.01) break;
+		}
+	}
 }
