@@ -16,6 +16,7 @@ public class DiaryBookkeeper : MonoBehaviour {
 	public static DiaryBookkeeper instance;
 	[HideInInspector] public VideoObject[] diaryItems; // Would prefer this to be a dictionary but whatever...
 	private VideoControl _videoControl;
+	public VideoControl VideoControl => _videoControl;
 
 	private void Start() {
 		if (instance == null) {

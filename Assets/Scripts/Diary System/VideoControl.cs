@@ -13,6 +13,8 @@ public class VideoControl : MonoBehaviour {
 
 	private MeshRenderer _meshRenderer;
 	private VideoPlayer _videoPlayer;
+
+	public VideoPlayer VideoPlayer => _videoPlayer;
 	private AudioSource _audioSource;
 
 	private Vector3 _prevCamPos;
