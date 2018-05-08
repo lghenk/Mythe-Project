@@ -17,6 +17,8 @@ public class ChargeAttackState : State {
 	
 	private NavMeshAgent _navMeshAgent;
 	private AnimationHandler _animationHandler;
+	
+	public Action OnAttack;
  
 	private void Start() {
 		stateName = "ChargeAttackState";
@@ -40,7 +42,7 @@ public class ChargeAttackState : State {
 		} else if (Vector3.Distance(target.position, transform.position) < _attackRange) {
 			_navMeshAgent.isStopped = true;
 			_animationHandler.SetAnimation("Attack");
-			
+			OnAttack?.Invoke();
 			machine.CurrentState = machine.GetState("IdleState");
 		}
 	}

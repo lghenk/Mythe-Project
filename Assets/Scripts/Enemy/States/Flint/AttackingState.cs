@@ -36,7 +36,7 @@ public class AttackingState : State
 	public override void EnterState(StateMachine machine)
 	{
 		// if the player is too close, do a knockback attack instead.
-		CheckAndDoKnockback(machine);
+		if (CheckAndDoKnockback(machine)) return;
 		
 		if (!@this) @this = machine;
 		
@@ -83,15 +83,18 @@ public class AttackingState : State
 		CheckAndDoKnockback(machine);
 	}
 
-	private void CheckAndDoKnockback(StateMachine machine)
+	private bool CheckAndDoKnockback(StateMachine machine)
 	{
 		float distance = (player.position - transform.position).sqrMagnitude;
 
 		if (distance < minPlayerSqrPlayerDistance)
 		{
-			if(uninterruptableStates.Any(x => x == subStateMachine.CurrentState.stateName)) return;
+			if(uninterruptableStates.Any(x => x == subStateMachine.CurrentState.stateName)) return false;
 			machine.SwitchState("KnockbackAttack");
+			return true;
 		}
+
+		return false;
 	}
 
 	public override void ExitState(StateMachine machine)

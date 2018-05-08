@@ -40,7 +40,7 @@ public class Health : MonoBehaviour {
     /// </summary>
     /// <param name="amount">The amount of damage it should take</param>
     public void TakeDamage(float amount = 1) {
-        if (godMode) return; 
+        if (godMode || !enabled) return; 
         
         CurHealth -= amount;
         CheckDeath();

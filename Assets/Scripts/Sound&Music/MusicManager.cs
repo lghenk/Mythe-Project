@@ -42,7 +42,6 @@ public class MusicManager : MonoBehaviour
 
 	public static IEnumerable<Song> GetSongs() =>
 		Instance._songs;
-	
 
 	public static Song GetSong(string songName) =>
 		Instance._songs.FirstOrDefault(x => x.songName == songName);
@@ -86,8 +85,9 @@ public class MusicManager : MonoBehaviour
 		{
 			SongFinished?.Invoke();
 			Debug.Log("Song Finished");
-			lastPlaying = _source.isPlaying;
 		}
+		
+		lastPlaying = _source.isPlaying;
 	}
 	
 	public void PlaySongType(SongType type)

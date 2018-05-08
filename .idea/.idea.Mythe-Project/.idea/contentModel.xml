@@ -121,7 +121,9 @@
           <e p="Projectile.cs" t="Include" />
           <e p="ResurrectEnemy.cs" t="Include" />
           <e p="Sound&amp;Music" t="Include">
+            <e p="BearSound.cs" t="Include" />
             <e p="MusicManager.cs" t="Include" />
+            <e p="PlayerSound.cs" t="Include" />
           </e>
           <e p="StateMachine" t="Include">
             <e p="State.cs" t="Include" />
