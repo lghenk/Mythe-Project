@@ -2,93 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7832df47-217f-4632-a869-08420c58de59" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/DeathScreen.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/DeathScreen.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bubble.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bubble.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bubble.png.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/hit sapling/New Material 1.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/hit sapling/New Material 1.mat.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/skullies.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/skullies.mat.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/skullies.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/skullies.png.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/steam.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/steam.mat.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/walk tex.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/MATERIAL/walk tex.png.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Models/Bear/Bear Attack 1.anim" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Models/Bear/Bear Attack 1.anim.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling idle(1).fbx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling idle(1).fbx.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/spaling run(1).fbx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/spaling run(1).fbx.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Resources/Craftable Objects/Crafting - Health Potion.asset" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Resources/Craftable Objects/Crafting - Health Potion.asset.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Resources/Craftable Objects/Crafting - Wooden Sword.asset" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Resources/Craftable Objects/Crafting - Wooden Sword.asset.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackHandler.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackHandler.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/ColorExtension.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/ColorExtension.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/HealthObject.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/HealthObject.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/HealthObjectHandler.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/HealthObjectHandler.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovementAnims.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovementAnims.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BasicButton.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BasicButton.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PanelUI.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PanelUI.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Use Behaviours/HealthPotionBehaviour.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Use Behaviours/HealthPotionBehaviour.cs.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/particle material/PARTICLE EFFECTS 2.prefab" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/particle material/PARTICLE EFFECTS 2.prefab.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/indexLayout.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/riderModule.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Mythe/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Bear.controller" afterPath="$PROJECT_DIR$/Assets/Animation/Controllers/Bear.controller" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Mythe-Project/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Sapling Controller.controller" afterPath="$PROJECT_DIR$/Assets/Animation/Controllers/Sapling Controller.controller" />
-      <change beforePath="$PROJECT_DIR$/Assets/MATERIAL/bear ground attack/bear rockies.mat" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bear ground attack/bear rockies.mat" />
-      <change beforePath="$PROJECT_DIR$/Assets/MATERIAL/bear ground attack/crck attack bear.mat" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bear ground attack/crck attack bear.mat" />
-      <change beforePath="$PROJECT_DIR$/Assets/MATERIAL/bear ground attack/wolkies.mat" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bear ground attack/wolkies.mat" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/death.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/death.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/hit.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/hit.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/idle.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/idle.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/run.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/run.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/walk.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/Saplin General Movement/walk.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/sapling attack 3.fbx" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/sapling attack 3.fbx" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/sapling attack 3.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/sapling attack 3.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/spaling attack 2.fbx" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/spaling attack 2.fbx" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/spaling attack 2.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/Sapling/Replacement Animaties/sapling attacks/spaling attack 2.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bear Enemennemyies.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bear Enemennemyies.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Craftable Objects/Crafting - Stone Sword.asset" afterPath="$PROJECT_DIR$/Assets/Resources/Craftable Objects/Crafting - Stone Sword.asset" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Item Objects/Item - Health Potion.asset" afterPath="$PROJECT_DIR$/Assets/Resources/Item Objects/Item - Health Potion.asset" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Particles.meta" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene_Profiles/Cube Profile.asset" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene_Profiles/Cube Profile.asset" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera.meta.orig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera.meta.orig.meta" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera.meta.orig.meta~HEAD.meta" afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera.meta.orig.meta~HEAD_0" afterPath="$PROJECT_DIR$/Assets/MATERIAL/bubble.mat.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera.meta.orig.meta~HEAD_0.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Bear/StaticAttackState.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Bear/StaticAttackState.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/Health.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Third Person/ThirdPersonMovement.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Third Person/ThirdPersonMovement.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/particle effects.prefab" afterPath="$PROJECT_DIR$/Assets/particle material/particle effects.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/particle effects.prefab.meta" afterPath="$PROJECT_DIR$/Assets/particle material/particle effects.prefab.meta" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/PlayerSound.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/PlayerSound.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Footsteps/dirt3.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Footsteps/dirt3.mp3.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Footsteps/dirt6.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Footsteps/dirt6.mp3.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Hits/hit1.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Hits/hit1.mp3.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Hits/hit3.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Hits/hit3.mp3.meta" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,12 +39,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerAttackInput.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayerAttackInput.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <marker date="1525795920084" expanded="false" signature="6:92" ph="..." />
+                <marker date="1525795920084" expanded="true" signature="141:531" ph="{...}" />
+                <marker date="1525795920084" expanded="true" signature="248:354" ph="{...}" />
+                <marker date="1525795920084" expanded="true" signature="409:529" ph="{...}" />
+                <marker date="1525795920084" expanded="true" signature="446:526" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,28 +68,82 @@
       <file leaf-file-name="HideAfterSpawnState.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            <state relative-caret-position="289">
+              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <folding>
+                <marker date="1525795818741" expanded="false" signature="6:130" ph="..." />
+                <marker date="1525795818741" expanded="true" signature="173:1938" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="468:839" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="882:1117" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="940:1085" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="1222:1686" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="1228:1321" ph="/* just wait ... waiit.... ... */" />
+                <marker date="1525795818741" expanded="true" signature="1392:1530" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="1602:1640" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="1738:1767" ph="{...}" />
+                <marker date="1525795818741" expanded="true" signature="1822:1936" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BossfightStarter.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BossfightStarter.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs">
+      <file leaf-file-name="PlayerSound.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/PlayerSound.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="680">
+              <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnemyAttackHandler.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackHandler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeleeCombat.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <marker date="1525792184828" expanded="false" signature="6:78" ph="..." />
-                <marker date="1525792184828" expanded="true" signature="145:1860" ph="{...}" />
-                <marker date="1525792184828" expanded="true" signature="420:838" ph="{...}" />
-                <marker date="1525792184828" expanded="true" signature="558:790" ph="/* TODO : ANTONIO, WAAROM START DE NORMALE MUZIEK VIA DIT SCRIPT? ... */" />
-                <marker date="1525792184828" expanded="true" signature="874:1678" ph="{...}" />
-                <marker date="1525792184828" expanded="true" signature="1178:1226" ph="{...}" />
-                <marker date="1525792184828" expanded="true" signature="1336:1467" ph="/* todo : place the player a bit more forward (so that he can't get stuck in the invisible wall?) ... */" />
-                <marker date="1525792184828" expanded="true" signature="1711:1858" ph="{...}" />
+                <marker date="1525795873988" expanded="false" signature="6:32" ph="..." />
+                <marker date="1525795873988" expanded="true" signature="34:90" ph="/// Made by Koen Sparreboom ... " />
+                <marker date="1525795873988" expanded="true" signature="132:1971" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="515:544" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="571:1276" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="971:1200" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="1328:1367" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="1432:1746" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="1493:1740" ph="{...}" />
+                <marker date="1525795873988" expanded="true" signature="1780:1969" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Projectile.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,18 +165,26 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/BearSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Bear/StaticAttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/PlayerSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/DizzyState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Bear/StaticAttackState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/PlayerSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs" />
       </list>
     </option>
   </component>
@@ -196,7 +194,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="2031" />
     <option name="y" value="-19" />
     <option name="width" value="1694" />
@@ -228,6 +226,19 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Mythe-Project (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mythe-Project (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Mythe-Project (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -270,12 +281,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525791010141</updated>
       <workItem from="1525791016016" duration="644000" />
-      <workItem from="1525791709570" duration="477000" />
+      <workItem from="1525791709570" duration="2929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1121000" />
+    <option name="totallyTimeSpent" value="3573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,7 +298,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1036" extended-state="6" />
+    <frame x="1912" y="-8" width="1696" height="1036" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -357,14 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/DizzyState.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -373,27 +376,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossfightStarter.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Sound&amp;Music/PlayerSound.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/States/Flint/Substates/HideAfterSpawnState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding>
-            <marker date="1525792184828" expanded="false" signature="6:78" ph="..." />
-            <marker date="1525792184828" expanded="true" signature="145:1860" ph="{...}" />
-            <marker date="1525792184828" expanded="true" signature="420:838" ph="{...}" />
-            <marker date="1525792184828" expanded="true" signature="558:790" ph="/* TODO : ANTONIO, WAAROM START DE NORMALE MUZIEK VIA DIT SCRIPT? ... */" />
-            <marker date="1525792184828" expanded="true" signature="874:1678" ph="{...}" />
-            <marker date="1525792184828" expanded="true" signature="1178:1226" ph="{...}" />
-            <marker date="1525792184828" expanded="true" signature="1336:1467" ph="/* todo : place the player a bit more forward (so that he can't get stuck in the invisible wall?) ... */" />
-            <marker date="1525792184828" expanded="true" signature="1711:1858" ph="{...}" />
+            <marker date="1525795818741" expanded="false" signature="6:130" ph="..." />
+            <marker date="1525795818741" expanded="true" signature="173:1938" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="468:839" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="882:1117" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="940:1085" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="1222:1686" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="1228:1321" ph="/* just wait ... waiit.... ... */" />
+            <marker date="1525795818741" expanded="true" signature="1392:1530" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="1602:1640" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="1738:1767" ph="{...}" />
+            <marker date="1525795818741" expanded="true" signature="1822:1936" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Melee/MeleeCombat.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1525795873988" expanded="false" signature="6:32" ph="..." />
+            <marker date="1525795873988" expanded="true" signature="34:90" ph="/// Made by Koen Sparreboom ... " />
+            <marker date="1525795873988" expanded="true" signature="132:1971" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="515:544" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="571:1276" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="971:1200" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="1328:1367" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="1432:1746" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="1493:1740" ph="{...}" />
+            <marker date="1525795873988" expanded="true" signature="1780:1969" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerAttackInput.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <marker date="1525795920084" expanded="false" signature="6:92" ph="..." />
+            <marker date="1525795920084" expanded="true" signature="141:531" ph="{...}" />
+            <marker date="1525795920084" expanded="true" signature="248:354" ph="{...}" />
+            <marker date="1525795920084" expanded="true" signature="409:529" ph="{...}" />
+            <marker date="1525795920084" expanded="true" signature="446:526" ph="{...}" />
           </folding>
         </state>
       </provider>

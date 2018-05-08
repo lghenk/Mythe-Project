@@ -27,20 +27,26 @@ public class MeleeCombat : EquipListener {
         base.Start();
     }
 
-    public void Attack() {
-        if (_meleeType == null || Time.timeSinceLevelLoad - _lastAttack < _attackCooldown) return;
+    public bool Attack() {
+        if (_meleeType == null || Time.timeSinceLevelLoad - _lastAttack < _attackCooldown) return false;
         
         Vector3 center = transform.position + new Vector3(0, 1.25f, 0);
      
         Ray ray;
         RaycastHit[] hits = Physics.SphereCastAll(center + (transform.forward * 1.25f), 1.2f, transform.forward, Mathf.Infinity,  _collisionLayers.value);
 
-        foreach (var hit in hits) {
-            hit.transform.GetComponent<Health>()?.TakeDamage(_meleeType.Damage);
+        foreach (var hit in hits)
+        {
+            var health = hit.transform.GetComponent<Health>();
+            if(health == null) continue;
+            
+            health.TakeDamage(_meleeType.Damage);
             onHit?.Invoke(hit.transform);
         }
 
         _lastAttack = Time.timeSinceLevelLoad;
+
+        return true;
     }
 
     public void ChangeWeapon(MeleeType meleeType) {

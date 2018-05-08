@@ -19,7 +19,8 @@ public class PlayerSound : MonoBehaviour
         _audioSource = gameObject.AddComponent<AudioSource>();
         _audioSource.spatialBlend = 1.0f;
 
-        _health = GetComponent<Health>();
+        _health = transform.parent.GetComponent<Health>();
+        _meleeCombat = transform.parent.GetComponent<MeleeCombat>();
         _health.onDamage += OnDamage;
         _meleeCombat.onHit += OnHit;
     }

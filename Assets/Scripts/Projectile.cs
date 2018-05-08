@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
 	private Health _playerHealth;
 	private float damage;
 
-	private const float MIN_LENGTH_BEFORE_HURT = 2.0f; // squared
+	private const float MIN_LENGTH_BEFORE_HURT = 7.0f; // squared
 	
 	public void Init(GameObject player, Vector3 velocity, float damageOnHit)
 	{

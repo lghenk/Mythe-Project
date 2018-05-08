@@ -22,7 +22,7 @@ public class HideAfterSpawnState : State
 		Debug.Log($"Entered state ${stateName}");
 
 		Vector3 rockheight = transform.position;
-		rockheight.y = -3.4f;
+		rockheight.y = 1f;
 		StartCoroutine(MoveRock(rockheight));
 		_animationHandler.SetAnimation("t_Stomp");
 	}
@@ -73,7 +73,7 @@ public class HideAfterSpawnState : State
 	public override void ExitState(StateMachine machine)
 	{
 		Vector3 rockheight = transform.position;
-		rockheight.y = -9.0f;
+		rockheight.y = -3.64f;
 		StartCoroutine(MoveRock(rockheight));
 	}
 }

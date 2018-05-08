@@ -16,8 +16,8 @@ public class PlayerAttackInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
-			_meleeCombat.Attack();
-			_animationHandler.SetAnimation("Attack");
+			if(_meleeCombat.Attack())
+				_animationHandler.SetAnimation("Attack");
 		}
 	}
 }
