@@ -7,7 +7,7 @@ using UnityEngine;
 /// Generic Health Script that we can put on anything we'd like
 /// </summary>
 public class Health : MonoBehaviour {
-    [SerializeField] private float _startingHealth = 100;
+    public float StartingHealth = 100;
     public float CurHealth { get; private set; }
 
     /// <summary>
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour {
 
     void Start() {
         _healthModule?.SetHealthReference(this); // Passalong health script to the module (if exists)
-        CurHealth = _startingHealth;
+        CurHealth = StartingHealth;
     }
 
     /// <summary>
@@ -39,9 +39,9 @@ public class Health : MonoBehaviour {
         CheckDeath();
 
         if (_healthModule) {
-            _healthModule.OnDamage(amount, CurHealth, _startingHealth);
+            _healthModule.OnDamage(amount, CurHealth, StartingHealth);
         } else {
-            onDamage?.Invoke(amount, CurHealth, _startingHealth, this);
+            onDamage?.Invoke(amount, CurHealth, StartingHealth, this);
         }
     }
 
