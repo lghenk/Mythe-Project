@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
-/// Made by Koen Sparreboom 8===============================D~~~~~~~~~~~~~
+/// Made by Koen Sparreboom
 /// </summary>
 public class Pause : MonoBehaviour {
     private static bool _paused;
@@ -19,5 +20,17 @@ public class Pause : MonoBehaviour {
         Time.timeScale = 1;
 
         EventManager.TriggerEvent("OnPauseChange");
+    }
+
+    public static void TogglePauseGame()
+    {
+        if (_paused)
+        {
+            UnpauseGame();
+        }
+        else
+        {
+            PauseGame();
+        }
     }
 }
