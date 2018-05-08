@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthObjectHandler : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.E)) {
@@ -23,6 +17,10 @@ public class HealthObjectHandler : MonoBehaviour {
 				float required = health.StartingHealth - health.CurHealth;
 				float amount = healthobj.TakeHealth(required);
 				health.AddHealth(amount);
+
+				GameObject go = (GameObject)Instantiate(Resources.Load("Particles/Sapling Heal"), transform.position, Quaternion.Euler(new Vector3(-90,0,0)));
+				Destroy(go, 5);
+
 			}
 		}
 	}
