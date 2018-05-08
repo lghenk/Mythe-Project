@@ -10,6 +10,21 @@ public class BasicButton : MonoBehaviour {
         SceneManager.LoadScene(levelName);
     }
 
+    public void PauseGame()
+    {
+        Pause.PauseGame();
+    }
+
+    public void UnpauseGame()
+    {
+        Pause.UnpauseGame();
+    }
+
+    public void TogglePauseGame()
+    {
+        Pause.TogglePauseGame();
+    }
+
     public void QuitApplication() {
         Application.Quit();
     }
