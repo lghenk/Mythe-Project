@@ -20,7 +20,10 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private float _maxRotateSpeed = 3.0f;
     
     private bool moving = false;
+    
     private float currentVelocity;
+    public float CurrentVelocity => currentVelocity;
+    
     private float currentGravity;
     
     private OrbitCamera _ob;
