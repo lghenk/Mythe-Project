@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Inventory System.unity
     guid: 0d9ce6faa779ac24cb2663967b3a79e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Menu.unity
     guid: dfa54435555368848996906dd30f6b04
+  - enabled: 1
+    path: Assets/Scenes/Maine Menu 2.unity
+    guid: 4268b2c91bdce415b8a45988f4be60fa
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: e443f4faa95d516458221f8ae5c51ff4
